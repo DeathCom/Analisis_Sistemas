@@ -17,23 +17,6 @@ namespace _01Presentacion
             InitializeComponent();
         }
 
-        #region Metodo Limpiar
-        public void Limpiar()
-        {
-            txtIdPedido.Text = "";
-            txtIdUsuario.Text = "";
-            txtIdPaisOrigen.Text = "";
-            txtIdPaisDestino.Text = "";
-            txtIdPago.Text = "";
-            txtIdEnvio.Text = "";
-            txtIdEstado.Text = "";
-            txtTotal.Text = "";
-            txtDescripcion.Text = "";
-            txtIdCiudadDestino.Text = "";
-            txtIdCiudadOrigen.Text = "";
-        }
-        #endregion
-
         #region Metodo para cargar info del DataGrid
         private void CargarPedidos()
         {

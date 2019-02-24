@@ -142,9 +142,9 @@
             this.lblTipoUsuario.ForeColor = System.Drawing.Color.White;
             this.lblTipoUsuario.Location = new System.Drawing.Point(44, 7);
             this.lblTipoUsuario.Name = "lblTipoUsuario";
-            this.lblTipoUsuario.Size = new System.Drawing.Size(68, 24);
+            this.lblTipoUsuario.Size = new System.Drawing.Size(179, 24);
             this.lblTipoUsuario.TabIndex = 1;
-            this.lblTipoUsuario.Text = "Cliente";
+            this.lblTipoUsuario.Text = "Nombre_Supervisor";
             // 
             // btnInicio
             // 
@@ -153,7 +153,7 @@
             this.btnInicio.Location = new System.Drawing.Point(0, 0);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(130, 73);
-            this.btnInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnInicio.TabIndex = 0;
             this.btnInicio.TabStop = false;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
@@ -195,7 +195,7 @@
             this.btnDoPedido.Name = "btnDoPedido";
             this.btnDoPedido.Size = new System.Drawing.Size(99, 30);
             this.btnDoPedido.TabIndex = 9;
-            this.btnDoPedido.Text = "Do Pedido";
+            this.btnDoPedido.Text = "Asignacion";
             this.btnDoPedido.UseVisualStyleBackColor = true;
             this.btnDoPedido.Click += new System.EventHandler(this.btnDoPedido_Click);
             // 
@@ -222,7 +222,7 @@
             this.btnPedidos.Name = "btnPedidos";
             this.btnPedidos.Size = new System.Drawing.Size(99, 30);
             this.btnPedidos.TabIndex = 3;
-            this.btnPedidos.Text = "Pedidos";
+            this.btnPedidos.Text = "Reporteria";
             this.btnPedidos.UseVisualStyleBackColor = true;
             this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 

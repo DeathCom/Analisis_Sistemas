@@ -118,31 +118,28 @@ namespace _01Presentacion
             {
                 #region ProcesoLogin
                 string nombre = txtUsuario.Text;
+                this.Hide();
 
-
-
-
-                    if (txtUsuario.Text == "ADMIN" && txtPassword.Text == "0987")
-                    {
-                        new Administrador(nombre).Show();
-                    }
-                    else if (txtUsuario.Text == "USER" && txtPassword.Text == "6543")
-                    {
-                        new Usuario(nombre).Show();
-                    }
-                    else if (txtUsuario.Text == "CLIENT" && txtPassword.Text == "1234")
-                    {
-                        new Cliente(nombre).Show();
-                    }
-                    else
-                    {
+                if (txtUsuario.Text == "Admin" && txtPassword.Text == "0987")
+                {
+                    new Administrador(nombre).Show();
+                }
+                else if (txtUsuario.Text == "User" && txtPassword.Text == "6543")
+                {
+                    new Usuario(nombre).Show();
+                }
+                else if (txtUsuario.Text == "Supervisor" && txtPassword.Text == "1234")
+                {
+                    new Cliente(nombre).Show();
+                }
+                else
+                {
                     MessageBox.Show("Usuario o contraseña Invalidos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     /*MessageBox.Show("Usuario Inactivo",
-                                   "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);*/
+                                    "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);*/
                     this.Show();
-                    }
+                }
                 #endregion
-
             }
             catch (Exception)
             {

@@ -33,14 +33,25 @@
             this.lblTipoUsuario = new System.Windows.Forms.Label();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.icono = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numero_Tiquete = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado_Tiquete = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hora_de_Asignacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hora_de_Cierre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Herramienta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Comentarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelCentral.SuspendLayout();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icono)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(42)))));
+            this.panelCentral.Controls.Add(this.dataGridView1);
             this.panelCentral.Controls.Add(this.lblTipoUsuario);
             this.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCentral.Location = new System.Drawing.Point(0, 35);
@@ -81,6 +92,63 @@
             this.icono.TabIndex = 0;
             this.icono.TabStop = false;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Usuario,
+            this.Numero_Tiquete,
+            this.Cliente,
+            this.Estado_Tiquete,
+            this.Hora_de_Asignacion,
+            this.Hora_de_Cierre,
+            this.Herramienta,
+            this.Comentarios});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 6);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(496, 258);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // Usuario
+            // 
+            this.Usuario.HeaderText = "Usuario";
+            this.Usuario.Name = "Usuario";
+            // 
+            // Numero_Tiquete
+            // 
+            this.Numero_Tiquete.HeaderText = "Numero_Tiquete";
+            this.Numero_Tiquete.Name = "Numero_Tiquete";
+            // 
+            // Cliente
+            // 
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.Name = "Cliente";
+            // 
+            // Estado_Tiquete
+            // 
+            this.Estado_Tiquete.HeaderText = "Estado_Tiquete";
+            this.Estado_Tiquete.Name = "Estado_Tiquete";
+            // 
+            // Hora_de_Asignacion
+            // 
+            this.Hora_de_Asignacion.HeaderText = "Hora_de_Asignacion";
+            this.Hora_de_Asignacion.Name = "Hora_de_Asignacion";
+            // 
+            // Hora_de_Cierre
+            // 
+            this.Hora_de_Cierre.HeaderText = "Hora_de_Cierre";
+            this.Hora_de_Cierre.Name = "Hora_de_Cierre";
+            // 
+            // Herramienta
+            // 
+            this.Herramienta.HeaderText = "Herramienta";
+            this.Herramienta.Name = "Herramienta";
+            // 
+            // Comentarios
+            // 
+            this.Comentarios.HeaderText = "Comentarios";
+            this.Comentarios.Name = "Comentarios";
+            // 
             // Usuario_Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -97,6 +165,7 @@
             this.panelCentral.PerformLayout();
             this.BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.icono)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -107,5 +176,14 @@
         private System.Windows.Forms.Panel BarraTitulo;
         private System.Windows.Forms.PictureBox icono;
         private System.Windows.Forms.Label lblTipoUsuario;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numero_Tiquete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado_Tiquete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Hora_de_Asignacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Hora_de_Cierre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Herramienta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Comentarios;
     }
 }

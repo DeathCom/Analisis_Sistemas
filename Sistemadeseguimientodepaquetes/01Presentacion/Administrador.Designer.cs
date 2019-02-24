@@ -78,9 +78,9 @@
             this.lblTipoUsuario.ForeColor = System.Drawing.Color.White;
             this.lblTipoUsuario.Location = new System.Drawing.Point(43, 6);
             this.lblTipoUsuario.Name = "lblTipoUsuario";
-            this.lblTipoUsuario.Size = new System.Drawing.Size(126, 24);
+            this.lblTipoUsuario.Size = new System.Drawing.Size(205, 24);
             this.lblTipoUsuario.TabIndex = 1;
-            this.lblTipoUsuario.Text = "Administrador";
+            this.lblTipoUsuario.Text = "Nombre_Administrador";
             // 
             // Barratitulo
             // 
@@ -236,7 +236,7 @@
             this.btnPagos.Name = "btnPagos";
             this.btnPagos.Size = new System.Drawing.Size(99, 30);
             this.btnPagos.TabIndex = 17;
-            this.btnPagos.Text = "Pagos";
+            this.btnPagos.Text = "Severidad";
             this.btnPagos.UseVisualStyleBackColor = true;
             this.btnPagos.Click += new System.EventHandler(this.btnPagos_Click);
             // 
@@ -263,7 +263,7 @@
             this.btnEnvio.Name = "btnEnvio";
             this.btnEnvio.Size = new System.Drawing.Size(99, 30);
             this.btnEnvio.TabIndex = 15;
-            this.btnEnvio.Text = "Envios";
+            this.btnEnvio.Text = "Reporteria";
             this.btnEnvio.UseVisualStyleBackColor = true;
             this.btnEnvio.Click += new System.EventHandler(this.btnEnvio_Click);
             // 
@@ -290,7 +290,7 @@
             this.btnOrigen.Name = "btnOrigen";
             this.btnOrigen.Size = new System.Drawing.Size(99, 30);
             this.btnOrigen.TabIndex = 13;
-            this.btnOrigen.Text = "Origenes";
+            this.btnOrigen.Text = "Aplicacion";
             this.btnOrigen.UseVisualStyleBackColor = true;
             this.btnOrigen.Click += new System.EventHandler(this.btnOrigen_Click);
             // 
@@ -317,7 +317,7 @@
             this.btnDestinos.Name = "btnDestinos";
             this.btnDestinos.Size = new System.Drawing.Size(99, 30);
             this.btnDestinos.TabIndex = 11;
-            this.btnDestinos.Text = "Destinos";
+            this.btnDestinos.Text = "Roles";
             this.btnDestinos.UseVisualStyleBackColor = true;
             this.btnDestinos.Click += new System.EventHandler(this.btnDestinos_Click);
             // 
@@ -371,7 +371,7 @@
             this.btnPedidos.Name = "btnPedidos";
             this.btnPedidos.Size = new System.Drawing.Size(99, 30);
             this.btnPedidos.TabIndex = 3;
-            this.btnPedidos.Text = "Pedidos";
+            this.btnPedidos.Text = "Clientes";
             this.btnPedidos.UseVisualStyleBackColor = true;
             this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 

@@ -36,11 +36,16 @@
             this.btnBorrar = new System.Windows.Forms.PictureBox();
             this.icono = new System.Windows.Forms.PictureBox();
             this.panelCentral = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtDescPago = new System.Windows.Forms.TextBox();
             this.txtIdPago = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGrid = new System.Windows.Forms.DataGridView();
+            this.Id_Severidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Severidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Desc_Severidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -135,6 +140,8 @@
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(82)))), ((int)(((byte)(100)))));
+            this.panelCentral.Controls.Add(this.textBox2);
+            this.panelCentral.Controls.Add(this.label4);
             this.panelCentral.Controls.Add(this.txtDescPago);
             this.panelCentral.Controls.Add(this.txtIdPago);
             this.panelCentral.Controls.Add(this.label2);
@@ -151,10 +158,29 @@
             this.panelCentral.Size = new System.Drawing.Size(520, 355);
             this.panelCentral.TabIndex = 9;
             // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(127, 114);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(120, 27);
+            this.textBox2.TabIndex = 47;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(122, 91);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 20);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "Severidad:";
+            // 
             // txtDescPago
             // 
             this.txtDescPago.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescPago.Location = new System.Drawing.Point(216, 102);
+            this.txtDescPago.Location = new System.Drawing.Point(126, 173);
             this.txtDescPago.Name = "txtDescPago";
             this.txtDescPago.Size = new System.Drawing.Size(203, 27);
             this.txtDescPago.TabIndex = 45;
@@ -162,9 +188,9 @@
             // txtIdPago
             // 
             this.txtIdPago.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdPago.Location = new System.Drawing.Point(216, 60);
+            this.txtIdPago.Location = new System.Drawing.Point(126, 61);
             this.txtIdPago.Name = "txtIdPago";
-            this.txtIdPago.Size = new System.Drawing.Size(99, 27);
+            this.txtIdPago.Size = new System.Drawing.Size(120, 27);
             this.txtIdPago.TabIndex = 44;
             // 
             // label2
@@ -172,32 +198,51 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(121, 68);
+            this.label2.Location = new System.Drawing.Point(121, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 20);
+            this.label2.Size = new System.Drawing.Size(104, 20);
             this.label2.TabIndex = 43;
-            this.label2.Text = "Id Pago:";
+            this.label2.Text = "Id Severidad:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(121, 108);
+            this.label3.Location = new System.Drawing.Point(122, 150);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 20);
+            this.label3.Size = new System.Drawing.Size(125, 20);
             this.label3.TabIndex = 42;
-            this.label3.Text = "Desc Pago:";
+            this.label3.Text = "Desc Severidad:";
             // 
             // dataGrid
             // 
             this.dataGrid.AllowUserToOrderColumns = true;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id_Severidad,
+            this.Severidad,
+            this.Desc_Severidad});
             this.dataGrid.Location = new System.Drawing.Point(3, 212);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.Size = new System.Drawing.Size(514, 140);
             this.dataGrid.TabIndex = 3;
             this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
+            // 
+            // Id_Severidad
+            // 
+            this.Id_Severidad.HeaderText = "Id_Severidad";
+            this.Id_Severidad.Name = "Id_Severidad";
+            // 
+            // Severidad
+            // 
+            this.Severidad.HeaderText = "Severidad";
+            this.Severidad.Name = "Severidad";
+            // 
+            // Desc_Severidad
+            // 
+            this.Desc_Severidad.HeaderText = "Desc_Severidad";
+            this.Desc_Severidad.Name = "Desc_Severidad";
             // 
             // textBox1
             // 
@@ -230,11 +275,11 @@
             this.Tabla.AutoSize = true;
             this.Tabla.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tabla.ForeColor = System.Drawing.Color.White;
-            this.Tabla.Location = new System.Drawing.Point(401, 190);
+            this.Tabla.Location = new System.Drawing.Point(376, 189);
             this.Tabla.Name = "Tabla";
-            this.Tabla.Size = new System.Drawing.Size(96, 20);
+            this.Tabla.Size = new System.Drawing.Size(141, 20);
             this.Tabla.TabIndex = 25;
-            this.Tabla.Text = "Tabla Pagos";
+            this.Tabla.Text = "Tabla Severidades";
             // 
             // label6
             // 
@@ -289,5 +334,10 @@
         private System.Windows.Forms.TextBox txtIdPago;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Severidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Severidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Desc_Severidad;
     }
 }

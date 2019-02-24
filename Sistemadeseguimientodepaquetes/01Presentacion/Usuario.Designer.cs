@@ -123,9 +123,9 @@
             this.lblTipoUsuario.ForeColor = System.Drawing.Color.White;
             this.lblTipoUsuario.Location = new System.Drawing.Point(43, 6);
             this.lblTipoUsuario.Name = "lblTipoUsuario";
-            this.lblTipoUsuario.Size = new System.Drawing.Size(74, 24);
+            this.lblTipoUsuario.Size = new System.Drawing.Size(153, 24);
             this.lblTipoUsuario.TabIndex = 1;
-            this.lblTipoUsuario.Text = "Usuario";
+            this.lblTipoUsuario.Text = "Nombre_Usuario";
             // 
             // Barratitulo
             // 
@@ -150,7 +150,7 @@
             this.btnInicio.Location = new System.Drawing.Point(0, 0);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(130, 73);
-            this.btnInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnInicio.TabIndex = 0;
             this.btnInicio.TabStop = false;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
@@ -190,7 +190,7 @@
             this.btnPedidos.Name = "btnPedidos";
             this.btnPedidos.Size = new System.Drawing.Size(99, 30);
             this.btnPedidos.TabIndex = 3;
-            this.btnPedidos.Text = "Pedidos";
+            this.btnPedidos.Text = "Tiquetes";
             this.btnPedidos.UseVisualStyleBackColor = true;
             this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
