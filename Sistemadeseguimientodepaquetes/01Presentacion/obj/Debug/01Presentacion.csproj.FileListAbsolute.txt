@@ -1,0 +1,154 @@
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.exe.config
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.exe
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.pdb
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\02LogicadeNegocios.dll
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\04Entidades.dll
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\02LogicadeNegocios.pdb
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\04Entidades.pdb
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.FormLogin.resources
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Properties.Resources.resources
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.csproj.GenerateResource.Cache
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.exe
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.pdb
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador.resources
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Usuario.resources
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Cliente.resources
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Cliente.resources
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Inicio.resources
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Pedido.resources
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Producto.resources
+C:\Users\Www-R\Documents\Visual Studio 2015\Projects\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Usuario.resources
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.exe.config
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.exe
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.pdb
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.exe
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.pdb
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\02LogicadeNegocios.dll
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\04Entidades.dll
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\02LogicadeNegocios.pdb
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\04Entidades.pdb
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador.resources
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Inicio.resources
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Pedido.resources
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Usuario.resources
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Cliente.resources
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.FormLogin.resources
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Properties.Resources.resources
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Usuario.resources
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.csproj.GenerateResource.Cache
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Cliente_Inicio.resources
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Cliente_Pedido.resources
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Usuario_Inicio.resources
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Usuario_Pedido.resources
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\03AccesoDatos.dll
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\03AccesoDatos.pdb
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\EntityFramework.dll
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\EntityFramework.xml
+C:\Users\Www-R\Videos\SeguimientoPaquetes2BACK\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.exe.config
+C:\Users\Www-R\Videos\SeguimientoPaquetes2BACK\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.exe
+C:\Users\Www-R\Videos\SeguimientoPaquetes2BACK\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.pdb
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.exe.config
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.exe
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.pdb
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\02LogicadeNegocios.dll
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\04Entidades.dll
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\03AccesoDatos.dll
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\EntityFramework.dll
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\02LogicadeNegocios.pdb
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\04Entidades.pdb
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\04Entidades.dll.config
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\03AccesoDatos.pdb
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\03AccesoDatos.dll.config
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\EntityFramework.xml
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador.resources
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Stock.resources
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Inicio.resources
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Pedido.resources
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Producto.resources
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Usuario.resources
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Cliente.resources
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Cliente_Inicio.resources
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Cliente_Pedido.resources
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Cliente_Producto.resources
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.FormLogin.resources
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Properties.Resources.resources
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Usuario.resources
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Usuario_Inicio.resources
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Usuario_Pedido.resources
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Usuario_Producto.resources
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.csproj.GenerateResource.cache
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.csproj.CopyComplete
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.exe
+C:\Users\cperezme\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.pdb
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Destino.resources
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Envios.resources
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Estados.resources
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Origen.resources
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Pagos.resources
+C:\Users\Www-R\Documents\GitHub\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Cliente_DoPedido.resources
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.exe.config
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.exe
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.pdb
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\02LogicadeNegocios.dll
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\04Entidades.dll
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\03AccesoDatos.dll
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\EntityFramework.dll
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\02LogicadeNegocios.pdb
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\04Entidades.pdb
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\04Entidades.dll.config
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\03AccesoDatos.pdb
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\03AccesoDatos.dll.config
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\EntityFramework.xml
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.csprojAssemblyReference.cache
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador.resources
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Destino.resources
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Envios.resources
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Estados.resources
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Inicio.resources
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Origen.resources
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Pagos.resources
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Pedido.resources
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Usuario.resources
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Cliente.resources
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Cliente_Inicio.resources
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Cliente_Pedido.resources
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.FormLogin.resources
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Properties.Resources.resources
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Usuario.resources
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Cliente_DoPedido.resources
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Usuario_Inicio.resources
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Usuario_Pedido.resources
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.csproj.GenerateResource.cache
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.csproj.CopyComplete
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.exe
+C:\Users\Marce\Documents\GitHub\SeguimientoPaquetes-master\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.pdb
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.exe.config
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.exe
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.pdb
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.exe
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.pdb
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador.resources
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Destino.resources
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Envios.resources
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Estados.resources
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Inicio.resources
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Origen.resources
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Pagos.resources
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Pedido.resources
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Administrador_Usuario.resources
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Cliente.resources
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Cliente_Inicio.resources
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Cliente_Pedido.resources
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.FormLogin.resources
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Properties.Resources.resources
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Usuario.resources
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Cliente_DoPedido.resources
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Usuario_Inicio.resources
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Usuario_Pedido.resources
+C:\Users\Www-R\Documents\UAM\2019\Analisis_de_SIstemas\SeguimientoPaquetes\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.csproj.GenerateResource.Cache

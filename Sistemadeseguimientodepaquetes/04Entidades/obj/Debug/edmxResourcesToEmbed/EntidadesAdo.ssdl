@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SeguimientoPaquetesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DESTINO">
+    <Key>
+      <PropertyRef Name="IDDESTINO" />
+    </Key>
+    <Property Name="IDDESTINO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PAIS" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="CIUDAD" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="IMPUESTO" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ENVIO">
+    <Key>
+      <PropertyRef Name="IDENVIO" />
+    </Key>
+    <Property Name="IDENVIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESC_ENVIO" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="PRECIO_ENVIO" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTADO">
+    <Key>
+      <PropertyRef Name="IDESTADO" />
+    </Key>
+    <Property Name="IDESTADO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESC_ESTADO" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ORIGEN">
+    <Key>
+      <PropertyRef Name="IDORIGEN" />
+    </Key>
+    <Property Name="IDORIGEN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PAIS" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="CIUDAD" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PAGO">
+    <Key>
+      <PropertyRef Name="IDPAGO" />
+    </Key>
+    <Property Name="IDPAGO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DESC_PAGO" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PEDIDOS">
+    <Key>
+      <PropertyRef Name="IDPEDIDO" />
+    </Key>
+    <Property Name="IDPEDIDO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDUSUARIO" Type="int" Nullable="false" />
+    <Property Name="IDPAISORIGEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IDPAISDESTINO" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IDPAGO" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IDENVIO" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IDESTADO" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TOTAL" Type="int" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IDCIUDADDESTINO" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IDCIUDADORIGEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USUARIOS">
+    <Key>
+      <PropertyRef Name="IDUSUARIO" />
+    </Key>
+    <Property Name="IDUSUARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="ALIAS" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="PASS" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="TIPO_USUARIO" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="ESTADO_USUARIO" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SeguimientoPaquetesModelStoreContainer">
+    <EntitySet Name="DESTINO" EntityType="Self.DESTINO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ENVIO" EntityType="Self.ENVIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ESTADO" EntityType="Self.ESTADO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORIGEN" EntityType="Self.ORIGEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PAGO" EntityType="Self.PAGO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PEDIDOS" EntityType="Self.PEDIDOS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

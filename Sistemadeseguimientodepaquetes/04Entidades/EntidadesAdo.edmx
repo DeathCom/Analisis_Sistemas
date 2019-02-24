@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SeguimientoPaquetesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DESTINO">
+          <Key>
+            <PropertyRef Name="IDDESTINO" />
+          </Key>
+          <Property Name="IDDESTINO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PAIS" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="CIUDAD" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="IMPUESTO" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ENVIO">
+          <Key>
+            <PropertyRef Name="IDENVIO" />
+          </Key>
+          <Property Name="IDENVIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DESC_ENVIO" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="PRECIO_ENVIO" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ESTADO">
+          <Key>
+            <PropertyRef Name="IDESTADO" />
+          </Key>
+          <Property Name="IDESTADO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DESC_ESTADO" Type="nvarchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ORIGEN">
+          <Key>
+            <PropertyRef Name="IDORIGEN" />
+          </Key>
+          <Property Name="IDORIGEN" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PAIS" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="CIUDAD" Type="nvarchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PAGO">
+          <Key>
+            <PropertyRef Name="IDPAGO" />
+          </Key>
+          <Property Name="IDPAGO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DESC_PAGO" Type="nvarchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PEDIDOS">
+          <Key>
+            <PropertyRef Name="IDPEDIDO" />
+          </Key>
+          <Property Name="IDPEDIDO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDUSUARIO" Type="int" Nullable="false" />
+          <Property Name="IDPAISORIGEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDPAISDESTINO" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDPAGO" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDENVIO" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDESTADO" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TOTAL" Type="int" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDCIUDADDESTINO" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDCIUDADORIGEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="USUARIOS">
+          <Key>
+            <PropertyRef Name="IDUSUARIO" />
+          </Key>
+          <Property Name="IDUSUARIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMBRE" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="ALIAS" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="PASS" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="TIPO_USUARIO" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="ESTADO_USUARIO" Type="nvarchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="SeguimientoPaquetesModelStoreContainer">
+          <EntitySet Name="DESTINO" EntityType="Self.DESTINO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ENVIO" EntityType="Self.ENVIO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ESTADO" EntityType="Self.ESTADO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ORIGEN" EntityType="Self.ORIGEN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PAGO" EntityType="Self.PAGO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PEDIDOS" EntityType="Self.PEDIDOS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SeguimientoPaquetesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SeguimientoPaquetesEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DESTINOes" EntityType="SeguimientoPaquetesModel.DESTINO" />
+          <EntitySet Name="ENVIOs" EntityType="SeguimientoPaquetesModel.ENVIO" />
+          <EntitySet Name="ESTADOes" EntityType="SeguimientoPaquetesModel.ESTADO" />
+          <EntitySet Name="ORIGENs" EntityType="SeguimientoPaquetesModel.ORIGEN" />
+          <EntitySet Name="PAGOes" EntityType="SeguimientoPaquetesModel.PAGO" />
+          <EntitySet Name="PEDIDOS" EntityType="SeguimientoPaquetesModel.PEDIDOS" />
+          <EntitySet Name="USUARIOS" EntityType="SeguimientoPaquetesModel.USUARIOS" />
+        </EntityContainer>
+        <EntityType Name="DESTINO">
+          <Key>
+            <PropertyRef Name="IDDESTINO" />
+          </Key>
+          <Property Name="IDDESTINO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PAIS" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="CIUDAD" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="IMPUESTO" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ENVIO">
+          <Key>
+            <PropertyRef Name="IDENVIO" />
+          </Key>
+          <Property Name="IDENVIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DESC_ENVIO" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="PRECIO_ENVIO" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ESTADO">
+          <Key>
+            <PropertyRef Name="IDESTADO" />
+          </Key>
+          <Property Name="IDESTADO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DESC_ESTADO" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ORIGEN">
+          <Key>
+            <PropertyRef Name="IDORIGEN" />
+          </Key>
+          <Property Name="IDORIGEN" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PAIS" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="CIUDAD" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PAGO">
+          <Key>
+            <PropertyRef Name="IDPAGO" />
+          </Key>
+          <Property Name="IDPAGO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DESC_PAGO" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PEDIDOS">
+          <Key>
+            <PropertyRef Name="IDPEDIDO" />
+          </Key>
+          <Property Name="IDPEDIDO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDUSUARIO" Type="Int32" Nullable="false" />
+          <Property Name="IDPAISORIGEN" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDPAISDESTINO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDPAGO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDENVIO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDESTADO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TOTAL" Type="Int32" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDCIUDADDESTINO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IDCIUDADORIGEN" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="USUARIOS">
+          <Key>
+            <PropertyRef Name="IDUSUARIO" />
+          </Key>
+          <Property Name="IDUSUARIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ALIAS" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="PASS" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="TIPO_USUARIO" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ESTADO_USUARIO" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SeguimientoPaquetesModelStoreContainer" CdmEntityContainer="SeguimientoPaquetesEntities">
+          <EntitySetMapping Name="DESTINOes">
+            <EntityTypeMapping TypeName="SeguimientoPaquetesModel.DESTINO">
+              <MappingFragment StoreEntitySet="DESTINO">
+                <ScalarProperty Name="IMPUESTO" ColumnName="IMPUESTO" />
+                <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+                <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+                <ScalarProperty Name="IDDESTINO" ColumnName="IDDESTINO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ENVIOs">
+            <EntityTypeMapping TypeName="SeguimientoPaquetesModel.ENVIO">
+              <MappingFragment StoreEntitySet="ENVIO">
+                <ScalarProperty Name="PRECIO_ENVIO" ColumnName="PRECIO_ENVIO" />
+                <ScalarProperty Name="DESC_ENVIO" ColumnName="DESC_ENVIO" />
+                <ScalarProperty Name="IDENVIO" ColumnName="IDENVIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ESTADOes">
+            <EntityTypeMapping TypeName="SeguimientoPaquetesModel.ESTADO">
+              <MappingFragment StoreEntitySet="ESTADO">
+                <ScalarProperty Name="DESC_ESTADO" ColumnName="DESC_ESTADO" />
+                <ScalarProperty Name="IDESTADO" ColumnName="IDESTADO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ORIGENs">
+            <EntityTypeMapping TypeName="SeguimientoPaquetesModel.ORIGEN">
+              <MappingFragment StoreEntitySet="ORIGEN">
+                <ScalarProperty Name="CIUDAD" ColumnName="CIUDAD" />
+                <ScalarProperty Name="PAIS" ColumnName="PAIS" />
+                <ScalarProperty Name="IDORIGEN" ColumnName="IDORIGEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PAGOes">
+            <EntityTypeMapping TypeName="SeguimientoPaquetesModel.PAGO">
+              <MappingFragment StoreEntitySet="PAGO">
+                <ScalarProperty Name="DESC_PAGO" ColumnName="DESC_PAGO" />
+                <ScalarProperty Name="IDPAGO" ColumnName="IDPAGO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PEDIDOS">
+            <EntityTypeMapping TypeName="SeguimientoPaquetesModel.PEDIDOS">
+              <MappingFragment StoreEntitySet="PEDIDOS">
+                <ScalarProperty Name="IDCIUDADORIGEN" ColumnName="IDCIUDADORIGEN" />
+                <ScalarProperty Name="IDCIUDADDESTINO" ColumnName="IDCIUDADDESTINO" />
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
+                <ScalarProperty Name="IDESTADO" ColumnName="IDESTADO" />
+                <ScalarProperty Name="IDENVIO" ColumnName="IDENVIO" />
+                <ScalarProperty Name="IDPAGO" ColumnName="IDPAGO" />
+                <ScalarProperty Name="IDPAISDESTINO" ColumnName="IDPAISDESTINO" />
+                <ScalarProperty Name="IDPAISORIGEN" ColumnName="IDPAISORIGEN" />
+                <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+                <ScalarProperty Name="IDPEDIDO" ColumnName="IDPEDIDO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USUARIOS">
+            <EntityTypeMapping TypeName="SeguimientoPaquetesModel.USUARIOS">
+              <MappingFragment StoreEntitySet="USUARIOS">
+                <ScalarProperty Name="ESTADO_USUARIO" ColumnName="ESTADO_USUARIO" />
+                <ScalarProperty Name="TIPO_USUARIO" ColumnName="TIPO_USUARIO" />
+                <ScalarProperty Name="PASS" ColumnName="PASS" />
+                <ScalarProperty Name="ALIAS" ColumnName="ALIAS" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
