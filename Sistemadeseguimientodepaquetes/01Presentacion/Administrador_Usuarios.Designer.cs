@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrador_Usuarios));
             this.icono = new System.Windows.Forms.PictureBox();
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.btnEditar = new System.Windows.Forms.PictureBox();
@@ -38,6 +40,12 @@
             this.panelCentral = new System.Windows.Forms.Panel();
             this.txtEstadoCB = new System.Windows.Forms.ComboBox();
             this.dataGrid = new System.Windows.Forms.DataGridView();
+            this.Id_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Contrasena_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTipoUserCB = new System.Windows.Forms.ComboBox();
             this.txtIdUsuario = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -50,24 +58,16 @@
             this.Tabla = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.Id_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contrasena_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.icono)).BeginInit();
             this.BarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBorrar)).BeginInit();
             this.panelCentral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // icono
@@ -95,6 +95,32 @@
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(520, 35);
             this.BarraTitulo.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(337, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(368, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // btnGuardar
             // 
@@ -202,6 +228,36 @@
             this.dataGrid.Size = new System.Drawing.Size(514, 174);
             this.dataGrid.TabIndex = 3;
             this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
+            // 
+            // Id_usuario
+            // 
+            this.Id_usuario.HeaderText = "Id_usuario";
+            this.Id_usuario.Name = "Id_usuario";
+            // 
+            // Nombre_usuario
+            // 
+            this.Nombre_usuario.HeaderText = "Nombre_usuario";
+            this.Nombre_usuario.Name = "Nombre_usuario";
+            // 
+            // Usuario
+            // 
+            this.Usuario.HeaderText = "Usuario";
+            this.Usuario.Name = "Usuario";
+            // 
+            // Contrasena_usuario
+            // 
+            this.Contrasena_usuario.HeaderText = "Contrasena_usuario";
+            this.Contrasena_usuario.Name = "Contrasena_usuario";
+            // 
+            // Estado_usuario
+            // 
+            this.Estado_usuario.HeaderText = "Estado_usuario";
+            this.Estado_usuario.Name = "Estado_usuario";
+            // 
+            // Tipo_usuario
+            // 
+            this.Tipo_usuario.HeaderText = "Tipo_usuario";
+            this.Tipo_usuario.Name = "Tipo_usuario";
             // 
             // txtTipoUserCB
             // 
@@ -328,61 +384,7 @@
             this.label6.TabIndex = 24;
             this.label6.Text = "Id Usuario:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(337, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(368, 7);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
-            // 
-            // Id_usuario
-            // 
-            this.Id_usuario.HeaderText = "Id_usuario";
-            this.Id_usuario.Name = "Id_usuario";
-            // 
-            // Nombre_usuario
-            // 
-            this.Nombre_usuario.HeaderText = "Nombre_usuario";
-            this.Nombre_usuario.Name = "Nombre_usuario";
-            // 
-            // Usuario
-            // 
-            this.Usuario.HeaderText = "Usuario";
-            this.Usuario.Name = "Usuario";
-            // 
-            // Contrasena_usuario
-            // 
-            this.Contrasena_usuario.HeaderText = "Contrasena_usuario";
-            this.Contrasena_usuario.Name = "Contrasena_usuario";
-            // 
-            // Estado_usuario
-            // 
-            this.Estado_usuario.HeaderText = "Estado_usuario";
-            this.Estado_usuario.Name = "Estado_usuario";
-            // 
-            // Tipo_usuario
-            // 
-            this.Tipo_usuario.HeaderText = "Tipo_usuario";
-            this.Tipo_usuario.Name = "Tipo_usuario";
-            // 
-            // Administrador_Usuario
+            // Administrador_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -391,12 +393,14 @@
             this.Controls.Add(this.BarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Administrador_Usuario";
+            this.Name = "Administrador_Usuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administracion de Usuarios";
             this.Load += new System.EventHandler(this.Administrador_Usuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.icono)).EndInit();
             this.BarraTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
@@ -404,8 +408,6 @@
             this.panelCentral.ResumeLayout(false);
             this.panelCentral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

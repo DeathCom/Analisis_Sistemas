@@ -29,7 +29,7 @@ namespace _01Presentacion
         #region Accion Botones
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            
+            MessageBox.Show("Accion Pendiente de Cosntruccion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
 
@@ -40,5 +40,9 @@ namespace _01Presentacion
         }
         #endregion
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Accion Pendiente de Cosntruccion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

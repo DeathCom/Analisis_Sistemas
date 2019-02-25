@@ -27,7 +27,7 @@ namespace _01Presentacion
         #region  Boton_Eliminar 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-           
+            MessageBox.Show("Accion Pendiente de Cosntruccion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
 
@@ -43,8 +43,12 @@ namespace _01Presentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            
+            MessageBox.Show("Accion Pendiente de Cosntruccion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Accion Pendiente de Cosntruccion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

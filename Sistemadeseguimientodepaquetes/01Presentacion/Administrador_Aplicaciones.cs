@@ -38,22 +38,17 @@ namespace _01Presentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-          
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-           
+            MessageBox.Show("Accion Pendiente de Cosntruccion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            
+            MessageBox.Show("Accion Pendiente de Cosntruccion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            
+            MessageBox.Show("Accion Pendiente de Cosntruccion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
 
@@ -79,5 +74,20 @@ namespace _01Presentacion
             }
         }
         #endregion
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Accion Pendiente de Cosntruccion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Accion Pendiente de Cosntruccion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Accion Pendiente de Cosntruccion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

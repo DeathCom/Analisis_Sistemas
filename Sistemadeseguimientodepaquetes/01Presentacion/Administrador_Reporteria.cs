@@ -25,10 +25,6 @@ namespace _01Presentacion
         #endregion
 
         #region  Botones_Guardar_Buscar_Editar_Eliminar Form Administrador_Envio
-        private void btnBorrar_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -37,7 +33,7 @@ namespace _01Presentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            
+            MessageBox.Show("Accion Pendiente de Cosntruccion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -59,5 +55,15 @@ namespace _01Presentacion
            
         }
         #endregion
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Accion Pendiente de Cosntruccion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Accion Pendiente de Cosntruccion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

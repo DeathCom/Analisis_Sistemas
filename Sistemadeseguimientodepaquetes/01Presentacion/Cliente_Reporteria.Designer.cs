@@ -31,12 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente_Reporteria));
             this.icono = new System.Windows.Forms.PictureBox();
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new System.Windows.Forms.PictureBox();
             this.btnBorrar = new System.Windows.Forms.PictureBox();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboCiudadDestino = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Numero_Tiquete = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,14 +44,16 @@
             this.Hora_de_Cierre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Herramienta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Comentarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboCiudadDestino = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.icono)).BeginInit();
             this.BarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBorrar)).BeginInit();
             this.panelCentral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // icono
@@ -78,6 +78,19 @@
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(520, 35);
             this.BarraTitulo.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(430, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnBuscar
             // 
@@ -117,46 +130,6 @@
             this.panelCentral.Name = "panelCentral";
             this.panelCentral.Size = new System.Drawing.Size(520, 320);
             this.panelCentral.TabIndex = 7;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(287, 27);
-            this.textBox1.TabIndex = 98;
-            // 
-            // comboCiudadDestino
-            // 
-            this.comboCiudadDestino.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.comboCiudadDestino.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboCiudadDestino.FormattingEnabled = true;
-            this.comboCiudadDestino.Items.AddRange(new object[] {
-            "Id Usuario",
-            "Usuario",
-            "Numero Tiquete",
-            "Severidad",
-            "Cliente",
-            "Estado Tiquete",
-            "Hora Asignacion",
-            "Hora Cierre",
-            "Herramienta"});
-            this.comboCiudadDestino.Location = new System.Drawing.Point(108, 12);
-            this.comboCiudadDestino.Name = "comboCiudadDestino";
-            this.comboCiudadDestino.Size = new System.Drawing.Size(191, 28);
-            this.comboCiudadDestino.TabIndex = 96;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.LightGray;
-            this.label8.Location = new System.Drawing.Point(12, 12);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(90, 20);
-            this.label8.TabIndex = 91;
-            this.label8.Text = "Buscar por:";
             // 
             // dataGridView1
             // 
@@ -215,19 +188,47 @@
             this.Comentarios.HeaderText = "Comentarios";
             this.Comentarios.Name = "Comentarios";
             // 
-            // pictureBox1
+            // textBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(430, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(12, 46);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(287, 27);
+            this.textBox1.TabIndex = 98;
             // 
-            // Cliente_Pedido
+            // comboCiudadDestino
+            // 
+            this.comboCiudadDestino.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.comboCiudadDestino.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboCiudadDestino.FormattingEnabled = true;
+            this.comboCiudadDestino.Items.AddRange(new object[] {
+            "Id Usuario",
+            "Usuario",
+            "Numero Tiquete",
+            "Severidad",
+            "Cliente",
+            "Estado Tiquete",
+            "Hora Asignacion",
+            "Hora Cierre",
+            "Herramienta"});
+            this.comboCiudadDestino.Location = new System.Drawing.Point(108, 12);
+            this.comboCiudadDestino.Name = "comboCiudadDestino";
+            this.comboCiudadDestino.Size = new System.Drawing.Size(191, 28);
+            this.comboCiudadDestino.TabIndex = 96;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.LightGray;
+            this.label8.Location = new System.Drawing.Point(12, 12);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(90, 20);
+            this.label8.TabIndex = 91;
+            this.label8.Text = "Buscar por:";
+            // 
+            // Cliente_Reporteria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -236,18 +237,18 @@
             this.Controls.Add(this.BarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Cliente_Pedido";
+            this.Name = "Cliente_Reporteria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cliente_Pedido";
             this.Load += new System.EventHandler(this.Cliente_Pedido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.icono)).EndInit();
             this.BarraTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBorrar)).EndInit();
             this.panelCentral.ResumeLayout(false);
             this.panelCentral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
