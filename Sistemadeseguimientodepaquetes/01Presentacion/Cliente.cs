@@ -102,12 +102,12 @@ namespace _01Presentacion
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new Cliente_Pedido(codigo));
+            AbrirFormularioHijo(new Cliente_Reporteria(codigo));
         }
 
         private void btnDoPedido_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new Cliente_DoPedido(codigo));
+            AbrirFormularioHijo(new Cliente_Asignaciones(codigo));
         }
 
         #endregion

@@ -52,17 +52,17 @@
     <Compile Include="Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrador_Destino.cs">
+    <Compile Include="Administrador_Roles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrador_Destino.Designer.cs">
-      <DependentUpon>Administrador_Destino.cs</DependentUpon>
+    <Compile Include="Administrador_Roles.Designer.cs">
+      <DependentUpon>Administrador_Roles.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrador_Envios.cs">
+    <Compile Include="Administrador_Reporteria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrador_Envios.Designer.cs">
-      <DependentUpon>Administrador_Envios.cs</DependentUpon>
+    <Compile Include="Administrador_Reporteria.Designer.cs">
+      <DependentUpon>Administrador_Reporteria.cs</DependentUpon>
     </Compile>
     <Compile Include="Administrador_Estados.cs">
       <SubType>Form</SubType>
@@ -76,29 +76,29 @@
     <Compile Include="Administrador_Inicio.Designer.cs">
       <DependentUpon>Administrador_Inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrador_Origen.cs">
+    <Compile Include="Administrador_Aplicaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrador_Origen.Designer.cs">
-      <DependentUpon>Administrador_Origen.cs</DependentUpon>
+    <Compile Include="Administrador_Aplicaciones.Designer.cs">
+      <DependentUpon>Administrador_Aplicaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrador_Pagos.cs">
+    <Compile Include="Administrador_Severidades.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrador_Pagos.Designer.cs">
-      <DependentUpon>Administrador_Pagos.cs</DependentUpon>
+    <Compile Include="Administrador_Severidades.Designer.cs">
+      <DependentUpon>Administrador_Severidades.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrador_Pedido.cs">
+    <Compile Include="Administrador_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrador_Pedido.Designer.cs">
-      <DependentUpon>Administrador_Pedido.cs</DependentUpon>
+    <Compile Include="Administrador_Clientes.Designer.cs">
+      <DependentUpon>Administrador_Clientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrador_Usuario.cs">
+    <Compile Include="Administrador_Usuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Administrador_Usuario.Designer.cs">
-      <DependentUpon>Administrador_Usuario.cs</DependentUpon>
+    <Compile Include="Administrador_Usuarios.Designer.cs">
+      <DependentUpon>Administrador_Usuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>
@@ -112,11 +112,11 @@
     <Compile Include="Cliente_Inicio.Designer.cs">
       <DependentUpon>Cliente_Inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cliente_Pedido.cs">
+    <Compile Include="Cliente_Reporteria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente_Pedido.Designer.cs">
-      <DependentUpon>Cliente_Pedido.cs</DependentUpon>
+    <Compile Include="Cliente_Reporteria.Designer.cs">
+      <DependentUpon>Cliente_Reporteria.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -132,11 +132,11 @@
     <Compile Include="Usuario.Designer.cs">
       <DependentUpon>Usuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cliente_DoPedido.cs">
+    <Compile Include="Cliente_Asignaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente_DoPedido.Designer.cs">
-      <DependentUpon>Cliente_DoPedido.cs</DependentUpon>
+    <Compile Include="Cliente_Asignaciones.Designer.cs">
+      <DependentUpon>Cliente_Asignaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuario_Inicio.cs">
       <SubType>Form</SubType>
@@ -144,20 +144,20 @@
     <Compile Include="Usuario_Inicio.Designer.cs">
       <DependentUpon>Usuario_Inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuario_Pedido.cs">
+    <Compile Include="Usuario_TiquetesUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Usuario_Pedido.Designer.cs">
-      <DependentUpon>Usuario_Pedido.cs</DependentUpon>
+    <Compile Include="Usuario_TiquetesUser.Designer.cs">
+      <DependentUpon>Usuario_TiquetesUser.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrador_Destino.resx">
-      <DependentUpon>Administrador_Destino.cs</DependentUpon>
+    <EmbeddedResource Include="Administrador_Roles.resx">
+      <DependentUpon>Administrador_Roles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrador_Envios.resx">
-      <DependentUpon>Administrador_Envios.cs</DependentUpon>
+    <EmbeddedResource Include="Administrador_Reporteria.resx">
+      <DependentUpon>Administrador_Reporteria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Administrador_Estados.resx">
       <DependentUpon>Administrador_Estados.cs</DependentUpon>
@@ -165,17 +165,17 @@
     <EmbeddedResource Include="Administrador_Inicio.resx">
       <DependentUpon>Administrador_Inicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrador_Origen.resx">
-      <DependentUpon>Administrador_Origen.cs</DependentUpon>
+    <EmbeddedResource Include="Administrador_Aplicaciones.resx">
+      <DependentUpon>Administrador_Aplicaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrador_Pagos.resx">
-      <DependentUpon>Administrador_Pagos.cs</DependentUpon>
+    <EmbeddedResource Include="Administrador_Severidades.resx">
+      <DependentUpon>Administrador_Severidades.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrador_Pedido.resx">
-      <DependentUpon>Administrador_Pedido.cs</DependentUpon>
+    <EmbeddedResource Include="Administrador_Clientes.resx">
+      <DependentUpon>Administrador_Clientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Administrador_Usuario.resx">
-      <DependentUpon>Administrador_Usuario.cs</DependentUpon>
+    <EmbeddedResource Include="Administrador_Usuarios.resx">
+      <DependentUpon>Administrador_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
@@ -183,8 +183,8 @@
     <EmbeddedResource Include="Cliente_Inicio.resx">
       <DependentUpon>Cliente_Inicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cliente_Pedido.resx">
-      <DependentUpon>Cliente_Pedido.cs</DependentUpon>
+    <EmbeddedResource Include="Cliente_Reporteria.resx">
+      <DependentUpon>Cliente_Reporteria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -201,14 +201,14 @@
     <EmbeddedResource Include="Usuario.resx">
       <DependentUpon>Usuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cliente_DoPedido.resx">
-      <DependentUpon>Cliente_DoPedido.cs</DependentUpon>
+    <EmbeddedResource Include="Cliente_Asignaciones.resx">
+      <DependentUpon>Cliente_Asignaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuario_Inicio.resx">
       <DependentUpon>Usuario_Inicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Usuario_Pedido.resx">
-      <DependentUpon>Usuario_Pedido.cs</DependentUpon>
+    <EmbeddedResource Include="Usuario_TiquetesUser.resx">
+      <DependentUpon>Usuario_TiquetesUser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

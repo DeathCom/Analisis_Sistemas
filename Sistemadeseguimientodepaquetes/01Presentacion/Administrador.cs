@@ -107,33 +107,33 @@ namespace _01Presentacion
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new Administrador_Pedido());
+            AbrirFormularioHijo(new Administrador_Clientes());
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new Administrador_Usuario());
+            AbrirFormularioHijo(new Administrador_Usuarios());
         }
         #endregion
 
         private void btnDestinos_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new Administrador_Destino());
+            AbrirFormularioHijo(new Administrador_Roles());
         }
 
         private void btnOrigen_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new Administrador_Origen());
+            AbrirFormularioHijo(new Administrador_Aplicaciones());
         }
 
         private void btnEnvio_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new Administrador_Envios());
+            AbrirFormularioHijo(new Administrador_Reporteria());
         }
 
         private void btnPagos_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new Administrador_Pagos());
+            AbrirFormularioHijo(new Administrador_Severidades());
         }
 
         private void btnEstado_Click(object sender, EventArgs e)
