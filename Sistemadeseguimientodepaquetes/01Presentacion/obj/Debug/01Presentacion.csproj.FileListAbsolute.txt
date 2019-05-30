@@ -178,3 +178,6 @@ C:\Users\CARLOSANDRESPEREZMED\Documents\GitHub\Analisis_Sistemas\Sistemadeseguim
 C:\Users\CARLOSANDRESPEREZMED\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Cliente_Reporteria.resources
 C:\Users\CARLOSANDRESPEREZMED\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Cliente_Asignaciones.resources
 C:\Users\CARLOSANDRESPEREZMED\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Usuario_TiquetesUser.resources
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.exe.config
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.exe
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.pdb
