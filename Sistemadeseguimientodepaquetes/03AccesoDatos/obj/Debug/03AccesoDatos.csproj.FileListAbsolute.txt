@@ -1,0 +1,1 @@
+C:\Users\CARLOSANDRESPEREZMED\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\03AccesoDatos\obj\Debug\03AccesoDatos.csprojResolveAssemblyReference.cache

@@ -100,23 +100,23 @@
     <Compile Include="Administrador_Usuarios.Designer.cs">
       <DependentUpon>Administrador_Usuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cliente.cs">
+    <Compile Include="Supervisor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente.Designer.cs">
-      <DependentUpon>Cliente.cs</DependentUpon>
+    <Compile Include="Supervisor.Designer.cs">
+      <DependentUpon>Supervisor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cliente_Inicio.cs">
+    <Compile Include="Supervisor_Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente_Inicio.Designer.cs">
-      <DependentUpon>Cliente_Inicio.cs</DependentUpon>
+    <Compile Include="Supervisor_Inicio.Designer.cs">
+      <DependentUpon>Supervisor_Inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cliente_Reporteria.cs">
+    <Compile Include="Supervisor_Reporteria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente_Reporteria.Designer.cs">
-      <DependentUpon>Cliente_Reporteria.cs</DependentUpon>
+    <Compile Include="Supervisor_Reporteria.Designer.cs">
+      <DependentUpon>Supervisor_Reporteria.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -132,11 +132,11 @@
     <Compile Include="Usuario.Designer.cs">
       <DependentUpon>Usuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cliente_Asignaciones.cs">
+    <Compile Include="Supervisor_Asignaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cliente_Asignaciones.Designer.cs">
-      <DependentUpon>Cliente_Asignaciones.cs</DependentUpon>
+    <Compile Include="Supervisor_Asignaciones.Designer.cs">
+      <DependentUpon>Supervisor_Asignaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuario_Inicio.cs">
       <SubType>Form</SubType>
@@ -177,14 +177,14 @@
     <EmbeddedResource Include="Administrador_Usuarios.resx">
       <DependentUpon>Administrador_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cliente.resx">
-      <DependentUpon>Cliente.cs</DependentUpon>
+    <EmbeddedResource Include="Supervisor.resx">
+      <DependentUpon>Supervisor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cliente_Inicio.resx">
-      <DependentUpon>Cliente_Inicio.cs</DependentUpon>
+    <EmbeddedResource Include="Supervisor_Inicio.resx">
+      <DependentUpon>Supervisor_Inicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cliente_Reporteria.resx">
-      <DependentUpon>Cliente_Reporteria.cs</DependentUpon>
+    <EmbeddedResource Include="Supervisor_Reporteria.resx">
+      <DependentUpon>Supervisor_Reporteria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -201,8 +201,8 @@
     <EmbeddedResource Include="Usuario.resx">
       <DependentUpon>Usuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cliente_Asignaciones.resx">
-      <DependentUpon>Cliente_Asignaciones.cs</DependentUpon>
+    <EmbeddedResource Include="Supervisor_Asignaciones.resx">
+      <DependentUpon>Supervisor_Asignaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuario_Inicio.resx">
       <DependentUpon>Usuario_Inicio.cs</DependentUpon>

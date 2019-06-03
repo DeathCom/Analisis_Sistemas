@@ -116,7 +116,7 @@ namespace _01Presentacion
         {
             try
             {
-                #region ProcesoLogin
+                #region ProcesoLogin_Analisis
                 string nombre = txtUsuario.Text;
                 this.Hide();
 
@@ -130,7 +130,7 @@ namespace _01Presentacion
                 }
                 else if (txtUsuario.Text == "Supervisor" && txtPassword.Text == "1234")
                 {
-                    new Cliente(nombre).Show();
+                    new Supervisor(nombre).Show();
                 }
                 else
                 {
@@ -139,6 +139,45 @@ namespace _01Presentacion
                                     "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);*/
                     this.Show();
                 }
+                #endregion
+                #region Proceso_Login_Teoria_Sistemas
+                DataTable dt = new DataTable();
+                objE.iduser = txtUsuario.Text;
+                objE.password = txtPassword.Text;
+                //objE.typeuser = comboTipo.Text;
+                dt = objLN.LNlogin(objE);
+
+                //creo objeto Usuario
+                USUARIOS user = new USUARIOS();
+                user.NOMBRE = dt.Rows[0][1].ToString(); //asigno el elemento [0][1] del dt al objeto use en su atributo nombre
+                user.IDUSUARIO = Convert.ToInt32(dt.Rows[0][0].ToString());
+
+                if (dt.Rows.Count == 1)
+                {
+                    this.Hide();
+                    if (dt.Rows[0][4].ToString() == "ADMIN" && dt.Rows[0][5].ToString() == "ACTIVO")
+                    {
+                        new Administrador(user).Show();
+                    }
+                    else if (dt.Rows[0][4].ToString() == "USER" && dt.Rows[0][5].ToString() == "ACTIVO")
+                    {
+                        new Usuario(user).Show();
+                    }
+                    else if (dt.Rows[0][4].ToString() == "CLIENT" && dt.Rows[0][5].ToString() == "ACTIVO")
+                    {
+                        new Supervisor(user).Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario Inactivo",
+                                   "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        this.Show();
+                    }
+                }
+                /*else
+                {
+                    MessageBox.Show("Usuario o contraseña Invalidos");
+                }*/
                 #endregion
             }
             catch (Exception)

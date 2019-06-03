@@ -181,3 +181,8 @@ C:\Users\CARLOSANDRESPEREZMED\Documents\GitHub\Analisis_Sistemas\Sistemadeseguim
 C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\01Presentacion\bin\Debug\01Presentacion.exe.config
 C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.exe
 C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.pdb
+C:\Users\CARLOSANDRESPEREZMED\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\01Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\CARLOSANDRESPEREZMED\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Supervisor.resources
+C:\Users\CARLOSANDRESPEREZMED\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Supervisor_Inicio.resources
+C:\Users\CARLOSANDRESPEREZMED\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Supervisor_Reporteria.resources
+C:\Users\CARLOSANDRESPEREZMED\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\01Presentacion\obj\Debug\_01Presentacion.Supervisor_Asignaciones.resources

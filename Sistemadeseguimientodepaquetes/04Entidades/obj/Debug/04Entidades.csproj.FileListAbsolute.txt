@@ -1,0 +1,5 @@
+C:\Users\CARLOSANDRESPEREZMED\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\04Entidades\bin\Debug\04Entidades.dll
+C:\Users\CARLOSANDRESPEREZMED\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\04Entidades\bin\Debug\04Entidades.pdb
+C:\Users\CARLOSANDRESPEREZMED\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\04Entidades\obj\Debug\04Entidades.csprojResolveAssemblyReference.cache
+C:\Users\CARLOSANDRESPEREZMED\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\04Entidades\obj\Debug\04Entidades.dll
+C:\Users\CARLOSANDRESPEREZMED\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\04Entidades\obj\Debug\04Entidades.pdb
