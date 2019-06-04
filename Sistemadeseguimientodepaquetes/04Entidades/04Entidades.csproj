@@ -30,8 +30,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,8 +48,73 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntidadesAdo.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntidadesAdo.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntidadesAdo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntidadesAdo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntidadesAdo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EntidadesAdo.edmx</DependentUpon>
+    </Compile>
     <Compile Include="SQLSentencia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="T_Aplicacion.cs">
+      <DependentUpon>EntidadesAdo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Cliente.cs">
+      <DependentUpon>EntidadesAdo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Estado_Clientes.cs">
+      <DependentUpon>EntidadesAdo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Estado_Tiquetes.cs">
+      <DependentUpon>EntidadesAdo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Roles.cs">
+      <DependentUpon>EntidadesAdo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Severidades.cs">
+      <DependentUpon>EntidadesAdo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Tiquete.cs">
+      <DependentUpon>EntidadesAdo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T_Usuarios.cs">
+      <DependentUpon>EntidadesAdo.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="EntidadesAdo.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EntidadesAdo.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EntidadesAdo.edmx.diagram">
+      <DependentUpon>EntidadesAdo.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EntidadesAdo.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntidadesAdo.edmx</DependentUpon>
+      <LastGenOutput>EntidadesAdo.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EntidadesAdo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EntidadesAdo.edmx</DependentUpon>
+      <LastGenOutput>EntidadesAdo.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

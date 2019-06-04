@@ -6,14 +6,14 @@ IF NOT EXISTS(SELECT * FROM sysdatabases WHERE name = 'DB_Tiquetes')
 		create database DB_Tiquetes
 		ON(
 			NAME = 'DBTiquetes',
-			FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL14.SQLSERVER\MSSQL\DATA\DB_Tiquetes.mdf',
+			FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\DATA\DB_Tiquetes.mdf',
 			SIZE = 1MB,
 			MAXSIZE = 10MB,
 			FILEGROWTH = 5
 		)
 		LOG ON(
 			NAME = 'DB_Tiquetes_log',
-			FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL14.SQLSERVER\MSSQL\Log\DB_Tiquetes_log.ldf',
+			FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\Log\DB_Tiquetes_log.ldf',
 			SIZE = 1MB,
 			MAXSIZE = 10MB,
 			FILEGROWTH = 5
@@ -25,7 +25,7 @@ ELSE
 	END
 go
 
-use EntidadFinanciera --Ubicacion de la base de datos
+use DB_Tiquetes 
 go
 
 IF NOT EXISTS(select * from sysobjects where type = 'U' and name = 'T_Aplicacion')
@@ -164,3 +164,12 @@ ELSE
 	END
 go
 
+--Crear Procedimiento almacenado para el Login
+use DB_Tiquetes 
+go
+Create proc LOGIN
+@IDUSER nvarchar(50),
+@PASSW nvarchar(50)
+AS
+SELECT Usuario, Contrasena_Usuario FROM T_Usuarios WHERE Usuario=@IDUSER AND Contrasena_Usuario=@PASSW 
+GO

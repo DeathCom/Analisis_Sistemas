@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using _04Entidades;
+using System.Data;
 
 namespace _03AccesoDatos
 {
@@ -12,7 +15,6 @@ namespace _03AccesoDatos
 
         private string cadenaConexion = Properties.Settings.Default.Conexion;
         private SqlConnection objConexion;
-
 
         #endregion
 
@@ -86,10 +88,10 @@ namespace _03AccesoDatos
         #endregion
 
         #region Metod para obtener Informacion de las Tablas
-        #region Administrador_Destino
-        public List<DESTINO> Obtener_Destino(SQLSentencia objsentencia)
+        #region Administrador_Aplicaciones
+        public List<T_Aplicacion> Obtener_Aplicaciones(SQLSentencia objsentencia)
         {
-            List<DESTINO> lstDestino = new List<DESTINO>();
+            List<T_Aplicacion> lstAplicacion = new List<T_Aplicacion>();
             System.Data.DataTable dt = new System.Data.DataTable();
             try
             {
@@ -104,12 +106,11 @@ namespace _03AccesoDatos
 
                 foreach (System.Data.DataRow item in dt.Rows)
                 {
-                    DESTINO objDestino = new DESTINO();
-                    objDestino.IDDESTINO = Convert.ToInt16(item.ItemArray[0].ToString());
-                    objDestino.PAIS = item.ItemArray[1].ToString();
-                    objDestino.CIUDAD = item.ItemArray[2].ToString();
-                    objDestino.IMPUESTO = Convert.ToInt32(item.ItemArray[3].ToString());
-                    lstDestino.Add(objDestino);
+                    T_Aplicacion objAplicacion = new T_Aplicacion();
+                    objAplicacion.Id_Aplicacion = Convert.ToInt16(item.ItemArray[0].ToString());
+                    objAplicacion.Nombre_Aplicacion = item.ItemArray[1].ToString();
+                    objAplicacion.Descripcion_Aplicacion = item.ItemArray[2].ToString();
+                    lstAplicacion.Add(objAplicacion);
                 }
             }
             catch (Exception ex)
@@ -121,14 +122,14 @@ namespace _03AccesoDatos
                 this.CERRAR();
             }
 
-            return lstDestino;
+            return lstAplicacion;
         }
         #endregion
 
-        #region Administrador_Envios
-        public List<ENVIO> Obtener_Envio(SQLSentencia objsentencia)
+        #region Administrador_Estados_Tiquetes_Clientes
+        public List<T_Estado_Tiquetes> Obtener_Estado_Tiquetes(SQLSentencia objsentencia)
         {
-            List<ENVIO> lstEnvio = new List<ENVIO>();
+            List<T_Estado_Tiquetes> lstEstado_Tiquetes = new List<T_Estado_Tiquetes>();
             System.Data.DataTable dt = new System.Data.DataTable();
             try
             {
@@ -143,11 +144,10 @@ namespace _03AccesoDatos
 
                 foreach (System.Data.DataRow item in dt.Rows)
                 {
-                    ENVIO objEnvio = new ENVIO();
-                    objEnvio.IDENVIO = Convert.ToInt16(item.ItemArray[0].ToString());
-                    objEnvio.DESC_ENVIO = item.ItemArray[1].ToString();
-                    objEnvio.PRECIO_ENVIO = Convert.ToInt16(item.ItemArray[2].ToString());
-                    lstEnvio.Add(objEnvio);
+                    T_Estado_Tiquetes objEstado_Tiquetes = new T_Estado_Tiquetes();
+                    objEstado_Tiquetes.Id_Estado_Tiquete = Convert.ToInt16(item.ItemArray[0].ToString());
+                    objEstado_Tiquetes.Descripcion_Estado_Tiquete = item.ItemArray[1].ToString();
+                    lstEstado_Tiquetes.Add(objEstado_Tiquetes);
                 }
             }
             catch (Exception ex)
@@ -159,14 +159,12 @@ namespace _03AccesoDatos
                 this.CERRAR();
             }
 
-            return lstEnvio;
+            return lstEstado_Tiquetes;
         }
-        #endregion
 
-        #region Administrador_Estados
-        public List<ESTADO> Obtener_Estado(SQLSentencia objsentencia)
+        public List<T_Estado_Clientes> Obtener_Estado_Clientes(SQLSentencia objsentencia)
         {
-            List<ESTADO> lstEstado = new List<ESTADO>();
+            List<T_Estado_Clientes> lstEstado_Clientes = new List<T_Estado_Clientes>();
             System.Data.DataTable dt = new System.Data.DataTable();
             try
             {
@@ -181,10 +179,10 @@ namespace _03AccesoDatos
 
                 foreach (System.Data.DataRow item in dt.Rows)
                 {
-                    ESTADO objEstado = new ESTADO();
-                    objEstado.IDESTADO = Convert.ToInt16(item.ItemArray[0].ToString());
-                    objEstado.DESC_ESTADO = item.ItemArray[1].ToString();
-                    lstEstado.Add(objEstado);
+                    T_Estado_Clientes objEstado_Clientes = new T_Estado_Clientes();
+                    objEstado_Clientes.Id_Estado_Clientes = Convert.ToInt16(item.ItemArray[0].ToString());
+                    objEstado_Clientes.Descripcion_Estado_Clientes = item.ItemArray[1].ToString();
+                    lstEstado_Clientes.Add(objEstado_Clientes);
                 }
             }
             catch (Exception ex)
@@ -196,14 +194,14 @@ namespace _03AccesoDatos
                 this.CERRAR();
             }
 
-            return lstEstado;
+            return lstEstado_Clientes;
         }
         #endregion
 
-        #region Administrador_Origen
-        public List<ORIGEN> Obtener_Origen(SQLSentencia objsentencia)
+        #region Administrador_Clientes
+        public List<T_Cliente> Obtener_Origen(SQLSentencia objsentencia)
         {
-            List<ORIGEN> lstOrigen = new List<ORIGEN>();
+            List<T_Cliente> lstClientes= new List<T_Cliente>();
             System.Data.DataTable dt = new System.Data.DataTable();
             try
             {
@@ -218,11 +216,19 @@ namespace _03AccesoDatos
 
                 foreach (System.Data.DataRow item in dt.Rows)
                 {
-                    ORIGEN objOrigen = new ORIGEN();
-                    objOrigen.IDORIGEN = Convert.ToInt16(item.ItemArray[0].ToString());
-                    objOrigen.PAIS = item.ItemArray[1].ToString();
-                    objOrigen.CIUDAD = item.ItemArray[2].ToString();
-                    lstOrigen.Add(objOrigen);
+                    T_Cliente objCliente = new T_Cliente();
+                    objCliente.Id_Cliente = Convert.ToInt16(item.ItemArray[0].ToString());
+                    objCliente.Nombre_Cliente= item.ItemArray[1].ToString();
+                    objCliente.Telefono_Cliente = item.ItemArray[2].ToString();
+                    objCliente.Correo_Cliente = item.ItemArray[3].ToString();
+                    objCliente.Region_Cliente = item.ItemArray[4].ToString();
+                    objCliente.Pais_Cliente = item.ItemArray[5].ToString();
+                    objCliente.Focal_Cliente = item.ItemArray[6].ToString();
+                    objCliente.Tipo_Servidor = item.ItemArray[7].ToString();
+                    objCliente.Nombre_Servidor = item.ItemArray[8].ToString();
+                    objCliente.Ip_Servidor = item.ItemArray[9].ToString();
+                    objCliente.Estado_Servidor = item.ItemArray[10].ToString();
+                    lstClientes.Add(objCliente);
                 }
             }
             catch (Exception ex)
@@ -234,14 +240,14 @@ namespace _03AccesoDatos
                 this.CERRAR();
             }
 
-            return lstOrigen;
+            return lstClientes;
         }
         #endregion
 
-        #region Administrador_Pagos
-        public List<PAGO> Obtener_Pago(SQLSentencia objsentencia)
+        #region Administrador_Roles
+        public List<T_Roles> Obtener_Pago(SQLSentencia objsentencia)
         {
-            List<PAGO> lstPago = new List<PAGO>();
+            List<T_Roles> lstRoles = new List<T_Roles>();
             System.Data.DataTable dt = new System.Data.DataTable();
             try
             {
@@ -256,10 +262,11 @@ namespace _03AccesoDatos
 
                 foreach (System.Data.DataRow item in dt.Rows)
                 {
-                    PAGO objPago = new PAGO();
-                    objPago.IDPAGO = Convert.ToInt16(item.ItemArray[0].ToString());
-                    objPago.DESC_PAGO = item.ItemArray[1].ToString();
-                    lstPago.Add(objPago);
+                    T_Roles objRol = new T_Roles();
+                    objRol.Id_Rol = Convert.ToInt16(item.ItemArray[0].ToString());
+                    objRol.Nombre_Rol = item.ItemArray[1].ToString();
+                    objRol.Descripcion_Rol = item.ItemArray[2].ToString();
+                    lstRoles.Add(objRol);
                 }
             }
             catch (Exception ex)
@@ -271,14 +278,14 @@ namespace _03AccesoDatos
                 this.CERRAR();
             }
 
-            return lstPago;
+            return lstRoles;
         }
         #endregion
 
-        #region Administrador_Pedido
-        public List<PEDIDOS> Obtener_Pedidos(SQLSentencia objSentencia)
+        #region Administrador_Severidades
+        public List<T_Severidades> Obtener_Severidades(SQLSentencia objSentencia)
         {
-            List<PEDIDOS> lstPedidos = new List<PEDIDOS>();
+            List<T_Severidades> lstSeveridades = new List<T_Severidades>();
             System.Data.DataTable dt = new System.Data.DataTable();
             try
             {
@@ -290,19 +297,10 @@ namespace _03AccesoDatos
                 objcarga.Fill(dt);
                 foreach (System.Data.DataRow item in dt.Rows)
                 {
-                    PEDIDOS objPedido = new PEDIDOS();
-                    objPedido.IDPEDIDO = Convert.ToInt32(item.ItemArray[0].ToString());
-                    objPedido.IDUSUARIO = Convert.ToInt32(item.ItemArray[1].ToString());
-                    objPedido.IDPAISORIGEN = item.ItemArray[2].ToString();
-                    objPedido.IDPAISDESTINO = item.ItemArray[3].ToString();
-                    objPedido.IDPAGO = item.ItemArray[4].ToString();
-                    objPedido.IDENVIO = item.ItemArray[5].ToString();
-                    objPedido.IDESTADO = item.ItemArray[6].ToString();
-                    objPedido.TOTAL = Convert.ToInt32(item.ItemArray[7].ToString());
-                    objPedido.DESCRIPCION = item.ItemArray[8].ToString();
-                    objPedido.IDCIUDADDESTINO = item.ItemArray[9].ToString();
-                    objPedido.IDCIUDADORIGEN = item.ItemArray[10].ToString();
-                    lstPedidos.Add(objPedido);
+                    T_Severidades objSeveridades = new T_Severidades();
+                    objSeveridades.Severidad = Convert.ToInt32(item.ItemArray[0].ToString());
+                    objSeveridades.Descripcion_Severidad = item.ItemArray[1].ToString();
+                    lstSeveridades.Add(objSeveridades);
                 }
 
             }
@@ -314,15 +312,15 @@ namespace _03AccesoDatos
             {
                 CERRAR();
             }
-            return lstPedidos;
+            return lstSeveridades;
         }
 
         #endregion
 
-        #region Administrador_Usuario
-        public List<USUARIOS> Obtener_Usuarios(SQLSentencia objSentencia)
+        #region Administrador_Usuarios
+        public List<T_Usuarios> Obtener_Usuarios(SQLSentencia objSentencia)
         {
-            List<USUARIOS> lstUsuarios = new List<USUARIOS>();
+            List<T_Usuarios> lstUsuarios = new List<T_Usuarios>();
             System.Data.DataTable dt = new System.Data.DataTable();
             try
             {
@@ -334,13 +332,13 @@ namespace _03AccesoDatos
                 objcarga.Fill(dt);
                 foreach (System.Data.DataRow item in dt.Rows)
                 {
-                    USUARIOS objUsuario = new USUARIOS();
-                    objUsuario.IDUSUARIO = Convert.ToInt32(item.ItemArray[0].ToString());
-                    objUsuario.NOMBRE = item.ItemArray[1].ToString();
-                    objUsuario.ALIAS = item.ItemArray[2].ToString();
-                    objUsuario.PASS = item.ItemArray[3].ToString();
-                    objUsuario.TIPO_USUARIO = item.ItemArray[4].ToString();
-                    objUsuario.ESTADO_USUARIO = item.ItemArray[5].ToString();
+                    T_Usuarios objUsuario = new T_Usuarios();
+                    objUsuario.Id_Usuario = Convert.ToInt32(item.ItemArray[0].ToString());
+                    objUsuario.Usuario = item.ItemArray[1].ToString();
+                    objUsuario.Nombre_Usuario = item.ItemArray[2].ToString();
+                    objUsuario.Contrasena_Usuario = item.ItemArray[3].ToString();
+                    objUsuario.Estado_Usuario = item.ItemArray[4].ToString();
+                    objUsuario.Tipo_Usuario = item.ItemArray[5].ToString();
                     lstUsuarios.Add(objUsuario);
                 }
 
@@ -356,6 +354,52 @@ namespace _03AccesoDatos
             return lstUsuarios;
         }
         #endregion
+
+        #region Administrador_Tiquetes
+        public List<T_Tiquete> Obtener_Tiquetes(SQLSentencia objsentencia)
+        {
+            List<T_Tiquete> lstTiquetes = new List<T_Tiquete>();
+            System.Data.DataTable dt = new System.Data.DataTable();
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                cmd.CommandText = objsentencia.PETICION;
+                cmd.Connection = objConexion;
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                SqlDataAdapter objcarga = new SqlDataAdapter(cmd);
+                objcarga.Fill(dt);
+
+                foreach (System.Data.DataRow item in dt.Rows)
+                {
+                    T_Tiquete objTiquete = new T_Tiquete();
+                    objTiquete.Id_Tiquete = Convert.ToInt16(item.ItemArray[0].ToString());
+                    objTiquete.Id_Supervisor = Convert.ToInt16(item.ItemArray[1].ToString());
+                    objTiquete.Nombre_Usuario = item.ItemArray[2].ToString();
+                    objTiquete.Nombre_Cliente = item.ItemArray[3].ToString();
+                    objTiquete.Nombre_Aplicacion = item.ItemArray[4].ToString();
+                    objTiquete.Numero_Tiquete = item.ItemArray[5].ToString();
+                    objTiquete.Severidad_Tiquete = Convert.ToInt16(item.ItemArray[6].ToString());
+                    objTiquete.Estado_Tiquete = item.ItemArray[7].ToString();
+                    objTiquete.Comentarios_Tiquete = item.ItemArray[8].ToString();
+                    objTiquete.HorayFecha_Apertura = Convert.ToDateTime(item.ItemArray[9].ToString());
+                    objTiquete.HorayFecha_Cierre = Convert.ToDateTime(item.ItemArray[10].ToString());
+                    lstTiquetes.Add(objTiquete);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                this.CERRAR();
+            }
+
+            return lstTiquetes;
+        }
+        #endregion
         #endregion
 
         #region ProcesoLogin
@@ -365,10 +409,6 @@ namespace _03AccesoDatos
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@IDUSER", objE.iduser);
             cmd.Parameters.AddWithValue("@PASSW", objE.password);
-            //cmd.Parameters.AddWithValue("@TIPO_USER", objE.typeuser);
-            //cmd.Parameters.AddWithValue("@NOMBREUSER", objE.nameUser);
-            //cmd.Parameters.AddWithValue("@TIPO_USER", objE.typeuser);
-            //cmd.Parameters.AddWithValue("@ESTADO_USER", objE.stateUser);
             SqlDataAdapter sda = new SqlDataAdapter(cmd);
             DataTable datatable = new DataTable();
             sda.Fill(datatable);

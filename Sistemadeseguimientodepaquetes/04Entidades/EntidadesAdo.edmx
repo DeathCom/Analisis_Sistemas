@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DB_TiquetesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="T_Aplicacion">
+          <Key>
+            <PropertyRef Name="Id_Aplicacion" />
+          </Key>
+          <Property Name="Id_Aplicacion" Type="int" Nullable="false" />
+          <Property Name="Nombre_Aplicacion" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Descripcion_Aplicacion" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Cliente">
+          <Key>
+            <PropertyRef Name="Id_Cliente" />
+          </Key>
+          <Property Name="Id_Cliente" Type="int" Nullable="false" />
+          <Property Name="Nombre_Cliente" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Telefono_Cliente" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Correo_Cliente" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Region_Cliente" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Pais_Cliente" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Focal_Cliente" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tipo_Servidor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nombre_Servidor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Ip_Servidor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Estado_Servidor" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Estado_Clientes">
+          <Key>
+            <PropertyRef Name="Id_Estado_Clientes" />
+          </Key>
+          <Property Name="Id_Estado_Clientes" Type="int" Nullable="false" />
+          <Property Name="Descripcion_Estado_Clientes" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Estado_Tiquetes">
+          <Key>
+            <PropertyRef Name="Id_Estado_Tiquete" />
+          </Key>
+          <Property Name="Id_Estado_Tiquete" Type="int" Nullable="false" />
+          <Property Name="Descripcion_Estado_Tiquete" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Roles">
+          <Key>
+            <PropertyRef Name="Id_Rol" />
+          </Key>
+          <Property Name="Id_Rol" Type="int" Nullable="false" />
+          <Property Name="Nombre_Rol" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Descripcion_Rol" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Severidades">
+          <Key>
+            <PropertyRef Name="Severidad" />
+          </Key>
+          <Property Name="Severidad" Type="int" Nullable="false" />
+          <Property Name="Descripcion_Severidad" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Tiquete">
+          <Key>
+            <PropertyRef Name="Id_Tiquete" />
+          </Key>
+          <Property Name="Id_Tiquete" Type="int" Nullable="false" />
+          <Property Name="Id_Supervisor" Type="int" Nullable="false" />
+          <Property Name="Nombre_Usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nombre_Cliente" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nombre_Aplicacion" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Numero_Tiquete" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Severidad_Tiquete" Type="int" Nullable="false" />
+          <Property Name="Estado_Tiquete" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Comentarios_Tiquete" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="HorayFecha_Apertura" Type="datetime" />
+          <Property Name="HorayFecha_Cierre" Type="datetime" />
+        </EntityType>
+        <EntityType Name="T_Usuarios">
+          <Key>
+            <PropertyRef Name="Id_Usuario" />
+          </Key>
+          <Property Name="Id_Usuario" Type="int" Nullable="false" />
+          <Property Name="Usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nombre_Usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Contrasena_Usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Estado_Usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tipo_Usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DB_TiquetesModelStoreContainer">
+          <EntitySet Name="T_Aplicacion" EntityType="Self.T_Aplicacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Cliente" EntityType="Self.T_Cliente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Estado_Clientes" EntityType="Self.T_Estado_Clientes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Estado_Tiquetes" EntityType="Self.T_Estado_Tiquetes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Roles" EntityType="Self.T_Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Severidades" EntityType="Self.T_Severidades" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Tiquete" EntityType="Self.T_Tiquete" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="T_Usuarios" EntityType="Self.T_Usuarios" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_TiquetesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="T_Aplicacion">
+          <Key>
+            <PropertyRef Name="Id_Aplicacion" />
+          </Key>
+          <Property Name="Id_Aplicacion" Type="Int32" Nullable="false" />
+          <Property Name="Nombre_Aplicacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Descripcion_Aplicacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Cliente">
+          <Key>
+            <PropertyRef Name="Id_Cliente" />
+          </Key>
+          <Property Name="Id_Cliente" Type="Int32" Nullable="false" />
+          <Property Name="Nombre_Cliente" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Telefono_Cliente" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Correo_Cliente" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Region_Cliente" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Pais_Cliente" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Focal_Cliente" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tipo_Servidor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nombre_Servidor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ip_Servidor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Estado_Servidor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Estado_Clientes">
+          <Key>
+            <PropertyRef Name="Id_Estado_Clientes" />
+          </Key>
+          <Property Name="Id_Estado_Clientes" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion_Estado_Clientes" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Estado_Tiquetes">
+          <Key>
+            <PropertyRef Name="Id_Estado_Tiquete" />
+          </Key>
+          <Property Name="Id_Estado_Tiquete" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion_Estado_Tiquete" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Roles">
+          <Key>
+            <PropertyRef Name="Id_Rol" />
+          </Key>
+          <Property Name="Id_Rol" Type="Int32" Nullable="false" />
+          <Property Name="Nombre_Rol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Descripcion_Rol" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Severidades">
+          <Key>
+            <PropertyRef Name="Severidad" />
+          </Key>
+          <Property Name="Severidad" Type="Int32" Nullable="false" />
+          <Property Name="Descripcion_Severidad" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_Tiquete">
+          <Key>
+            <PropertyRef Name="Id_Tiquete" />
+          </Key>
+          <Property Name="Id_Tiquete" Type="Int32" Nullable="false" />
+          <Property Name="Id_Supervisor" Type="Int32" Nullable="false" />
+          <Property Name="Nombre_Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nombre_Cliente" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nombre_Aplicacion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Numero_Tiquete" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Severidad_Tiquete" Type="Int32" Nullable="false" />
+          <Property Name="Estado_Tiquete" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Comentarios_Tiquete" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HorayFecha_Apertura" Type="DateTime" Precision="3" />
+          <Property Name="HorayFecha_Cierre" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="T_Usuarios">
+          <Key>
+            <PropertyRef Name="Id_Usuario" />
+          </Key>
+          <Property Name="Id_Usuario" Type="Int32" Nullable="false" />
+          <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nombre_Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Contrasena_Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Estado_Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tipo_Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DB_TiquetesEntidades" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_Aplicacion" EntityType="Self.T_Aplicacion" />
+          <EntitySet Name="T_Cliente" EntityType="Self.T_Cliente" />
+          <EntitySet Name="T_Estado_Clientes" EntityType="Self.T_Estado_Clientes" />
+          <EntitySet Name="T_Estado_Tiquetes" EntityType="Self.T_Estado_Tiquetes" />
+          <EntitySet Name="T_Roles" EntityType="Self.T_Roles" />
+          <EntitySet Name="T_Severidades" EntityType="Self.T_Severidades" />
+          <EntitySet Name="T_Tiquete" EntityType="Self.T_Tiquete" />
+          <EntitySet Name="T_Usuarios" EntityType="Self.T_Usuarios" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_TiquetesModelStoreContainer" CdmEntityContainer="DB_TiquetesEntidades">
+          <EntitySetMapping Name="T_Aplicacion">
+            <EntityTypeMapping TypeName="DB_TiquetesModel.T_Aplicacion">
+              <MappingFragment StoreEntitySet="T_Aplicacion">
+                <ScalarProperty Name="Id_Aplicacion" ColumnName="Id_Aplicacion" />
+                <ScalarProperty Name="Nombre_Aplicacion" ColumnName="Nombre_Aplicacion" />
+                <ScalarProperty Name="Descripcion_Aplicacion" ColumnName="Descripcion_Aplicacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Cliente">
+            <EntityTypeMapping TypeName="DB_TiquetesModel.T_Cliente">
+              <MappingFragment StoreEntitySet="T_Cliente">
+                <ScalarProperty Name="Id_Cliente" ColumnName="Id_Cliente" />
+                <ScalarProperty Name="Nombre_Cliente" ColumnName="Nombre_Cliente" />
+                <ScalarProperty Name="Telefono_Cliente" ColumnName="Telefono_Cliente" />
+                <ScalarProperty Name="Correo_Cliente" ColumnName="Correo_Cliente" />
+                <ScalarProperty Name="Region_Cliente" ColumnName="Region_Cliente" />
+                <ScalarProperty Name="Pais_Cliente" ColumnName="Pais_Cliente" />
+                <ScalarProperty Name="Focal_Cliente" ColumnName="Focal_Cliente" />
+                <ScalarProperty Name="Tipo_Servidor" ColumnName="Tipo_Servidor" />
+                <ScalarProperty Name="Nombre_Servidor" ColumnName="Nombre_Servidor" />
+                <ScalarProperty Name="Ip_Servidor" ColumnName="Ip_Servidor" />
+                <ScalarProperty Name="Estado_Servidor" ColumnName="Estado_Servidor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Estado_Clientes">
+            <EntityTypeMapping TypeName="DB_TiquetesModel.T_Estado_Clientes">
+              <MappingFragment StoreEntitySet="T_Estado_Clientes">
+                <ScalarProperty Name="Id_Estado_Clientes" ColumnName="Id_Estado_Clientes" />
+                <ScalarProperty Name="Descripcion_Estado_Clientes" ColumnName="Descripcion_Estado_Clientes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Estado_Tiquetes">
+            <EntityTypeMapping TypeName="DB_TiquetesModel.T_Estado_Tiquetes">
+              <MappingFragment StoreEntitySet="T_Estado_Tiquetes">
+                <ScalarProperty Name="Id_Estado_Tiquete" ColumnName="Id_Estado_Tiquete" />
+                <ScalarProperty Name="Descripcion_Estado_Tiquete" ColumnName="Descripcion_Estado_Tiquete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Roles">
+            <EntityTypeMapping TypeName="DB_TiquetesModel.T_Roles">
+              <MappingFragment StoreEntitySet="T_Roles">
+                <ScalarProperty Name="Id_Rol" ColumnName="Id_Rol" />
+                <ScalarProperty Name="Nombre_Rol" ColumnName="Nombre_Rol" />
+                <ScalarProperty Name="Descripcion_Rol" ColumnName="Descripcion_Rol" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Severidades">
+            <EntityTypeMapping TypeName="DB_TiquetesModel.T_Severidades">
+              <MappingFragment StoreEntitySet="T_Severidades">
+                <ScalarProperty Name="Severidad" ColumnName="Severidad" />
+                <ScalarProperty Name="Descripcion_Severidad" ColumnName="Descripcion_Severidad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Tiquete">
+            <EntityTypeMapping TypeName="DB_TiquetesModel.T_Tiquete">
+              <MappingFragment StoreEntitySet="T_Tiquete">
+                <ScalarProperty Name="Id_Tiquete" ColumnName="Id_Tiquete" />
+                <ScalarProperty Name="Id_Supervisor" ColumnName="Id_Supervisor" />
+                <ScalarProperty Name="Nombre_Usuario" ColumnName="Nombre_Usuario" />
+                <ScalarProperty Name="Nombre_Cliente" ColumnName="Nombre_Cliente" />
+                <ScalarProperty Name="Nombre_Aplicacion" ColumnName="Nombre_Aplicacion" />
+                <ScalarProperty Name="Numero_Tiquete" ColumnName="Numero_Tiquete" />
+                <ScalarProperty Name="Severidad_Tiquete" ColumnName="Severidad_Tiquete" />
+                <ScalarProperty Name="Estado_Tiquete" ColumnName="Estado_Tiquete" />
+                <ScalarProperty Name="Comentarios_Tiquete" ColumnName="Comentarios_Tiquete" />
+                <ScalarProperty Name="HorayFecha_Apertura" ColumnName="HorayFecha_Apertura" />
+                <ScalarProperty Name="HorayFecha_Cierre" ColumnName="HorayFecha_Cierre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_Usuarios">
+            <EntityTypeMapping TypeName="DB_TiquetesModel.T_Usuarios">
+              <MappingFragment StoreEntitySet="T_Usuarios">
+                <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Nombre_Usuario" ColumnName="Nombre_Usuario" />
+                <ScalarProperty Name="Contrasena_Usuario" ColumnName="Contrasena_Usuario" />
+                <ScalarProperty Name="Estado_Usuario" ColumnName="Estado_Usuario" />
+                <ScalarProperty Name="Tipo_Usuario" ColumnName="Tipo_Usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
