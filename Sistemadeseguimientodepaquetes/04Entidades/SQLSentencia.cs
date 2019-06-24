@@ -26,6 +26,7 @@ namespace _04Entidades
         {
             this.peticion = string.Empty;
         }
+
         public string PETICION
         {
             set { this.peticion = value; }

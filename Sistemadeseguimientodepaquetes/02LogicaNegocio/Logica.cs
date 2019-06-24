@@ -31,34 +31,33 @@ namespace _02LogicaNegocio
 
         #region Tablas
 
-        #region Metodos Para Tabla DESTINO 
-        public static void GuardarDato(DESTINO destino) //Metodo para Agregar informacion a la tabla DESTINO
+        #region Metodos Para Tabla T_Aplicacion 
+        public static void GuardarDato(T_Aplicacion Aplicacion) //Metodo para Agregar informacion a la tabla DESTINO
         {
             try
             {
                 ArrayList listParametros = new ArrayList();
                 SQLSentencia sentencia = new SQLSentencia();
-                //sentencia.PETICION = @"INSERT INTO DESTINO VALUES ('" + destino.PAIS + "','" + destino.CIUDAD + "','" + destino.IMPUESTO + "')";
-                sentencia.PETICION = @"INSERT INTO DESTINO VALUES (@pais,@ciudad,@impuesto)";
+                sentencia.PETICION = @"INSERT INTO T_Aplicacion VALUES (@Id_Aplicacion,@Nombre_Aplicacion,@Descripcion_Aplicacion)";
                 #region Parametrización
-                SqlParameter pais = new SqlParameter();
-                pais.SqlDbType = System.Data.SqlDbType.NVarChar;
-                pais.ParameterName = "@pais";
-                pais.Value = destino.PAIS;
+                SqlParameter Id_Aplicacion = new SqlParameter();
+                Id_Aplicacion.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Aplicacion.ParameterName = "@Id_Aplicacion";
+                Id_Aplicacion.Value = Aplicacion.Id_Aplicacion;
 
-                SqlParameter ciudad = new SqlParameter();
-                ciudad.SqlDbType = System.Data.SqlDbType.NVarChar;
-                ciudad.ParameterName = "@ciudad";
-                ciudad.Value = destino.CIUDAD;
+                SqlParameter Nombre_Aplicacion = new SqlParameter();
+                Nombre_Aplicacion.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Nombre_Aplicacion.ParameterName = "@Nombre_Aplicacion";
+                Nombre_Aplicacion.Value = Aplicacion.Nombre_Aplicacion;
 
-                SqlParameter impuesto = new SqlParameter();
-                impuesto.SqlDbType = System.Data.SqlDbType.Int;
-                impuesto.ParameterName = "@impuesto";
-                impuesto.Value = destino.IMPUESTO;
+                SqlParameter Descripcion_Aplicacion = new SqlParameter();
+                Descripcion_Aplicacion.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Descripcion_Aplicacion.ParameterName = "@Descripcion_Aplicacion";
+                Descripcion_Aplicacion.Value = Aplicacion.Descripcion_Aplicacion;
 
-                listParametros.Add(pais);
-                listParametros.Add(ciudad);
-                listParametros.Add(impuesto);
+                listParametros.Add(Id_Aplicacion);
+                listParametros.Add(Nombre_Aplicacion);
+                listParametros.Add(Descripcion_Aplicacion);
 
                 sentencia.LSTPARAMETROS = listParametros;
                 #endregion
@@ -71,39 +70,33 @@ namespace _02LogicaNegocio
                 throw e;
             }
         }
-        public static void ModificarDato(DESTINO destino) //Metodo para Modificar informacion en la tabla DESTINO
+        public static void ModificarDato(T_Aplicacion Aplicacion) //Metodo para Modificar informacion en la tabla DESTINO
         {
             try
             {
                 ArrayList listParametros = new ArrayList();
                 SQLSentencia sentencia = new SQLSentencia();
-                //sentencia.PETICION = @"UPDATE DESTINO SET PAIS='" + destino.PAIS + "', CIUDAD='" + destino.CIUDAD + "', IMPUESTO='" + destino.IMPUESTO + "' WHERE IDDESTINO='" + destino.IDDESTINO + "'";
-                sentencia.PETICION = @"UPDATE DESTINO SET PAIS= @pais, CIUDAD= @ciudad, IMPUESTO= @impuesto WHERE IDDESTINO= @iDdestino";
+                sentencia.PETICION = @"UPDATE T_Aplicacion SET Nombre_Aplicacion= @Nombre_Aplicacion, Descripcion_Aplicacion= @Descripcion_Aplicacion WHERE Id_Aplicacion= @Id_Aplicacion";
+
                 #region Parametrización
-                SqlParameter pais = new SqlParameter();
-                pais.SqlDbType = System.Data.SqlDbType.NVarChar;
-                pais.ParameterName = "@pais";
-                pais.Value = destino.PAIS;
+                SqlParameter Id_Aplicacion = new SqlParameter();
+                Id_Aplicacion.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Aplicacion.ParameterName = "@Id_Aplicacion";
+                Id_Aplicacion.Value = Aplicacion.Id_Aplicacion;
 
-                SqlParameter ciudad = new SqlParameter();
-                ciudad.SqlDbType = System.Data.SqlDbType.NVarChar;
-                ciudad.ParameterName = "@ciudad";
-                ciudad.Value = destino.CIUDAD;
+                SqlParameter Nombre_Aplicacion = new SqlParameter();
+                Nombre_Aplicacion.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Nombre_Aplicacion.ParameterName = "@Nombre_Aplicacion";
+                Nombre_Aplicacion.Value = Aplicacion.Nombre_Aplicacion;
 
-                SqlParameter impuesto = new SqlParameter();
-                impuesto.SqlDbType = System.Data.SqlDbType.Int;
-                impuesto.ParameterName = "@impuesto";
-                impuesto.Value = destino.IMPUESTO;
+                SqlParameter Descripcion_Aplicacion = new SqlParameter();
+                Descripcion_Aplicacion.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Descripcion_Aplicacion.ParameterName = "@Descripcion_Aplicacion";
+                Descripcion_Aplicacion.Value = Aplicacion.Descripcion_Aplicacion;
 
-                SqlParameter iDdestino = new SqlParameter();
-                iDdestino.SqlDbType = System.Data.SqlDbType.Int;
-                iDdestino.ParameterName = "@iDdestino";
-                iDdestino.Value = destino.IDDESTINO;
-
-                listParametros.Add(pais);
-                listParametros.Add(ciudad);
-                listParametros.Add(impuesto);
-                listParametros.Add(iDdestino);
+                listParametros.Add(Id_Aplicacion);
+                listParametros.Add(Nombre_Aplicacion);
+                listParametros.Add(Descripcion_Aplicacion);
 
                 sentencia.LSTPARAMETROS = listParametros;
                 #endregion
@@ -116,20 +109,20 @@ namespace _02LogicaNegocio
                 throw e;
             }
         }
-        public static void EliminarDato(DESTINO destino) //Metodo para Eliminar informacion en la tabla DESTINO
+        public static void EliminarDato(T_Aplicacion Aplicacion) //Metodo para Eliminar informacion en la tabla DESTINO
         {
             try
             {
                 ArrayList listParametros = new ArrayList();
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"DELETE FROM DESTINO WHERE IDDESTINO= @iDdestino";
+                sentencia.PETICION = @"DELETE FROM T_Aplicacion WHERE Id_Aplicacion= @Id_Aplicacion";
                 #region Parametrización
-                SqlParameter iDdestino = new SqlParameter();
-                iDdestino.SqlDbType = System.Data.SqlDbType.Int;
-                iDdestino.ParameterName = "@iDdestino";
-                iDdestino.Value = destino.IDDESTINO;
+                SqlParameter Id_Aplicacion = new SqlParameter();
+                Id_Aplicacion.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Aplicacion.ParameterName = "@Id_Aplicacion";
+                Id_Aplicacion.Value = Aplicacion.Id_Aplicacion;
 
-                listParametros.Add(iDdestino);
+                listParametros.Add(Id_Aplicacion);
 
                 sentencia.LSTPARAMETROS = listParametros;
                 #endregion
@@ -141,28 +134,28 @@ namespace _02LogicaNegocio
                 throw e;
             }
         }
-        public static List<DESTINO> obtDestinos()
+        public static List<T_Aplicacion> obtAplicacion()
         {
             try
             {
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT IDDESTINO, PAIS, CIUDAD, IMPUESTO FROM DESTINO";
+                sentencia.PETICION = @"SELECT Id_Aplicacion, Nombre_Aplicacion, Descripcion_Aplicacion FROM T_Aplicacion";
                 Acceso objacceso = new Acceso();
-                return objacceso.Obtener_Destino(sentencia);
+                return objacceso.Obtener_Aplicaciones(sentencia);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
-        public static List<DESTINO> BuscarDatoA(DESTINO destino) //Metodo para Buscar informacion en la tabla DESTINO
+        public static List<T_Aplicacion> BuscarDatoA(T_Aplicacion Aplicacion) //Metodo para Buscar informacion en la tabla DESTINO
         {
             try
             {
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT * FROM DESTINO WHERE IDDESTINO='" + destino.IDDESTINO + "'";
+                sentencia.PETICION = @"SELECT Id_Aplicacion, Nombre_Aplicacion, Descripcion_Aplicacion FROM T_Aplicacion WHERE Id_Aplicacion='" + Aplicacion.Id_Aplicacion + "'";
                 _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                return objAcceso.Obtener_Destino(sentencia);
+                return objAcceso.Obtener_Aplicaciones(sentencia);
             }
             catch (Exception e)
             {
@@ -170,14 +163,14 @@ namespace _02LogicaNegocio
                 throw e;
             }
         }
-        public static List<DESTINO> BuscarDatoB(DESTINO destino) //Metodo para Buscar informacion en la tabla DESTINO
+        public static List<T_Aplicacion> BuscarDatoB(T_Aplicacion Aplicacion) //Metodo para Buscar informacion en la tabla DESTINO
         {
             try
             {
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT * FROM DESTINO WHERE PAIS='" + destino.PAIS + "'";
+                sentencia.PETICION = @"SELECT Id_Aplicacion, Nombre_Aplicacion, Descripcion_Aplicacion FROM T_Aplicacion WHERE Nombre_Aplicacion='" + Aplicacion.Nombre_Aplicacion + "'";
                 _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                return objAcceso.Obtener_Destino(sentencia);
+                return objAcceso.Obtener_Aplicaciones(sentencia);
             }
             catch (Exception e)
             {
@@ -188,28 +181,27 @@ namespace _02LogicaNegocio
 
         #endregion
 
-        #region Metodos Para Tabla ENVIO 
-        public static void GuardarDato(ENVIO envio) //Metodo para Agregar informacion a la tabla Envio
+        #region Metodos Para Tabla T_Estado_Tiquetes 
+        public static void GuardarDato(T_Estado_Tiquetes E_Tiquete) //Metodo para Agregar informacion a la tabla Envio
         {
             try
             {
                 ArrayList listParametros = new ArrayList();
                 SQLSentencia sentencia = new SQLSentencia();
-                //sentencia.PETICION = @"INSERT INTO ENVIO VALUES ('" + envio.DESC_ENVIO + "','" + envio.PRECIO_ENVIO + "')";
-                sentencia.PETICION = @"INSERT INTO ENVIO VALUES (@DESC_ENVIO, @PRECIO_ENVIO)";
+                sentencia.PETICION = @"INSERT INTO T_Estado_Tiquetes VALUES (@Id_Estado_Tiquete, @Descripcion_Estado_Tiquete)";
                 #region Parametrización
-                SqlParameter DESC_ENVIO = new SqlParameter();
-                DESC_ENVIO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                DESC_ENVIO.ParameterName = "@DESC_ENVIO";
-                DESC_ENVIO.Value = envio.DESC_ENVIO;
+                SqlParameter Id_Estado_Tiquete = new SqlParameter();
+                Id_Estado_Tiquete.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Estado_Tiquete.ParameterName = "@Id_Estado_Tiquete";
+                Id_Estado_Tiquete.Value = E_Tiquete.Id_Estado_Tiquete;
 
-                SqlParameter PRECIO_ENVIO = new SqlParameter();
-                PRECIO_ENVIO.SqlDbType = System.Data.SqlDbType.Int;
-                PRECIO_ENVIO.ParameterName = "@PRECIO_ENVIO";
-                PRECIO_ENVIO.Value = envio.PRECIO_ENVIO;
+                SqlParameter Descripcion_Estado_Tiquete = new SqlParameter();
+                Descripcion_Estado_Tiquete.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Descripcion_Estado_Tiquete.ParameterName = "@Descripcion_Estado_Tiquete";
+                Descripcion_Estado_Tiquete.Value = E_Tiquete.Descripcion_Estado_Tiquete;
 
-                listParametros.Add(DESC_ENVIO);
-                listParametros.Add(PRECIO_ENVIO);
+                listParametros.Add(Id_Estado_Tiquete);
+                listParametros.Add(Descripcion_Estado_Tiquete);
 
                 sentencia.LSTPARAMETROS = listParametros;
                 #endregion
@@ -221,34 +213,27 @@ namespace _02LogicaNegocio
                 throw e;
             }
         }
-        public static void ModificarDato(ENVIO envio) //Metodo para Modificar informacion en la tabla envio
+        public static void ModificarDato(T_Estado_Tiquetes E_Tiquete) //Metodo para Modificar informacion en la tabla envio
 
         {
             try
             {
                 ArrayList listParametros = new ArrayList();
                 SQLSentencia sentencia = new SQLSentencia();
-                //sentencia.PETICION = @"UPDATE ENVIO SET IDENVIO='" + envio.IDENVIO + "', DESC_ENVIO='" + envio.DESC_ENVIO + "', , PRECIO_ENVIO='" + envio.PRECIO_ENVIO + "' WHERE IDENVIO='" + envio.IDENVIO + "'";
-                sentencia.PETICION = @"UPDATE ENVIO SET DESC_ENVIO= @DESC_ENVIO, PRECIO_ENVIO= @PRECIO_ENVIO WHERE IDENVIO= @IDENVIO";
+                sentencia.PETICION = @"UPDATE T_Estado_Tiquetes SET Descripcion_Estado_Tiquete= @Descripcion_Estado_Tiquete WHERE Id_Estado_Tiquete= @Id_Estado_Tiquete";
                 #region Parametrización
-                SqlParameter IDENVIO = new SqlParameter();
-                IDENVIO.SqlDbType = System.Data.SqlDbType.Int;
-                IDENVIO.ParameterName = "@IDENVIO";
-                IDENVIO.Value = envio.IDENVIO;
+                SqlParameter Id_Estado_Tiquete = new SqlParameter();
+                Id_Estado_Tiquete.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Estado_Tiquete.ParameterName = "@Id_Estado_Tiquete";
+                Id_Estado_Tiquete.Value = E_Tiquete.Id_Estado_Tiquete;
 
-                SqlParameter DESC_ENVIO = new SqlParameter();
-                DESC_ENVIO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                DESC_ENVIO.ParameterName = "@DESC_ENVIO";
-                DESC_ENVIO.Value = envio.DESC_ENVIO;
+                SqlParameter Descripcion_Estado_Tiquete = new SqlParameter();
+                Descripcion_Estado_Tiquete.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Descripcion_Estado_Tiquete.ParameterName = "@Descripcion_Estado_Tiquete";
+                Descripcion_Estado_Tiquete.Value = E_Tiquete.Descripcion_Estado_Tiquete;
 
-                SqlParameter PRECIO_ENVIO = new SqlParameter();
-                PRECIO_ENVIO.SqlDbType = System.Data.SqlDbType.Int;
-                PRECIO_ENVIO.ParameterName = "@PRECIO_ENVIO";
-                PRECIO_ENVIO.Value = envio.PRECIO_ENVIO;
-
-                listParametros.Add(DESC_ENVIO);
-                listParametros.Add(PRECIO_ENVIO);
-                listParametros.Add(IDENVIO);
+                listParametros.Add(Id_Estado_Tiquete);
+                listParametros.Add(Descripcion_Estado_Tiquete);
 
                 sentencia.LSTPARAMETROS = listParametros;
                 #endregion
@@ -260,22 +245,21 @@ namespace _02LogicaNegocio
                 throw e;
             }
         }
-        public static void EliminarDato(ENVIO envio) //Metodo para Eliminar informacion en la tabla envio
+        public static void EliminarDato(T_Estado_Tiquetes E_Tiquete) //Metodo para Eliminar informacion en la tabla envio
 
         {
             try
             {
                 ArrayList listParametros = new ArrayList();
                 SQLSentencia sentencia = new SQLSentencia();
-                //sentencia.PETICION = @"DELETE FROM ENVIO WHERE IDENVIO='" + envio.IDENVIO + "'";
-                sentencia.PETICION = @"DELETE FROM ENVIO WHERE IDENVIO= @IDENVIO";
+                sentencia.PETICION = @"DELETE FROM T_Estado_Tiquetes WHERE Id_Estado_Tiquete= @Id_Estado_Tiquete";
                 #region Parametrización
-                SqlParameter IDENVIO = new SqlParameter();
-                IDENVIO.SqlDbType = System.Data.SqlDbType.Int;
-                IDENVIO.ParameterName = "@IDENVIO";
-                IDENVIO.Value = envio.IDENVIO;
+                SqlParameter Id_Estado_Tiquete = new SqlParameter();
+                Id_Estado_Tiquete.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Estado_Tiquete.ParameterName = "@Id_Estado_Tiquete";
+                Id_Estado_Tiquete.Value = E_Tiquete.Id_Estado_Tiquete;
 
-                listParametros.Add(IDENVIO);
+                listParametros.Add(Id_Estado_Tiquete);
 
                 sentencia.LSTPARAMETROS = listParametros;
                 #endregion
@@ -287,28 +271,28 @@ namespace _02LogicaNegocio
                 throw e;
             }
         }
-        public static List<ENVIO> obtEnvio()
+        public static List<T_Estado_Tiquetes> obtE_Tiquete()
         {
             try
             {
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT IDENVIO, DESC_ENVIO, PRECIO_ENVIO FROM ENVIO";
+                sentencia.PETICION = @"SELECT Id_Estado_Tiquete, Descripcion_Estado_Tiquete FROM T_Estado_Tiquetes";
                 Acceso objacceso = new Acceso();
-                return objacceso.Obtener_Envio(sentencia);
+                return objacceso.Obtener_Estado_Tiquetes(sentencia);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
-        public static List<ENVIO> BuscarDatoA(ENVIO envio) //Metodo para Buscar informacion en la tabla envio
+        public static List<T_Estado_Tiquetes> BuscarDatoA(T_Estado_Tiquetes E_Tiquete) //Metodo para Buscar informacion en la tabla envio
         {
             try
             {
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT * FROM ENVIO WHERE IDENVIO='" + envio.IDENVIO + "'";
+                sentencia.PETICION = @"SELECT Id_Estado_Tiquete, Descripcion_Estado_Tiquete FROM T_Estado_Tiquetes WHERE Id_Estado_Tiquete='" + E_Tiquete.Id_Estado_Tiquete + "'";
                 _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                return objAcceso.Obtener_Envio(sentencia);
+                return objAcceso.Obtener_Estado_Tiquetes(sentencia);
             }
             catch (Exception e)
             {
@@ -316,14 +300,14 @@ namespace _02LogicaNegocio
                 throw e;
             }
         }
-        public static List<ENVIO> BuscarDatoB(ENVIO envio) //Metodo para Buscar informacion en la tabla envio
+        public static List<T_Estado_Tiquetes> BuscarDatoB(T_Estado_Tiquetes E_Tiquete) //Metodo para Buscar informacion en la tabla envio
         {
             try
             {
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT * FROM ENVIO WHERE DESC_ENVIO='" + envio.DESC_ENVIO + "'";
+                sentencia.PETICION = @"SELECT Id_Estado_Tiquete, Descripcion_Estado_Tiquete FROM T_Estado_Tiquetes WHERE Descripcion_Estado_Tiquete='" + E_Tiquete.Descripcion_Estado_Tiquete + "'";
                 _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                return objAcceso.Obtener_Envio(sentencia);
+                return objAcceso.Obtener_Estado_Tiquetes(sentencia);
             }
             catch (Exception e)
             {
@@ -333,22 +317,27 @@ namespace _02LogicaNegocio
         }
         #endregion
 
-        #region Metodos Para Tabla ESTADO 
-        public static void GuardarDato(ESTADO estado) //Metodo para Agregar informacion a la tabla Estado
+        #region Metodos Para Tabla T_Estado_Clientes 
+        public static void GuardarDato(T_Estado_Clientes E_Cliente) //Metodo para Agregar informacion a la tabla Estado
         {
             try
             {
                 ArrayList listParametros = new ArrayList();
                 SQLSentencia sentencia = new SQLSentencia();
-                //sentencia.PETICION = @"INSERT INTO ESTADO VALUES ('" + estado.DESC_ESTADO + "')";
-                sentencia.PETICION = @"INSERT INTO ESTADO VALUES (@DESC_ESTADO)";
+                sentencia.PETICION = @"INSERT INTO T_Estado_Clientes VALUES (@Id_Estado_Clientes, @Descripcion_Estado_Clientes)";
                 #region Parametrización
-                SqlParameter DESC_ESTADO = new SqlParameter();
-                DESC_ESTADO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                DESC_ESTADO.ParameterName = "@DESC_ESTADO";
-                DESC_ESTADO.Value = estado.DESC_ESTADO;
+                SqlParameter Id_Estado_Clientes = new SqlParameter();
+                Id_Estado_Clientes.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Estado_Clientes.ParameterName = "@Id_Estado_Clientes";
+                Id_Estado_Clientes.Value = E_Cliente.Id_Estado_Clientes;
 
-                listParametros.Add(DESC_ESTADO);
+                SqlParameter Descripcion_Estado_Clientes = new SqlParameter();
+                Descripcion_Estado_Clientes.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Descripcion_Estado_Clientes.ParameterName = "@Descripcion_Estado_Clientes";
+                Descripcion_Estado_Clientes.Value = E_Cliente.Descripcion_Estado_Clientes;
+
+                listParametros.Add(Id_Estado_Clientes);
+                listParametros.Add(Descripcion_Estado_Clientes);
 
                 sentencia.LSTPARAMETROS = listParametros;
                 #endregion
@@ -360,27 +349,26 @@ namespace _02LogicaNegocio
                 throw ex;
             }
         }
-        public static void ModificarDato(ESTADO estado) //Metodo para Modificar informacion en la tabla Estado
+        public static void ModificarDato(T_Estado_Clientes E_Cliente) //Metodo para Modificar informacion en la tabla Estado
         {
             try
             {
                 ArrayList listParametros = new ArrayList();
                 SQLSentencia sentencia = new SQLSentencia();
-                //sentencia.PETICION = @"UPDATE ESTADO SET IDESTADO='" + estado.IDESTADO + "', DESC_ESTADO='" + estado.DESC_ESTADO + "' WHERE IDESTADO='" + estado.IDESTADO + "'";
-                sentencia.PETICION = @"UPDATE ESTADO SET DESC_ESTADO= @DESC_ESTADO WHERE IDESTADO= @IDESTADO";
+                sentencia.PETICION = @"UPDATE T_Estado_Clientes SET Descripcion_Estado_Clientes= @Descripcion_Estado_Clientes WHERE Id_Estado_Clientes= @Id_Estado_Clientes";
                 #region Parametrización
-                SqlParameter DESC_ESTADO = new SqlParameter();
-                DESC_ESTADO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                DESC_ESTADO.ParameterName = "@DESC_ESTADO";
-                DESC_ESTADO.Value = estado.DESC_ESTADO;
+                SqlParameter Id_Estado_Clientes = new SqlParameter();
+                Id_Estado_Clientes.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Estado_Clientes.ParameterName = "@Id_Estado_Clientes";
+                Id_Estado_Clientes.Value = E_Cliente.Id_Estado_Clientes;
 
-                SqlParameter IDESTADO = new SqlParameter();
-                IDESTADO.SqlDbType = System.Data.SqlDbType.Int;
-                IDESTADO.ParameterName = "@IDESTADO";
-                IDESTADO.Value = estado.IDESTADO;
+                SqlParameter Descripcion_Estado_Clientes = new SqlParameter();
+                Descripcion_Estado_Clientes.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Descripcion_Estado_Clientes.ParameterName = "@Descripcion_Estado_Clientes";
+                Descripcion_Estado_Clientes.Value = E_Cliente.Descripcion_Estado_Clientes;
 
-                listParametros.Add(DESC_ESTADO);
-                listParametros.Add(IDESTADO);
+                listParametros.Add(Id_Estado_Clientes);
+                listParametros.Add(Descripcion_Estado_Clientes);
 
                 sentencia.LSTPARAMETROS = listParametros;
                 #endregion
@@ -392,22 +380,21 @@ namespace _02LogicaNegocio
                 throw ex;
             }
         }
-        public static void EliminarDato(ESTADO estado) //Metodo para Eliminar informacion en la tabla Estado
+        public static void EliminarDato(T_Estado_Clientes E_Cliente) //Metodo para Eliminar informacion en la tabla Estado
 
         {
             try
             {
                 ArrayList listParametros = new ArrayList();
                 SQLSentencia sentencia = new SQLSentencia();
-                //sentencia.PETICION = @"DELETE FROM ESTADO WHERE IDESTADO='" + estado.IDESTADO + "'";
-                sentencia.PETICION = @"DELETE FROM ESTADO WHERE IDESTADO= @IDESTADO";
+                sentencia.PETICION = @"DELETE FROM T_Estado_Clientes WHERE Id_Estado_Clientes= @Id_Estado_Clientes";
                 #region Parametrización
-                SqlParameter IDESTADO = new SqlParameter();
-                IDESTADO.SqlDbType = System.Data.SqlDbType.Int;
-                IDESTADO.ParameterName = "@IDESTADO";
-                IDESTADO.Value = estado.IDESTADO;
+                SqlParameter Id_Estado_Clientes = new SqlParameter();
+                Id_Estado_Clientes.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Estado_Clientes.ParameterName = "@Id_Estado_Clientes";
+                Id_Estado_Clientes.Value = E_Cliente.Id_Estado_Clientes;
 
-                listParametros.Add(IDESTADO);
+                listParametros.Add(Id_Estado_Clientes);
 
                 sentencia.LSTPARAMETROS = listParametros;
                 #endregion
@@ -419,28 +406,28 @@ namespace _02LogicaNegocio
                 throw ex;
             }
         }
-        public static List<ESTADO> obtEstado()
+        public static List<T_Estado_Clientes> obtE_Cliente()
         {
             try
             {
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT IDESTADO, DESC_ESTADO  FROM ESTADO";
+                sentencia.PETICION = @"SELECT Id_Estado_Clientes, Descripcion_Estado_Clientes  FROM T_Estado_Clientes";
                 Acceso objacceso = new Acceso();
-                return objacceso.Obtener_Estado(sentencia);
+                return objacceso.Obtener_Estado_Clientes(sentencia);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
-        public static List<ESTADO> BuscarDatoA(ESTADO estado) //Metodo para Buscar informacion en la tabla estado
+        public static List<T_Estado_Clientes> BuscarDatoA(T_Estado_Clientes E_Cliente) //Metodo para Buscar informacion en la tabla estado
         {
             try
             {
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT * FROM ESTADO WHERE IDESTADO='" + estado.IDESTADO + "'";
+                sentencia.PETICION = @"SELECT Id_Estado_Clientes, Descripcion_Estado_Clientes FROM T_Estado_Clientes WHERE Id_Estado_Clientes='" + E_Cliente.Id_Estado_Clientes + "'";
                 _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                return objAcceso.Obtener_Estado(sentencia);
+                return objAcceso.Obtener_Estado_Clientes(sentencia);
             }
             catch (Exception e)
             {
@@ -448,14 +435,14 @@ namespace _02LogicaNegocio
                 throw e;
             }
         }
-        public static List<ESTADO> BuscarDatoB(ESTADO estado) //Metodo para Buscar informacion en la tabla envio
+        public static List<T_Estado_Clientes> BuscarDatoB(T_Estado_Clientes E_Cliente) //Metodo para Buscar informacion en la tabla envio
         {
             try
             {
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT * FROM ESTADO WHERE DESC_ESTADO='" + estado.DESC_ESTADO + "'";
+                sentencia.PETICION = @"SELECT Id_Estado_Clientes, Descripcion_Estado_Clientes FROM T_Estado_Clientes WHERE Descripcion_Estado_Clientes='" + E_Cliente.Descripcion_Estado_Clientes + "'";
                 _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                return objAcceso.Obtener_Estado(sentencia);
+                return objAcceso.Obtener_Estado_Clientes(sentencia);
             }
             catch (Exception e)
             {
@@ -465,8 +452,288 @@ namespace _02LogicaNegocio
         }
         #endregion
 
-        #region Metodos Para Tabla ORIGEN 
-        public static void GuardarDato(ORIGEN origen) //Metodo para Agregar informacion a la tabla Origen
+        #region Metodos Para Tabla T_Roles
+        public static void GuardarDato(T_Roles Roles) //Metodo para Agregar informacion a la tabla Pago
+        {
+            try
+            {
+                ArrayList listParametros = new ArrayList();
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"INSERT INTO T_Roles VALUES (@Id_Rol, @Nombre_Rol, @Descripcion_Rol)";
+                #region Parametrización
+                SqlParameter Id_Rol = new SqlParameter();
+                Id_Rol.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Rol.ParameterName = "@Id_Rol";
+                Id_Rol.Value = Roles.Id_Rol;
+
+                SqlParameter Nombre_Rol = new SqlParameter();
+                Nombre_Rol.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Nombre_Rol.ParameterName = "@Nombre_Rol";
+                Nombre_Rol.Value = Roles.Nombre_Rol;
+
+                SqlParameter Descripcion_Rol = new SqlParameter();
+                Descripcion_Rol.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Descripcion_Rol.ParameterName = "@Descripcion_Rol";
+                Descripcion_Rol.Value = Roles.Descripcion_Rol;
+
+                listParametros.Add(Id_Rol);
+                listParametros.Add(Nombre_Rol);
+                listParametros.Add(Descripcion_Rol);
+
+                sentencia.LSTPARAMETROS = listParametros;
+                #endregion
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                objAcceso.EjecutarSentencia(sentencia);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static void ModificarDato(T_Roles Roles) //Metodo para Modificar informacion en la tabla Pago
+        {
+            try
+            {
+                ArrayList listParametros = new ArrayList();
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"UPDATE T_Roles SET Nombre_Rol= @Nombre_Rol, Descripcion_Rol= @Descripcion_Rol WHERE Id_Rol= @Id_Rol";
+                #region Parametrización
+                SqlParameter Id_Rol = new SqlParameter();
+                Id_Rol.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Rol.ParameterName = "@Id_Rol";
+                Id_Rol.Value = Roles.Id_Rol;
+
+                SqlParameter Nombre_Rol = new SqlParameter();
+                Nombre_Rol.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Nombre_Rol.ParameterName = "@Nombre_Rol";
+                Nombre_Rol.Value = Roles.Nombre_Rol;
+
+                SqlParameter Descripcion_Rol = new SqlParameter();
+                Descripcion_Rol.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Descripcion_Rol.ParameterName = "@Descripcion_Rol";
+                Descripcion_Rol.Value = Roles.Descripcion_Rol;
+
+                listParametros.Add(Id_Rol);
+                listParametros.Add(Nombre_Rol);
+                listParametros.Add(Descripcion_Rol);
+
+                sentencia.LSTPARAMETROS = listParametros;
+                #endregion
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                objAcceso.EjecutarSentencia(sentencia);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static void EliminarDato(T_Roles Roles) //Metodo para Eliminar informacion en la tabla Pago
+        {
+            try
+            {
+                ArrayList listParametros = new ArrayList();
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"DELETE FROM T_Roles WHERE Id_Rol= @Id_Rol";
+                #region Parametrización
+                SqlParameter Id_Rol = new SqlParameter();
+                Id_Rol.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Rol.ParameterName = "@Id_Rol";
+                Id_Rol.Value = Roles.Id_Rol;
+
+                listParametros.Add(Id_Rol);
+
+                sentencia.LSTPARAMETROS = listParametros;
+                #endregion
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                objAcceso.EjecutarSentencia(sentencia);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static List<T_Roles> obtRoles()
+        {
+            try
+            {
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT Id_Rol, Nombre_Rol, Descripcion_Rol FROM T_Roles";
+                Acceso objacceso = new Acceso();
+                return objacceso.Obtener_Roles(sentencia);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static List<T_Roles> BuscarDatoA(T_Roles Roles) //Metodo para Buscar informacion en la tabla estado
+        {
+            try
+            {
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT Id_Rol, Nombre_Rol, Descripcion_Rol FROM T_Roles WHERE Id_Rol='" + Roles.Id_Rol + "'";
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                return objAcceso.Obtener_Roles(sentencia);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+        public static List<T_Roles> BuscarDatoB(T_Roles Roles) //Metodo para Buscar informacion en la tabla envio
+        {
+            try
+            {
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT Id_Rol, Nombre_Rol, Descripcion_Rol FROM T_RolesO WHERE Nombre_Rol='" + Roles.Nombre_Rol + "'";
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                return objAcceso.Obtener_Roles(sentencia);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+        #endregion
+
+        #region Metodos Para Tabla T_Severidades 
+        public static void GuardarDato(T_Severidades Severidad) //Metodo para Agregar informacion a la tabla DESTINO
+        {
+            try
+            {
+                ArrayList listParametros = new ArrayList();
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"INSERT INTO T_Severidades VALUES (@Severidad, @Descripcion_Severidad)";
+                #region Parametrización
+                SqlParameter Severity = new SqlParameter();
+                Severity.SqlDbType = System.Data.SqlDbType.Int;
+                Severity.ParameterName = "@Severidad";
+                Severity.Value = Severidad.Severidad;
+
+                SqlParameter Descripcion_Severidad = new SqlParameter();
+                Descripcion_Severidad.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Descripcion_Severidad.ParameterName = "@Descripcion_Severidad";
+                Descripcion_Severidad.Value = Severidad.Descripcion_Severidad;
+
+                listParametros.Add(Severity);
+                listParametros.Add(Descripcion_Severidad);
+
+                sentencia.LSTPARAMETROS = listParametros;
+                #endregion
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                objAcceso.EjecutarSentencia(sentencia);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public static void ModificarDato(T_Severidades Severidad) //Metodo para Modificar informacion en la tabla DESTINO
+        {
+            try
+            {
+                ArrayList listParametros = new ArrayList();
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"UPDATE T_Severidades SET Descripcion_Severidad= @Descripcion_Severidad WHERE Severidad= @Severidad";
+                #region Parametrización
+                SqlParameter Severity = new SqlParameter();
+                Severity.SqlDbType = System.Data.SqlDbType.Int;
+                Severity.ParameterName = "@Severidad";
+                Severity.Value = Severidad.Severidad;
+
+                SqlParameter Descripcion_Severidad = new SqlParameter();
+                Descripcion_Severidad.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Descripcion_Severidad.ParameterName = "@Descripcion_Severidad";
+                Descripcion_Severidad.Value = Severidad.Descripcion_Severidad;
+
+                listParametros.Add(Severity);
+                listParametros.Add(Descripcion_Severidad);
+
+                sentencia.LSTPARAMETROS = listParametros;
+                #endregion
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                objAcceso.EjecutarSentencia(sentencia);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+        public static void EliminarDato(T_Severidades Severidad) //Metodo para Eliminar informacion en la tabla DESTINO
+        {
+            try
+            {
+                ArrayList listParametros = new ArrayList();
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"DELETE FROM T_Severidades WHERE Severidad=@Severidad";
+                #region Parametrización
+                SqlParameter Severity = new SqlParameter();
+                Severity.SqlDbType = System.Data.SqlDbType.Int;
+                Severity.ParameterName = "@Severidad";
+                Severity.Value = Severidad.Severidad;
+
+                listParametros.Add(Severity);
+
+                sentencia.LSTPARAMETROS = listParametros;
+                #endregion
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                objAcceso.EjecutarSentencia(sentencia);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+        public static List<T_Severidades> obtSeveridad()
+        {
+            try
+            {
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT Severidad, Descripcion_Severidad  FROM T_Severidades";
+                Acceso objacceso = new Acceso();
+                return objacceso.Obtener_Severidades(sentencia);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static List<T_Severidades> BuscarDatoA(T_Severidades Severidad) //Metodo para Buscar informacion en la tabla DESTINO
+        {
+            try
+            {
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT Severidad, Descripcion_Severidad FROM T_Severidades WHERE Severidad ='" + Severidad.Severidad + "'";
+                Acceso objacceso = new Acceso();
+                return objacceso.Obtener_Severidades(sentencia);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static List<T_Severidades> BuscarDatoB(T_Severidades Severidad) //Metodo para Buscar informacion en la tabla DESTINO
+        {
+            try
+            {
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT Severidad, Descripcion_Severidad FROM T_Severidades WHEREE Descripcion_Severidad='" + Severidad.Descripcion_Severidad + "'";
+                Acceso objacceso = new Acceso();
+                return objacceso.Obtener_Severidades(sentencia);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
+        #region Metodos Para Tabla T_Cliente 
+        public static void GuardarDato(T_Cliente Cliente) //Metodo para Agregar informacion a la tabla Origen
         {
             try
             {
@@ -498,7 +765,7 @@ namespace _02LogicaNegocio
                 throw ex;
             }
         }
-        public static void ModificarDato(ORIGEN origen) //Metodo para Modificar informacion en la tabla Origen
+        public static void ModificarDato(T_Cliente Cliente) //Metodo para Modificar informacion en la tabla Origen
         {
             try
             {
@@ -535,7 +802,7 @@ namespace _02LogicaNegocio
                 throw ex;
             }
         }
-        public static void EliminarDato(ORIGEN origen) //Metodo para Eliminar informacion en la tabla origen
+        public static void EliminarDato(T_Cliente Cliente) //Metodo para Eliminar informacion en la tabla origen
         {
             try
             {
@@ -560,7 +827,7 @@ namespace _02LogicaNegocio
                 throw ex;
             }
         }
-        public static List<ORIGEN> obtOrigen()
+        public static List<T_Cliente> obtCliente()
         {
             try
             {
@@ -574,7 +841,7 @@ namespace _02LogicaNegocio
                 throw ex;
             }
         }
-        public static List<ORIGEN> BuscarDatoA(ORIGEN origen) //Metodo para Buscar informacion en la tabla origen
+        public static List<T_Cliente> BuscarDatoA(T_Cliente Cliente) //Metodo para Buscar informacion en la tabla origen
         {
             try
             {
@@ -589,7 +856,7 @@ namespace _02LogicaNegocio
                 throw e;
             }
         }
-        public static List<ORIGEN> BuscarDatoB(ORIGEN origen) //Metodo para Buscar informacion en la tabla origen
+        public static List<T_Cliente> BuscarDatoB(T_Cliente Cliente) //Metodo para Buscar informacion en la tabla origen
         {
             try
             {
@@ -606,381 +873,8 @@ namespace _02LogicaNegocio
         }
         #endregion
 
-        #region Metodos Para Tabla PAGO
-        public static void GuardarDato(PAGO pago) //Metodo para Agregar informacion a la tabla Pago
-        {
-            try
-            {
-                ArrayList listParametros = new ArrayList();
-                SQLSentencia sentencia = new SQLSentencia();
-                //sentencia.PETICION = @"INSERT INTO PAGO VALUES ('" + pago.DESC_PAGO + "')";
-                sentencia.PETICION = @"INSERT INTO PAGO VALUES (@DESC_PAGO)";
-                #region Parametrización
-                SqlParameter DESC_PAGO = new SqlParameter();
-                DESC_PAGO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                DESC_PAGO.ParameterName = "@DESC_PAGO";
-                DESC_PAGO.Value = pago.DESC_PAGO;
-
-                listParametros.Add(DESC_PAGO);
-
-                sentencia.LSTPARAMETROS = listParametros;
-                #endregion
-                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                objAcceso.EjecutarSentencia(sentencia);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public static void ModificarDato(PAGO pago) //Metodo para Modificar informacion en la tabla Pago
-        {
-            try
-            {
-                ArrayList listParametros = new ArrayList();
-                SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"UPDATE PAGO SET DESC_PAGO= @DESC_PAGO WHERE IDPAGO= @IDPAGO";
-                #region Parametrización
-                SqlParameter DESC_PAGO = new SqlParameter();
-                DESC_PAGO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                DESC_PAGO.ParameterName = "@DESC_PAGO";
-                DESC_PAGO.Value = pago.DESC_PAGO;
-
-                SqlParameter IDPAGO = new SqlParameter();
-                IDPAGO.SqlDbType = System.Data.SqlDbType.Int;
-                IDPAGO.ParameterName = "@IDPAGO";
-                IDPAGO.Value = pago.IDPAGO;
-
-                listParametros.Add(DESC_PAGO);
-                listParametros.Add(IDPAGO);
-
-                sentencia.LSTPARAMETROS = listParametros;
-                #endregion
-                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                objAcceso.EjecutarSentencia(sentencia);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public static void EliminarDato(PAGO pago) //Metodo para Eliminar informacion en la tabla Pago
-        {
-            try
-            {
-                ArrayList listParametros = new ArrayList();
-                SQLSentencia sentencia = new SQLSentencia();
-                //sentencia.PETICION = @"DELETE FROM PAGO WHERE IDPAGO='" + pago.IDPAGO + "'";
-                sentencia.PETICION = @"DELETE FROM PAGO WHERE IDPAGO= @IDPAGO";
-                #region Parametrización
-                SqlParameter IDPAGO = new SqlParameter();
-                IDPAGO.SqlDbType = System.Data.SqlDbType.Int;
-                IDPAGO.ParameterName = "@IDPAGO";
-                IDPAGO.Value = pago.IDPAGO;
-
-                listParametros.Add(IDPAGO);
-
-                sentencia.LSTPARAMETROS = listParametros;
-                #endregion
-                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                objAcceso.EjecutarSentencia(sentencia);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public static List<PAGO> obtPago()
-        {
-            try
-            {
-                SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT IDPAGO, DESC_PAGO FROM PAGO";
-                Acceso objacceso = new Acceso();
-                return objacceso.Obtener_Pago(sentencia);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public static List<PAGO> BuscarDatoA(PAGO pago) //Metodo para Buscar informacion en la tabla estado
-        {
-            try
-            {
-                SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT * FROM PAGO WHERE IDPAGO='" + pago.IDPAGO + "'";
-                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                return objAcceso.Obtener_Pago(sentencia);
-            }
-            catch (Exception e)
-            {
-
-                throw e;
-            }
-        }
-        public static List<PAGO> BuscarDatoB(PAGO pago) //Metodo para Buscar informacion en la tabla envio
-        {
-            try
-            {
-                SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT * FROM PAGO WHERE DESC_PAGO='" + pago.DESC_PAGO + "'";
-                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                return objAcceso.Obtener_Pago(sentencia);
-            }
-            catch (Exception e)
-            {
-
-                throw e;
-            }
-        }
-        #endregion
-
-        #region Metodos Para Tabla PEDIDOS 
-        public static void GuardarDato(PEDIDOS pedido) //Metodo para Agregar informacion a la tabla DESTINO
-        {
-            try
-            {
-                ArrayList listParametros = new ArrayList();
-                SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"INSERT INTO PEDIDOS VALUES (@IDUSUARIO, @IDPAISORIGEN, @IDPAISDESTINO, @IDPAGO, @IDENVIO, @IDESTADO, @TOTAL, @DESCRIPCION, @IDCIUDADDESTINO, @IDCIUDADORIGEN)";
-                #region Parametrización
-                SqlParameter IDUSUARIO = new SqlParameter();
-                IDUSUARIO.SqlDbType = System.Data.SqlDbType.Int;
-                IDUSUARIO.ParameterName = "@IDUSUARIO";
-                IDUSUARIO.Value = pedido.IDUSUARIO;
-
-                SqlParameter IDPAISORIGEN = new SqlParameter();
-                IDPAISORIGEN.SqlDbType = System.Data.SqlDbType.NVarChar;
-                IDPAISORIGEN.ParameterName = "@IDPAISORIGEN";
-                IDPAISORIGEN.Value = pedido.IDPAISORIGEN;
-
-                SqlParameter IDPAISDESTINO = new SqlParameter();
-                IDPAISDESTINO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                IDPAISDESTINO.ParameterName = "@IDPAISDESTINO";
-                IDPAISDESTINO.Value = pedido.IDPAISDESTINO;
-
-                SqlParameter IDPAGO = new SqlParameter();
-                IDPAGO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                IDPAGO.ParameterName = "@IDPAGO";
-                IDPAGO.Value = pedido.IDPAGO;
-
-                SqlParameter IDENVIO = new SqlParameter();
-                IDENVIO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                IDENVIO.ParameterName = "@IDENVIO";
-                IDENVIO.Value = pedido.IDENVIO;
-
-                SqlParameter IDESTADO = new SqlParameter();
-                IDESTADO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                IDESTADO.ParameterName = "@IDESTADO";
-                IDESTADO.Value = pedido.IDESTADO;
-
-                SqlParameter TOTAL = new SqlParameter();
-                TOTAL.SqlDbType = System.Data.SqlDbType.Int;
-                TOTAL.ParameterName = "@TOTAL";
-                TOTAL.Value = pedido.TOTAL;
-
-                SqlParameter DESCRIPCION = new SqlParameter();
-                DESCRIPCION.SqlDbType = System.Data.SqlDbType.NVarChar;
-                DESCRIPCION.ParameterName = "@DESCRIPCION";
-                DESCRIPCION.Value = pedido.DESCRIPCION;
-
-                SqlParameter IDCIUDADDESTINO = new SqlParameter();
-                IDCIUDADDESTINO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                IDCIUDADDESTINO.ParameterName = "@IDCIUDADDESTINO";
-                IDCIUDADDESTINO.Value = pedido.IDCIUDADDESTINO;
-
-                SqlParameter IDCIUDADORIGEN = new SqlParameter();
-                IDCIUDADORIGEN.SqlDbType = System.Data.SqlDbType.NVarChar;
-                IDCIUDADORIGEN.ParameterName = "@IDCIUDADORIGEN";
-                IDCIUDADORIGEN.Value = pedido.IDCIUDADORIGEN;
-
-                listParametros.Add(IDUSUARIO);
-                listParametros.Add(IDPAISORIGEN);
-                listParametros.Add(IDPAISDESTINO);
-                listParametros.Add(IDPAGO);
-                listParametros.Add(IDENVIO);
-                listParametros.Add(IDESTADO);
-                listParametros.Add(TOTAL);
-                listParametros.Add(DESCRIPCION);
-                listParametros.Add(IDCIUDADDESTINO);
-                listParametros.Add(IDCIUDADORIGEN);
-
-                sentencia.LSTPARAMETROS = listParametros;
-                #endregion
-                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                objAcceso.EjecutarSentencia(sentencia);
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-        }
-        public static void ModificarDato(PEDIDOS pedido) //Metodo para Modificar informacion en la tabla DESTINO
-        {
-            try
-            {
-                ArrayList listParametros = new ArrayList();
-                SQLSentencia sentencia = new SQLSentencia();
-                //sentencia.PETICION = @"UPDATE PEDIDOS SET IDUSUARIO='" + pedido.IDUSUARIO + "', IDORIGEN='" + pedido.IDORIGEN + "', IDDESTINO='" + pedido.IDDESTINO + "', IDPAGO='" + pedido.IDPAGO + "', IDENVIO='" + pedido.IDENVIO + "', IDESTADO='" + pedido.IDESTADO + "', TOTAL='" + pedido.TOTAL + "', DESCRIPCION='" + pedido.DESCRIPCION + "' WHERE IDPEDIDO='" + pedido.IDPEDIDO + "'";
-                sentencia.PETICION = @"UPDATE PEDIDOS SET IDUSUARIO= @IDUSUARIO, IDPAISORIGEN= @IDPAISORIGEN, IDPAISDESTINO= @IDPAISDESTINO, IDPAGO= @IDPAGO, IDENVIO= @IDENVIO, IDESTADO= @IDESTADO, TOTAL= @TOTAL, DESCRIPCION= @DESCRIPCION, IDCIUDADDESTINO= @IDCIUDADDESTINO, IDCIUDADORIGEN= @IDCIUDADORIGEN WHERE IDPEDIDO= @IDPEDIDO";
-                #region Parametrización
-                SqlParameter IDUSUARIO = new SqlParameter();
-                IDUSUARIO.SqlDbType = System.Data.SqlDbType.Int;
-                IDUSUARIO.ParameterName = "@IDUSUARIO";
-                IDUSUARIO.Value = pedido.IDUSUARIO;
-
-                SqlParameter IDPAISORIGEN = new SqlParameter();
-                IDPAISORIGEN.SqlDbType = System.Data.SqlDbType.NVarChar;
-                IDPAISORIGEN.ParameterName = "@IDPAISORIGEN";
-                IDPAISORIGEN.Value = pedido.IDPAISORIGEN;
-
-                SqlParameter IDPAISDESTINO = new SqlParameter();
-                IDPAISDESTINO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                IDPAISDESTINO.ParameterName = "@IDPAISDESTINO";
-                IDPAISDESTINO.Value = pedido.IDPAISDESTINO;
-
-                SqlParameter IDPAGO = new SqlParameter();
-                IDPAGO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                IDPAGO.ParameterName = "@IDPAGO";
-                IDPAGO.Value = pedido.IDPAGO;
-
-                SqlParameter IDENVIO = new SqlParameter();
-                IDENVIO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                IDENVIO.ParameterName = "@IDENVIO";
-                IDENVIO.Value = pedido.IDENVIO;
-
-                SqlParameter IDESTADO = new SqlParameter();
-                IDESTADO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                IDESTADO.ParameterName = "@IDESTADO";
-                IDESTADO.Value = pedido.IDESTADO;
-
-                SqlParameter TOTAL = new SqlParameter();
-                TOTAL.SqlDbType = System.Data.SqlDbType.Int;
-                TOTAL.ParameterName = "@TOTAL";
-                TOTAL.Value = pedido.TOTAL;
-
-                SqlParameter DESCRIPCION = new SqlParameter();
-                DESCRIPCION.SqlDbType = System.Data.SqlDbType.NVarChar;
-                DESCRIPCION.ParameterName = "@DESCRIPCION";
-                DESCRIPCION.Value = pedido.DESCRIPCION;
-
-                SqlParameter IDCIUDADDESTINO = new SqlParameter();
-                IDCIUDADDESTINO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                IDCIUDADDESTINO.ParameterName = "@IDCIUDADDESTINO";
-                IDCIUDADDESTINO.Value = pedido.IDCIUDADDESTINO;
-
-                SqlParameter IDCIUDADORIGEN = new SqlParameter();
-                IDCIUDADORIGEN.SqlDbType = System.Data.SqlDbType.NVarChar;
-                IDCIUDADORIGEN.ParameterName = "@IDCIUDADORIGEN";
-                IDCIUDADORIGEN.Value = pedido.IDCIUDADORIGEN;
-
-                SqlParameter IDPEDIDO = new SqlParameter();
-                IDPEDIDO.SqlDbType = System.Data.SqlDbType.Int;
-                IDPEDIDO.ParameterName = "@IDPEDIDO";
-                IDPEDIDO.Value = pedido.IDPEDIDO;
-
-                listParametros.Add(IDUSUARIO);
-                listParametros.Add(IDPAISORIGEN);
-                listParametros.Add(IDPAISDESTINO);
-                listParametros.Add(IDPAGO);
-                listParametros.Add(IDENVIO);
-                listParametros.Add(IDESTADO);
-                listParametros.Add(TOTAL);
-                listParametros.Add(DESCRIPCION);
-                listParametros.Add(IDPEDIDO);
-                listParametros.Add(IDCIUDADDESTINO);
-                listParametros.Add(IDCIUDADORIGEN);
-
-                sentencia.LSTPARAMETROS = listParametros;
-                #endregion
-                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                objAcceso.EjecutarSentencia(sentencia);
-            }
-            catch (Exception e)
-            {
-
-                throw e;
-            }
-        }
-        public static void EliminarDato(PEDIDOS pedido) //Metodo para Eliminar informacion en la tabla DESTINO
-        {
-            try
-            {
-                ArrayList listParametros = new ArrayList();
-                SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"DELETE FROM PEDIDOS WHERE IDPEDIDO=@IDPEDIDO";
-                #region Parametrización
-                SqlParameter IDPEDIDO = new SqlParameter();
-                IDPEDIDO.SqlDbType = System.Data.SqlDbType.Int;
-                IDPEDIDO.ParameterName = "@IDPEDIDO";
-                IDPEDIDO.Value = pedido.IDPEDIDO;
-
-                listParametros.Add(IDPEDIDO);
-
-                sentencia.LSTPARAMETROS = listParametros;
-                #endregion
-                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                objAcceso.EjecutarSentencia(sentencia);
-            }
-            catch (Exception e)
-            {
-
-                throw e;
-            }
-        }
-        public static List<PEDIDOS> obtPedidos()
-        {
-            try
-            {
-                SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT IDPEDIDO, IDUSUARIO, IDPAISORIGEN, IDPAISDESTINO, IDPAGO, IDENVIO, IDESTADO, TOTAL, DESCRIPCION, IDCIUDADDESTINO, IDCIUDADORIGEN  FROM PEDIDOS";
-                Acceso objacceso = new Acceso();
-                return objacceso.Obtener_Pedidos(sentencia);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public static List<PEDIDOS> BuscarDatoA(PEDIDOS pedido) //Metodo para Buscar informacion en la tabla DESTINO
-        {
-            /*Metodo recibe un parametro objeto PEDIDOS que viene de Presentacion con un campo pedido.IDUSUARIO
-             para realizar la bussqueda y el retorno de una lista, este metodo es transacionado por el acceso a datos
-             en su metodo Obtener_Pedidos*/
-            try
-            {
-                SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT *  FROM PEDIDOS WHERE IDUSUARIO ='" + pedido.IDUSUARIO + "'";
-                Acceso objacceso = new Acceso();
-                return objacceso.Obtener_Pedidos(sentencia);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public static List<PEDIDOS> BuscarDatoB(PEDIDOS pedido) //Metodo para Buscar informacion en la tabla DESTINO
-        {
-            /*Metodo recibe un parametro objeto PEDIDOS que viene de Presentacion con un campo pedido.IDPEDIDO
-                para realizar la bussqueda y el retorno de una lista, este metodo es transacionado por el acceso a datos
-                en su metodo Obtener_Pedidos*/
-            try
-            {
-                SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT *  FROM PEDIDOS WHERE IDPEDIDO='" + pedido.IDPEDIDO + "'";
-                Acceso objacceso = new Acceso();
-                return objacceso.Obtener_Pedidos(sentencia);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        #endregion
-
-        #region Metodos Para Tabla USUARIO
-        public static void GuardarDato(USUARIOS user) //Metodo para Agregar informacion a la tabla DESTINO
+        #region Metodos Para Tabla T_Usuarios
+        public static void GuardarDato(T_Usuarios user) //Metodo para Agregar informacion a la tabla DESTINO
         {
             try
             {
@@ -1031,7 +925,7 @@ namespace _02LogicaNegocio
                 throw e;
             }
         }
-        public static void ModificarDato(USUARIOS user) //Metodo para Modificar informacion en la tabla DESTINO
+        public static void ModificarDato(T_Usuarios user) //Metodo para Modificar informacion en la tabla DESTINO
         {
             try
             {
@@ -1088,7 +982,7 @@ namespace _02LogicaNegocio
                 throw e;
             }
         }
-        public static void EliminarDato(USUARIOS user) //Metodo para Eliminar informacion en la tabla DESTINO
+        public static void EliminarDato(T_Usuarios user) //Metodo para Eliminar informacion en la tabla DESTINO
         {
             try
             {
@@ -1115,7 +1009,7 @@ namespace _02LogicaNegocio
                 throw e;
             }
         }
-        public static List<USUARIOS> obtUsuarios()
+        public static List<T_Usuarios> obtUsuarios()
         {
             try
             {
@@ -1129,7 +1023,7 @@ namespace _02LogicaNegocio
                 throw ex;
             }
         }
-        public static List<USUARIOS> BuscarDatoA(USUARIOS user) //Metodo para Buscar informacion en la tabla DESTINO
+        public static List<T_Usuarios> BuscarDatoA(T_Usuarios user) //Metodo para Buscar informacion en la tabla DESTINO
         {
             try
             {
@@ -1144,7 +1038,189 @@ namespace _02LogicaNegocio
                 throw e;
             }
         }
-        public static List<USUARIOS> BuscarDatoB(USUARIOS user) //Metodo para Buscar informacion en la tabla DESTINO
+        public static List<T_Usuarios> BuscarDatoB(T_Usuarios user) //Metodo para Buscar informacion en la tabla DESTINO
+        {
+            try
+            {
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT *  FROM USUARIOS WHERE ALIAS ='" + user.ALIAS + "'";
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                return objAcceso.Obtener_Usuarios(sentencia);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+        #endregion
+
+        #region Metodos Para Tabla T_Tiquete
+        public static void GuardarDato(T_Tiquete Tiquete) //Metodo para Agregar informacion a la tabla DESTINO
+        {
+            try
+            {
+                ArrayList listParametros = new ArrayList();
+                SQLSentencia sentencia = new SQLSentencia();
+                //sentencia.PETICION = @"INSERT INTO USUARIOS VALUES ('" + user.NOMBRE + "','" + user.ALIAS + "','" + user.PASS + "','" + user.TIPO_USUARIO + "','" + user.ESTADO_USUARIO + "')";
+                sentencia.PETICION = @"INSERT INTO USUARIOS VALUES (@NOMBRE, @ALIAS, @PASS, @TIPO_USUARIO, @ESTADO_USUARIO)";
+                #region Parametrización
+                SqlParameter NOMBRE = new SqlParameter();
+                NOMBRE.SqlDbType = System.Data.SqlDbType.NVarChar;
+                NOMBRE.ParameterName = "@NOMBRE";
+                NOMBRE.Value = user.NOMBRE;
+
+                SqlParameter ALIAS = new SqlParameter();
+                ALIAS.SqlDbType = System.Data.SqlDbType.NVarChar;
+                ALIAS.ParameterName = "@ALIAS";
+                ALIAS.Value = user.ALIAS;
+
+                SqlParameter PASS = new SqlParameter();
+                PASS.SqlDbType = System.Data.SqlDbType.NVarChar;
+                PASS.ParameterName = "@PASS";
+                PASS.Value = user.PASS;
+
+                SqlParameter TIPO_USUARIO = new SqlParameter();
+                TIPO_USUARIO.SqlDbType = System.Data.SqlDbType.NVarChar;
+                TIPO_USUARIO.ParameterName = "@TIPO_USUARIO";
+                TIPO_USUARIO.Value = user.TIPO_USUARIO;
+
+                SqlParameter ESTADO_USUARIO = new SqlParameter();
+                ESTADO_USUARIO.SqlDbType = System.Data.SqlDbType.NVarChar;
+                ESTADO_USUARIO.ParameterName = "@ESTADO_USUARIO";
+                ESTADO_USUARIO.Value = user.ESTADO_USUARIO;
+
+                listParametros.Add(NOMBRE);
+                listParametros.Add(ALIAS);
+                listParametros.Add(PASS);
+                listParametros.Add(TIPO_USUARIO);
+                listParametros.Add(ESTADO_USUARIO);
+
+                sentencia.LSTPARAMETROS = listParametros;
+                #endregion
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                objAcceso.EjecutarSentencia(sentencia);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+        public static void ModificarDato(T_Tiquete Tiquete) //Metodo para Modificar informacion en la tabla DESTINO
+        {
+            try
+            {
+                ArrayList listParametros = new ArrayList();
+                SQLSentencia sentencia = new SQLSentencia();
+                //sentencia.PETICION = @"UPDATE USUARIOS SET NOMBRE='" + user.NOMBRE + "', ALIAS='" + user.ALIAS + "', PASS='" + user.PASS + "', TIPO_USUARIO='" + user.TIPO_USUARIO + "', ESTADO_USUARIO='" + user.ESTADO_USUARIO + "' WHERE IDUSUARIO='" + user.IDUSUARIO + "'";
+                sentencia.PETICION = @"UPDATE USUARIOS SET NOMBRE= @NOMBRE, ALIAS= @ALIAS, PASS= @PASS, TIPO_USUARIO= @TIPO_USUARIO, ESTADO_USUARIO= @ESTADO_USUARIO WHERE IDUSUARIO= @IDUSUARIO";
+                #region Parametrización
+                SqlParameter NOMBRE = new SqlParameter();
+                NOMBRE.SqlDbType = System.Data.SqlDbType.NVarChar;
+                NOMBRE.ParameterName = "@NOMBRE";
+                NOMBRE.Value = user.NOMBRE;
+
+                SqlParameter ALIAS = new SqlParameter();
+                ALIAS.SqlDbType = System.Data.SqlDbType.NVarChar;
+                ALIAS.ParameterName = "@ALIAS";
+                ALIAS.Value = user.ALIAS;
+
+                SqlParameter PASS = new SqlParameter();
+                PASS.SqlDbType = System.Data.SqlDbType.NVarChar;
+                PASS.ParameterName = "@PASS";
+                PASS.Value = user.PASS;
+
+                SqlParameter TIPO_USUARIO = new SqlParameter();
+                TIPO_USUARIO.SqlDbType = System.Data.SqlDbType.NVarChar;
+                TIPO_USUARIO.ParameterName = "@TIPO_USUARIO";
+                TIPO_USUARIO.Value = user.TIPO_USUARIO;
+
+                SqlParameter ESTADO_USUARIO = new SqlParameter();
+                ESTADO_USUARIO.SqlDbType = System.Data.SqlDbType.NVarChar;
+                ESTADO_USUARIO.ParameterName = "@ESTADO_USUARIO";
+                ESTADO_USUARIO.Value = user.ESTADO_USUARIO;
+
+                SqlParameter IDUSUARIO = new SqlParameter();
+                IDUSUARIO.SqlDbType = System.Data.SqlDbType.Int;
+                IDUSUARIO.ParameterName = "@IDUSUARIO";
+                IDUSUARIO.Value = user.IDUSUARIO;
+
+                listParametros.Add(NOMBRE);
+                listParametros.Add(ALIAS);
+                listParametros.Add(PASS);
+                listParametros.Add(TIPO_USUARIO);
+                listParametros.Add(ESTADO_USUARIO);
+                listParametros.Add(IDUSUARIO);
+
+                sentencia.LSTPARAMETROS = listParametros;
+                #endregion
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                objAcceso.EjecutarSentencia(sentencia);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+        public static void EliminarDato(T_Tiquete Tiquete) //Metodo para Eliminar informacion en la tabla DESTINO
+        {
+            try
+            {
+                ArrayList listParametros = new ArrayList();
+                SQLSentencia sentencia = new SQLSentencia();
+                //sentencia.PETICION = @"DELETE FROM USUARIOS WHERE IDUSUARIO='" + user.IDUSUARIO + "'";
+                sentencia.PETICION = @"DELETE FROM USUARIOS WHERE IDUSUARIO= @IDUSUARIO";
+                #region Parametrización
+                SqlParameter IDUSUARIO = new SqlParameter();
+                IDUSUARIO.SqlDbType = System.Data.SqlDbType.Int;
+                IDUSUARIO.ParameterName = "@IDUSUARIO";
+                IDUSUARIO.Value = user.IDUSUARIO;
+
+                listParametros.Add(IDUSUARIO);
+
+                sentencia.LSTPARAMETROS = listParametros;
+                #endregion
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                objAcceso.EjecutarSentencia(sentencia);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+        public static List<T_Tiquete> obtTiquetes()
+        {
+            try
+            {
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT IDUSUARIO, NOMBRE, ALIAS, PASS, TIPO_USUARIO, ESTADO_USUARIO FROM USUARIOS";
+                Acceso objacceso = new Acceso();
+                return objacceso.Obtener_Usuarios(sentencia);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static List<T_Tiquete> BuscarDatoA(T_Tiquete Tiquete) //Metodo para Buscar informacion en la tabla DESTINO
+        {
+            try
+            {
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT *  FROM USUARIOS WHERE IDUSUARIO ='" + user.IDUSUARIO + "'";
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                return objAcceso.Obtener_Usuarios(sentencia);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+        public static List<T_Tiquete> BuscarDatoB(T_Tiquete Tiquete) //Metodo para Buscar informacion en la tabla DESTINO
         {
             try
             {

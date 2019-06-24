@@ -199,7 +199,7 @@ namespace _03AccesoDatos
         #endregion
 
         #region Administrador_Clientes
-        public List<T_Cliente> Obtener_Origen(SQLSentencia objsentencia)
+        public List<T_Cliente> Obtener_Clientes(SQLSentencia objsentencia)
         {
             List<T_Cliente> lstClientes= new List<T_Cliente>();
             System.Data.DataTable dt = new System.Data.DataTable();
@@ -245,7 +245,7 @@ namespace _03AccesoDatos
         #endregion
 
         #region Administrador_Roles
-        public List<T_Roles> Obtener_Pago(SQLSentencia objsentencia)
+        public List<T_Roles> Obtener_Roles(SQLSentencia objsentencia)
         {
             List<T_Roles> lstRoles = new List<T_Roles>();
             System.Data.DataTable dt = new System.Data.DataTable();
