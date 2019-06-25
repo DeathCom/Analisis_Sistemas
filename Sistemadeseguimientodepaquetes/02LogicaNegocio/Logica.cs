@@ -739,21 +739,75 @@ namespace _02LogicaNegocio
             {
                 ArrayList listParametros = new ArrayList();
                 SQLSentencia sentencia = new SQLSentencia();
-                //sentencia.PETICION = @"INSERT INTO ORIGEN VALUES ('" + origen.PAIS + "','" + origen.CIUDAD + "')";
-                sentencia.PETICION = @"INSERT INTO ORIGEN VALUES (@PAIS, @CIUDAD)";
+                sentencia.PETICION = @"INSERT INTO T_Cliente VALUES (@Id_Cliente, @Nombre_Cliente, @Telefono_Cliente, @Correo_Cliente, 
+                @Region_Cliente, @Pais_Cliente, @Focal_Cliente, @Tipo_Servidor, @Nombre_Servidor, @Ip_Servidor, @Estado_Servidor)";
                 #region Parametrización
-                SqlParameter PAIS = new SqlParameter();
-                PAIS.SqlDbType = System.Data.SqlDbType.NVarChar;
-                PAIS.ParameterName = "@PAIS";
-                PAIS.Value = origen.PAIS;
+                SqlParameter Id_Cliente = new SqlParameter();
+                Id_Cliente.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Cliente.ParameterName = "@Id_Cliente";
+                Id_Cliente.Value = Cliente.Id_Cliente;
 
-                SqlParameter CIUDAD = new SqlParameter();
-                CIUDAD.SqlDbType = System.Data.SqlDbType.NVarChar;
-                CIUDAD.ParameterName = "@CIUDAD";
-                CIUDAD.Value = origen.CIUDAD;
+                SqlParameter Nombre_Cliente = new SqlParameter();
+                Nombre_Cliente.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Nombre_Cliente.ParameterName = "@Nombre_Cliente";
+                Nombre_Cliente.Value = Cliente.Nombre_Cliente;
 
-                listParametros.Add(PAIS);
-                listParametros.Add(CIUDAD);
+                SqlParameter Telefono_Cliente = new SqlParameter();
+                Telefono_Cliente.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Telefono_Cliente.ParameterName = "@Telefono_Cliente";
+                Telefono_Cliente.Value = Cliente.Telefono_Cliente;
+
+                SqlParameter Correo_Cliente = new SqlParameter();
+                Correo_Cliente.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Correo_Cliente.ParameterName = "@Correo_Cliente";
+                Correo_Cliente.Value = Cliente.Correo_Cliente;
+
+                SqlParameter Region_Cliente = new SqlParameter();
+                Region_Cliente.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Region_Cliente.ParameterName = "@Region_Cliente";
+                Region_Cliente.Value = Cliente.Region_Cliente;
+
+                SqlParameter Pais_Cliente = new SqlParameter();
+                Pais_Cliente.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Pais_Cliente.ParameterName = "@Pais_Cliente";
+                Pais_Cliente.Value = Cliente.Pais_Cliente;
+
+                SqlParameter Focal_Cliente = new SqlParameter();
+                Focal_Cliente.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Focal_Cliente.ParameterName = "@Focal_Cliente";
+                Focal_Cliente.Value = Cliente.Focal_Cliente;
+
+                SqlParameter Tipo_Servidor = new SqlParameter();
+                Tipo_Servidor.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Tipo_Servidor.ParameterName = "@Tipo_Servidor";
+                Tipo_Servidor.Value = Cliente.Tipo_Servidor;
+
+                SqlParameter Nombre_Servidor = new SqlParameter();
+                Nombre_Servidor.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Nombre_Servidor.ParameterName = "@Nombre_Servidor";
+                Nombre_Servidor.Value = Cliente.Nombre_Servidor;
+
+                SqlParameter Ip_Servidor = new SqlParameter();
+                Ip_Servidor.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Ip_Servidor.ParameterName = "@Ip_Servidor";
+                Ip_Servidor.Value = Cliente.Ip_Servidor;
+
+                SqlParameter Estado_Servidor = new SqlParameter();
+                Estado_Servidor.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Estado_Servidor.ParameterName = "@Estado_Servidor";
+                Estado_Servidor.Value = Cliente.Estado_Servidor;
+
+                listParametros.Add(Id_Cliente);
+                listParametros.Add(Nombre_Cliente);
+                listParametros.Add(Telefono_Cliente);
+                listParametros.Add(Correo_Cliente);
+                listParametros.Add(Region_Cliente);
+                listParametros.Add(Pais_Cliente);
+                listParametros.Add(Focal_Cliente);
+                listParametros.Add(Tipo_Servidor);
+                listParametros.Add(Nombre_Servidor);
+                listParametros.Add(Ip_Servidor);
+                listParametros.Add(Estado_Servidor);
 
                 sentencia.LSTPARAMETROS = listParametros;
                 #endregion
@@ -771,26 +825,77 @@ namespace _02LogicaNegocio
             {
                 ArrayList listParametros = new ArrayList();
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"UPDATE ORIGEN SET PAIS= @PAIS, CIUDAD= @CIUDAD WHERE IDORIGEN= @IDORIGEN";
+                sentencia.PETICION = @"UPDATE T_Cliente SET Nombre_Cliente= @Nombre_Cliente, Telefono_Cliente= @Telefono_Cliente,
+                Correo_Cliente= @Correo_Cliente, Region_Cliente= @Region_Cliente, Pais_Cliente= @Pais_Cliente, Focal_Cliente= @Focal_Cliente,
+                Tipo_Servidor= @Tipo_Servidor, Nombre_Servidor= @Nombre_Servidor, Ip_Servidor= @Ip_Servidor, Estado_Servidor= @Estado_Servidor
+                WHERE Id_Cliente= @Id_Cliente";
                 #region Parametrización
-                SqlParameter PAIS = new SqlParameter();
-                PAIS.SqlDbType = System.Data.SqlDbType.NVarChar;
-                PAIS.ParameterName = "@PAIS";
-                PAIS.Value = origen.PAIS;
+                SqlParameter Id_Cliente = new SqlParameter();
+                Id_Cliente.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Cliente.ParameterName = "@Id_Cliente";
+                Id_Cliente.Value = Cliente.Id_Cliente;
 
-                SqlParameter CIUDAD = new SqlParameter();
-                CIUDAD.SqlDbType = System.Data.SqlDbType.NVarChar;
-                CIUDAD.ParameterName = "@CIUDAD";
-                CIUDAD.Value = origen.CIUDAD;
+                SqlParameter Nombre_Cliente = new SqlParameter();
+                Nombre_Cliente.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Nombre_Cliente.ParameterName = "@Nombre_Cliente";
+                Nombre_Cliente.Value = Cliente.Nombre_Cliente;
 
-                SqlParameter IDORIGEN = new SqlParameter();
-                IDORIGEN.SqlDbType = System.Data.SqlDbType.Int;
-                IDORIGEN.ParameterName = "@IDORIGEN";
-                IDORIGEN.Value = origen.IDORIGEN;
+                SqlParameter Telefono_Cliente = new SqlParameter();
+                Telefono_Cliente.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Telefono_Cliente.ParameterName = "@Telefono_Cliente";
+                Telefono_Cliente.Value = Cliente.Telefono_Cliente;
 
-                listParametros.Add(PAIS);
-                listParametros.Add(CIUDAD);
-                listParametros.Add(IDORIGEN);
+                SqlParameter Correo_Cliente = new SqlParameter();
+                Correo_Cliente.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Correo_Cliente.ParameterName = "@Correo_Cliente";
+                Correo_Cliente.Value = Cliente.Correo_Cliente;
+
+                SqlParameter Region_Cliente = new SqlParameter();
+                Region_Cliente.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Region_Cliente.ParameterName = "@Region_Cliente";
+                Region_Cliente.Value = Cliente.Region_Cliente;
+
+                SqlParameter Pais_Cliente = new SqlParameter();
+                Pais_Cliente.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Pais_Cliente.ParameterName = "@Pais_Cliente";
+                Pais_Cliente.Value = Cliente.Pais_Cliente;
+
+                SqlParameter Focal_Cliente = new SqlParameter();
+                Focal_Cliente.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Focal_Cliente.ParameterName = "@Focal_Cliente";
+                Focal_Cliente.Value = Cliente.Focal_Cliente;
+
+                SqlParameter Tipo_Servidor = new SqlParameter();
+                Tipo_Servidor.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Tipo_Servidor.ParameterName = "@Tipo_Servidor";
+                Tipo_Servidor.Value = Cliente.Tipo_Servidor;
+
+                SqlParameter Nombre_Servidor = new SqlParameter();
+                Nombre_Servidor.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Nombre_Servidor.ParameterName = "@Nombre_Servidor";
+                Nombre_Servidor.Value = Cliente.Nombre_Servidor;
+
+                SqlParameter Ip_Servidor = new SqlParameter();
+                Ip_Servidor.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Ip_Servidor.ParameterName = "@Ip_Servidor";
+                Ip_Servidor.Value = Cliente.Ip_Servidor;
+
+                SqlParameter Estado_Servidor = new SqlParameter();
+                Estado_Servidor.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Estado_Servidor.ParameterName = "@Estado_Servidor";
+                Estado_Servidor.Value = Cliente.Estado_Servidor;
+
+                listParametros.Add(Id_Cliente);
+                listParametros.Add(Nombre_Cliente);
+                listParametros.Add(Telefono_Cliente);
+                listParametros.Add(Correo_Cliente);
+                listParametros.Add(Region_Cliente);
+                listParametros.Add(Pais_Cliente);
+                listParametros.Add(Focal_Cliente);
+                listParametros.Add(Tipo_Servidor);
+                listParametros.Add(Nombre_Servidor);
+                listParametros.Add(Ip_Servidor);
+                listParametros.Add(Estado_Servidor);
 
                 sentencia.LSTPARAMETROS = listParametros;
                 #endregion
@@ -808,14 +913,14 @@ namespace _02LogicaNegocio
             {
                 ArrayList listParametros = new ArrayList();
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"DELETE FROM ORIGEN WHERE IDORIGEN= @IDORIGEN";
+                sentencia.PETICION = @"DELETE FROM T_Cliente WHERE Id_Cliente= @Id_Cliente";
                 #region Parametrización
-                SqlParameter IDORIGEN = new SqlParameter();
-                IDORIGEN.SqlDbType = System.Data.SqlDbType.Int;
-                IDORIGEN.ParameterName = "@IDORIGEN";
-                IDORIGEN.Value = origen.IDORIGEN;
+                SqlParameter Id_Cliente = new SqlParameter();
+                Id_Cliente.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Cliente.ParameterName = "@Id_Cliente";
+                Id_Cliente.Value = Cliente.Id_Cliente;
 
-                listParametros.Add(IDORIGEN);
+                listParametros.Add(Id_Cliente);
 
                 sentencia.LSTPARAMETROS = listParametros;
                 #endregion
@@ -832,9 +937,10 @@ namespace _02LogicaNegocio
             try
             {
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT IDORIGEN, PAIS,CIUDAD FROM ORIGEN";
+                sentencia.PETICION = @"SELECT Id_Cliente, Nombre_Cliente, Telefono_Cliente, Correo_Cliente, Region_Cliente,
+                Pais_Cliente, Focal_Cliente, Tipo_Servidor, Nombre_Servidor, Ip_Servidor, Estado_Servidor FROM T_Cliente";
                 Acceso objacceso = new Acceso();
-                return objacceso.Obtener_Origen(sentencia);
+                return objacceso.Obtener_Clientes(sentencia);
             }
             catch (Exception ex)
             {
@@ -846,9 +952,10 @@ namespace _02LogicaNegocio
             try
             {
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT * FROM ORIGEN WHERE IDORIGEN='" + origen.IDORIGEN + "'";
+                sentencia.PETICION = @"SELECT Id_Cliente, Nombre_Cliente, Telefono_Cliente, Correo_Cliente, Region_Cliente,
+                Pais_Cliente, Focal_Cliente, Tipo_Servidor, Nombre_Servidor, Ip_Servidor, Estado_Servidor FROM T_Cliente WHERE Id_Cliente='" + Cliente.Id_Cliente + "'";
                 _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                return objAcceso.Obtener_Origen(sentencia);
+                return objAcceso.Obtener_Clientes(sentencia);
             }
             catch (Exception e)
             {
@@ -861,9 +968,10 @@ namespace _02LogicaNegocio
             try
             {
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT * FROM ORIGEN WHERE PAIS='" + origen.PAIS + "'";
+                sentencia.PETICION = @"SELECT Id_Cliente, Nombre_Cliente, Telefono_Cliente, Correo_Cliente, Region_Cliente,
+                Pais_Cliente, Focal_Cliente, Tipo_Servidor, Nombre_Servidor, Ip_Servidor, Estado_Servidor FROM T_Cliente WHERE Nombre_Cliente='" + Cliente.Nombre_Cliente + "'";
                 _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                return objAcceso.Obtener_Origen(sentencia);
+                return objAcceso.Obtener_Clientes(sentencia);
             }
             catch (Exception e)
             {
@@ -880,39 +988,44 @@ namespace _02LogicaNegocio
             {
                 ArrayList listParametros = new ArrayList();
                 SQLSentencia sentencia = new SQLSentencia();
-                //sentencia.PETICION = @"INSERT INTO USUARIOS VALUES ('" + user.NOMBRE + "','" + user.ALIAS + "','" + user.PASS + "','" + user.TIPO_USUARIO + "','" + user.ESTADO_USUARIO + "')";
-                sentencia.PETICION = @"INSERT INTO USUARIOS VALUES (@NOMBRE, @ALIAS, @PASS, @TIPO_USUARIO, @ESTADO_USUARIO)";
+                sentencia.PETICION = @"INSERT INTO USUARIOS VALUES (@Id_Usuario, @Usuario, @Nombre_Usuario, @Contrasena_Usuario, @Estado_Usuario, @Tipo_Usuario)";
                 #region Parametrización
-                SqlParameter NOMBRE = new SqlParameter();
-                NOMBRE.SqlDbType = System.Data.SqlDbType.NVarChar;
-                NOMBRE.ParameterName = "@NOMBRE";
-                NOMBRE.Value = user.NOMBRE;
+                SqlParameter Id_Usuario = new SqlParameter();
+                Id_Usuario.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Usuario.ParameterName = "@Id_Usuario";
+                Id_Usuario.Value = user.Id_Usuario;
 
-                SqlParameter ALIAS = new SqlParameter();
-                ALIAS.SqlDbType = System.Data.SqlDbType.NVarChar;
-                ALIAS.ParameterName = "@ALIAS";
-                ALIAS.Value = user.ALIAS;
+                SqlParameter Usuario = new SqlParameter();
+                Usuario.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Usuario.ParameterName = "@Usuario";
+                Usuario.Value = user.Usuario;
 
-                SqlParameter PASS = new SqlParameter();
-                PASS.SqlDbType = System.Data.SqlDbType.NVarChar;
-                PASS.ParameterName = "@PASS";
-                PASS.Value = user.PASS;
+                SqlParameter Nombre_Usuario = new SqlParameter();
+                Nombre_Usuario.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Nombre_Usuario.ParameterName = "@Nombre_Usuario";
+                Nombre_Usuario.Value = user.Nombre_Usuario;
 
-                SqlParameter TIPO_USUARIO = new SqlParameter();
-                TIPO_USUARIO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                TIPO_USUARIO.ParameterName = "@TIPO_USUARIO";
-                TIPO_USUARIO.Value = user.TIPO_USUARIO;
+                SqlParameter Contrasena_Usuario = new SqlParameter();
+                Contrasena_Usuario.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Contrasena_Usuario.ParameterName = "@Contrasena_Usuario";
+                Contrasena_Usuario.Value = user.Contrasena_Usuario;
 
-                SqlParameter ESTADO_USUARIO = new SqlParameter();
-                ESTADO_USUARIO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                ESTADO_USUARIO.ParameterName = "@ESTADO_USUARIO";
-                ESTADO_USUARIO.Value = user.ESTADO_USUARIO;
+                SqlParameter Estado_Usuario = new SqlParameter();
+                Estado_Usuario.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Estado_Usuario.ParameterName = "@Estado_Usuario";
+                Estado_Usuario.Value = user.Estado_Usuario;
 
-                listParametros.Add(NOMBRE);
-                listParametros.Add(ALIAS);
-                listParametros.Add(PASS);
-                listParametros.Add(TIPO_USUARIO);
-                listParametros.Add(ESTADO_USUARIO);
+                SqlParameter Tipo_Usuario = new SqlParameter();
+                Tipo_Usuario.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Tipo_Usuario.ParameterName = "@Tipo_Usuario";
+                Tipo_Usuario.Value = user.Tipo_Usuario;
+
+                listParametros.Add(Id_Usuario);
+                listParametros.Add(Usuario);
+                listParametros.Add(Nombre_Usuario);
+                listParametros.Add(Contrasena_Usuario);
+                listParametros.Add(Estado_Usuario);
+                listParametros.Add(Tipo_Usuario);
 
                 sentencia.LSTPARAMETROS = listParametros;
                 #endregion
@@ -931,45 +1044,46 @@ namespace _02LogicaNegocio
             {
                 ArrayList listParametros = new ArrayList();
                 SQLSentencia sentencia = new SQLSentencia();
-                //sentencia.PETICION = @"UPDATE USUARIOS SET NOMBRE='" + user.NOMBRE + "', ALIAS='" + user.ALIAS + "', PASS='" + user.PASS + "', TIPO_USUARIO='" + user.TIPO_USUARIO + "', ESTADO_USUARIO='" + user.ESTADO_USUARIO + "' WHERE IDUSUARIO='" + user.IDUSUARIO + "'";
-                sentencia.PETICION = @"UPDATE USUARIOS SET NOMBRE= @NOMBRE, ALIAS= @ALIAS, PASS= @PASS, TIPO_USUARIO= @TIPO_USUARIO, ESTADO_USUARIO= @ESTADO_USUARIO WHERE IDUSUARIO= @IDUSUARIO";
+                sentencia.PETICION = @"UPDATE T_Usuarios SET Usuario= @Usuario, Nombre_Usuario= @Nombre_Usuario, 
+                Contrasena_Usuario= @Contrasena_Usuario, Estado_Usuario= @Estado_Usuario, Tipo_Usuario= @Tipo_Usuario
+                WHERE Id_Usuario= @Id_Usuario";
                 #region Parametrización
-                SqlParameter NOMBRE = new SqlParameter();
-                NOMBRE.SqlDbType = System.Data.SqlDbType.NVarChar;
-                NOMBRE.ParameterName = "@NOMBRE";
-                NOMBRE.Value = user.NOMBRE;
+                SqlParameter Id_Usuario = new SqlParameter();
+                Id_Usuario.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Usuario.ParameterName = "@Id_Usuario";
+                Id_Usuario.Value = user.Id_Usuario;
 
-                SqlParameter ALIAS = new SqlParameter();
-                ALIAS.SqlDbType = System.Data.SqlDbType.NVarChar;
-                ALIAS.ParameterName = "@ALIAS";
-                ALIAS.Value = user.ALIAS;
+                SqlParameter Usuario = new SqlParameter();
+                Usuario.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Usuario.ParameterName = "@Usuario";
+                Usuario.Value = user.Usuario;
 
-                SqlParameter PASS = new SqlParameter();
-                PASS.SqlDbType = System.Data.SqlDbType.NVarChar;
-                PASS.ParameterName = "@PASS";
-                PASS.Value = user.PASS;
+                SqlParameter Nombre_Usuario = new SqlParameter();
+                Nombre_Usuario.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Nombre_Usuario.ParameterName = "@Nombre_Usuario";
+                Nombre_Usuario.Value = user.Nombre_Usuario;
 
-                SqlParameter TIPO_USUARIO = new SqlParameter();
-                TIPO_USUARIO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                TIPO_USUARIO.ParameterName = "@TIPO_USUARIO";
-                TIPO_USUARIO.Value = user.TIPO_USUARIO;
+                SqlParameter Contrasena_Usuario = new SqlParameter();
+                Contrasena_Usuario.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Contrasena_Usuario.ParameterName = "@Contrasena_Usuario";
+                Contrasena_Usuario.Value = user.Contrasena_Usuario;
 
-                SqlParameter ESTADO_USUARIO = new SqlParameter();
-                ESTADO_USUARIO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                ESTADO_USUARIO.ParameterName = "@ESTADO_USUARIO";
-                ESTADO_USUARIO.Value = user.ESTADO_USUARIO;
+                SqlParameter Estado_Usuario = new SqlParameter();
+                Estado_Usuario.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Estado_Usuario.ParameterName = "@Estado_Usuario";
+                Estado_Usuario.Value = user.Estado_Usuario;
 
-                SqlParameter IDUSUARIO = new SqlParameter();
-                IDUSUARIO.SqlDbType = System.Data.SqlDbType.Int;
-                IDUSUARIO.ParameterName = "@IDUSUARIO";
-                IDUSUARIO.Value = user.IDUSUARIO;
+                SqlParameter Tipo_Usuario = new SqlParameter();
+                Tipo_Usuario.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Tipo_Usuario.ParameterName = "@Tipo_Usuario";
+                Tipo_Usuario.Value = user.Tipo_Usuario;
 
-                listParametros.Add(NOMBRE);
-                listParametros.Add(ALIAS);
-                listParametros.Add(PASS);
-                listParametros.Add(TIPO_USUARIO);
-                listParametros.Add(ESTADO_USUARIO);
-                listParametros.Add(IDUSUARIO);
+                listParametros.Add(Id_Usuario);
+                listParametros.Add(Usuario);
+                listParametros.Add(Nombre_Usuario);
+                listParametros.Add(Contrasena_Usuario);
+                listParametros.Add(Estado_Usuario);
+                listParametros.Add(Tipo_Usuario);
 
                 sentencia.LSTPARAMETROS = listParametros;
                 #endregion
@@ -988,15 +1102,14 @@ namespace _02LogicaNegocio
             {
                 ArrayList listParametros = new ArrayList();
                 SQLSentencia sentencia = new SQLSentencia();
-                //sentencia.PETICION = @"DELETE FROM USUARIOS WHERE IDUSUARIO='" + user.IDUSUARIO + "'";
-                sentencia.PETICION = @"DELETE FROM USUARIOS WHERE IDUSUARIO= @IDUSUARIO";
+                sentencia.PETICION = @"DELETE FROM T_Usuarios WHERE Id_Usuario= @Id_Usuario";
                 #region Parametrización
-                SqlParameter IDUSUARIO = new SqlParameter();
-                IDUSUARIO.SqlDbType = System.Data.SqlDbType.Int;
-                IDUSUARIO.ParameterName = "@IDUSUARIO";
-                IDUSUARIO.Value = user.IDUSUARIO;
+                SqlParameter Id_Usuario = new SqlParameter();
+                Id_Usuario.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Usuario.ParameterName = "@Id_Usuario";
+                Id_Usuario.Value = user.Id_Usuario;
 
-                listParametros.Add(IDUSUARIO);
+                listParametros.Add(Id_Usuario);
 
                 sentencia.LSTPARAMETROS = listParametros;
                 #endregion
@@ -1014,7 +1127,8 @@ namespace _02LogicaNegocio
             try
             {
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT IDUSUARIO, NOMBRE, ALIAS, PASS, TIPO_USUARIO, ESTADO_USUARIO FROM USUARIOS";
+                sentencia.PETICION = @"SELECT Id_Usuario, Usuario, Nombre_Usuario, Contrasena_Usuario, Estado_Usuario, Tipo_Usuario 
+                FROM T_Usuarios";
                 Acceso objacceso = new Acceso();
                 return objacceso.Obtener_Usuarios(sentencia);
             }
@@ -1028,7 +1142,8 @@ namespace _02LogicaNegocio
             try
             {
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT *  FROM USUARIOS WHERE IDUSUARIO ='" + user.IDUSUARIO + "'";
+                sentencia.PETICION = @"SELECT Id_Usuario, Usuario, Nombre_Usuario, Contrasena_Usuario, Estado_Usuario, Tipo_Usuario
+                FROM T_Usuarios WHERE Id_Usuario ='" + user.Id_Usuario + "'";
                 _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
                 return objAcceso.Obtener_Usuarios(sentencia);
             }
@@ -1043,7 +1158,24 @@ namespace _02LogicaNegocio
             try
             {
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT *  FROM USUARIOS WHERE ALIAS ='" + user.ALIAS + "'";
+                sentencia.PETICION = @"SELECT Id_Usuario, Usuario, Nombre_Usuario, Contrasena_Usuario, Estado_Usuario, Tipo_Usuario
+                FROM T_Usuarios WHERE Id_Usuario ='" + user.Usuario + "'";
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                return objAcceso.Obtener_Usuarios(sentencia);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+        public static List<T_Usuarios> BuscarDatoC(T_Usuarios user) //Metodo para Buscar informacion en la tabla DESTINO
+        {
+            try
+            {
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT Id_Usuario, Usuario, Nombre_Usuario, Contrasena_Usuario, Estado_Usuario, Tipo_Usuario
+                FROM T_Usuarios WHERE Id_Usuario ='" + user.Nombre_Usuario + "'";
                 _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
                 return objAcceso.Obtener_Usuarios(sentencia);
             }
@@ -1062,39 +1194,75 @@ namespace _02LogicaNegocio
             {
                 ArrayList listParametros = new ArrayList();
                 SQLSentencia sentencia = new SQLSentencia();
-                //sentencia.PETICION = @"INSERT INTO USUARIOS VALUES ('" + user.NOMBRE + "','" + user.ALIAS + "','" + user.PASS + "','" + user.TIPO_USUARIO + "','" + user.ESTADO_USUARIO + "')";
-                sentencia.PETICION = @"INSERT INTO USUARIOS VALUES (@NOMBRE, @ALIAS, @PASS, @TIPO_USUARIO, @ESTADO_USUARIO)";
+                sentencia.PETICION = @"INSERT INTO T_Tiquete VALUES (@Id_Tiquete, @Id_Supervisor, @Nombre_Usuario, @Nombre_Cliente, @Nombre_Aplicacion, @Numero_Tiquete,
+                @Severidad_Tiquete, @Estado_Tiquete, @Comentarios_Tiquete, @HorayFecha_Apertura, @HorayFecha_Cierre)";
                 #region Parametrización
-                SqlParameter NOMBRE = new SqlParameter();
-                NOMBRE.SqlDbType = System.Data.SqlDbType.NVarChar;
-                NOMBRE.ParameterName = "@NOMBRE";
-                NOMBRE.Value = user.NOMBRE;
+                SqlParameter Id_Tiquete = new SqlParameter();
+                Id_Tiquete.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Tiquete.ParameterName = "@Id_Tiquete";
+                Id_Tiquete.Value = Tiquete.Id_Tiquete;
 
-                SqlParameter ALIAS = new SqlParameter();
-                ALIAS.SqlDbType = System.Data.SqlDbType.NVarChar;
-                ALIAS.ParameterName = "@ALIAS";
-                ALIAS.Value = user.ALIAS;
+                SqlParameter Id_Supervisor = new SqlParameter();
+                Id_Supervisor.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Supervisor.ParameterName = "@Id_Supervisor";
+                Id_Supervisor.Value = Tiquete.Id_Supervisor;
 
-                SqlParameter PASS = new SqlParameter();
-                PASS.SqlDbType = System.Data.SqlDbType.NVarChar;
-                PASS.ParameterName = "@PASS";
-                PASS.Value = user.PASS;
+                SqlParameter Nombre_Usuario = new SqlParameter();
+                Nombre_Usuario.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Nombre_Usuario.ParameterName = "@Nombre_Usuario";
+                Nombre_Usuario.Value = Tiquete.Nombre_Usuario;
 
-                SqlParameter TIPO_USUARIO = new SqlParameter();
-                TIPO_USUARIO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                TIPO_USUARIO.ParameterName = "@TIPO_USUARIO";
-                TIPO_USUARIO.Value = user.TIPO_USUARIO;
+                SqlParameter Nombre_Cliente = new SqlParameter();
+                Nombre_Cliente.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Nombre_Cliente.ParameterName = "@Nombre_Cliente";
+                Nombre_Cliente.Value = Tiquete.Nombre_Cliente;
 
-                SqlParameter ESTADO_USUARIO = new SqlParameter();
-                ESTADO_USUARIO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                ESTADO_USUARIO.ParameterName = "@ESTADO_USUARIO";
-                ESTADO_USUARIO.Value = user.ESTADO_USUARIO;
+                SqlParameter Nombre_Aplicacion = new SqlParameter();
+                Nombre_Aplicacion.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Nombre_Aplicacion.ParameterName = "@Nombre_Aplicacion";
+                Nombre_Aplicacion.Value = Tiquete.Nombre_Aplicacion;
 
-                listParametros.Add(NOMBRE);
-                listParametros.Add(ALIAS);
-                listParametros.Add(PASS);
-                listParametros.Add(TIPO_USUARIO);
-                listParametros.Add(ESTADO_USUARIO);
+                SqlParameter Numero_Tiquete = new SqlParameter();
+                Numero_Tiquete.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Numero_Tiquete.ParameterName = "@Numero_Tiquete";
+                Numero_Tiquete.Value = Tiquete.Numero_Tiquete;
+
+                SqlParameter Severidad_Tiquete = new SqlParameter();
+                Severidad_Tiquete.SqlDbType = System.Data.SqlDbType.Int;
+                Severidad_Tiquete.ParameterName = "@Severidad_Tiquete";
+                Severidad_Tiquete.Value = Tiquete.Severidad_Tiquete;
+
+                SqlParameter Estado_Tiquete = new SqlParameter();
+                Estado_Tiquete.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Estado_Tiquete.ParameterName = "@Estado_Tiquete";
+                Estado_Tiquete.Value = Tiquete.Estado_Tiquete;
+
+                SqlParameter Comentarios_Tiquete = new SqlParameter();
+                Comentarios_Tiquete.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Comentarios_Tiquete.ParameterName = "@Comentarios_Tiquete";
+                Comentarios_Tiquete.Value = Tiquete.Comentarios_Tiquete;
+
+                SqlParameter HorayFecha_Apertura = new SqlParameter();
+                HorayFecha_Apertura.SqlDbType = System.Data.SqlDbType.DateTime;
+                HorayFecha_Apertura.ParameterName = "@HorayFecha_Apertura";
+                HorayFecha_Apertura.Value = Tiquete.HorayFecha_Apertura;
+
+                SqlParameter HorayFecha_Cierre = new SqlParameter();
+                HorayFecha_Cierre.SqlDbType = System.Data.SqlDbType.DateTime;
+                HorayFecha_Cierre.ParameterName = "@HorayFecha_Cierre";
+                HorayFecha_Cierre.Value = Tiquete.HorayFecha_Cierre;
+
+                listParametros.Add(Id_Tiquete);
+                listParametros.Add(Id_Supervisor);
+                listParametros.Add(Nombre_Usuario);
+                listParametros.Add(Nombre_Cliente);
+                listParametros.Add(Nombre_Aplicacion);
+                listParametros.Add(Numero_Tiquete);
+                listParametros.Add(Severidad_Tiquete);
+                listParametros.Add(Estado_Tiquete);
+                listParametros.Add(Comentarios_Tiquete);
+                listParametros.Add(HorayFecha_Apertura);
+                listParametros.Add(HorayFecha_Cierre);
 
                 sentencia.LSTPARAMETROS = listParametros;
                 #endregion
@@ -1113,45 +1281,76 @@ namespace _02LogicaNegocio
             {
                 ArrayList listParametros = new ArrayList();
                 SQLSentencia sentencia = new SQLSentencia();
-                //sentencia.PETICION = @"UPDATE USUARIOS SET NOMBRE='" + user.NOMBRE + "', ALIAS='" + user.ALIAS + "', PASS='" + user.PASS + "', TIPO_USUARIO='" + user.TIPO_USUARIO + "', ESTADO_USUARIO='" + user.ESTADO_USUARIO + "' WHERE IDUSUARIO='" + user.IDUSUARIO + "'";
-                sentencia.PETICION = @"UPDATE USUARIOS SET NOMBRE= @NOMBRE, ALIAS= @ALIAS, PASS= @PASS, TIPO_USUARIO= @TIPO_USUARIO, ESTADO_USUARIO= @ESTADO_USUARIO WHERE IDUSUARIO= @IDUSUARIO";
+                sentencia.PETICION = @"UPDATE T_Tiquete SET Id_Supervisor= @Id_Supervisor, Nombre_Usuario= @Nombre_Usuario, Nombre_Cliente= @Nombre_Cliente, 
+                Nombre_Aplicacion= @Nombre_Aplicacion, Numero_Tiquete= @Numero_Tiquete, Severidad_Tiquete= @Severidad_Tiquete,  Estado_Tiquete= @Estado_Tiquete,
+                Comentarios_Tiquete= @Comentarios_Tiquete, HorayFecha_Apertura= @HorayFecha_Apertura, HorayFecha_Cierre= @HorayFecha_Cierre WHERE Id_Tiquete= @Id_Tiquete";
                 #region Parametrización
-                SqlParameter NOMBRE = new SqlParameter();
-                NOMBRE.SqlDbType = System.Data.SqlDbType.NVarChar;
-                NOMBRE.ParameterName = "@NOMBRE";
-                NOMBRE.Value = user.NOMBRE;
+                SqlParameter Id_Tiquete = new SqlParameter();
+                Id_Tiquete.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Tiquete.ParameterName = "@Id_Tiquete";
+                Id_Tiquete.Value = Tiquete.Id_Tiquete;
 
-                SqlParameter ALIAS = new SqlParameter();
-                ALIAS.SqlDbType = System.Data.SqlDbType.NVarChar;
-                ALIAS.ParameterName = "@ALIAS";
-                ALIAS.Value = user.ALIAS;
+                SqlParameter Id_Supervisor = new SqlParameter();
+                Id_Supervisor.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Supervisor.ParameterName = "@Id_Supervisor";
+                Id_Supervisor.Value = Tiquete.Id_Supervisor;
 
-                SqlParameter PASS = new SqlParameter();
-                PASS.SqlDbType = System.Data.SqlDbType.NVarChar;
-                PASS.ParameterName = "@PASS";
-                PASS.Value = user.PASS;
+                SqlParameter Nombre_Usuario = new SqlParameter();
+                Nombre_Usuario.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Nombre_Usuario.ParameterName = "@Nombre_Usuario";
+                Nombre_Usuario.Value = Tiquete.Nombre_Usuario;
 
-                SqlParameter TIPO_USUARIO = new SqlParameter();
-                TIPO_USUARIO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                TIPO_USUARIO.ParameterName = "@TIPO_USUARIO";
-                TIPO_USUARIO.Value = user.TIPO_USUARIO;
+                SqlParameter Nombre_Cliente = new SqlParameter();
+                Nombre_Cliente.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Nombre_Cliente.ParameterName = "@Nombre_Cliente";
+                Nombre_Cliente.Value = Tiquete.Nombre_Cliente;
 
-                SqlParameter ESTADO_USUARIO = new SqlParameter();
-                ESTADO_USUARIO.SqlDbType = System.Data.SqlDbType.NVarChar;
-                ESTADO_USUARIO.ParameterName = "@ESTADO_USUARIO";
-                ESTADO_USUARIO.Value = user.ESTADO_USUARIO;
+                SqlParameter Nombre_Aplicacion = new SqlParameter();
+                Nombre_Aplicacion.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Nombre_Aplicacion.ParameterName = "@Nombre_Aplicacion";
+                Nombre_Aplicacion.Value = Tiquete.Nombre_Aplicacion;
 
-                SqlParameter IDUSUARIO = new SqlParameter();
-                IDUSUARIO.SqlDbType = System.Data.SqlDbType.Int;
-                IDUSUARIO.ParameterName = "@IDUSUARIO";
-                IDUSUARIO.Value = user.IDUSUARIO;
+                SqlParameter Numero_Tiquete = new SqlParameter();
+                Numero_Tiquete.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Numero_Tiquete.ParameterName = "@Numero_Tiquete";
+                Numero_Tiquete.Value = Tiquete.Numero_Tiquete;
 
-                listParametros.Add(NOMBRE);
-                listParametros.Add(ALIAS);
-                listParametros.Add(PASS);
-                listParametros.Add(TIPO_USUARIO);
-                listParametros.Add(ESTADO_USUARIO);
-                listParametros.Add(IDUSUARIO);
+                SqlParameter Severidad_Tiquete = new SqlParameter();
+                Severidad_Tiquete.SqlDbType = System.Data.SqlDbType.Int;
+                Severidad_Tiquete.ParameterName = "@Severidad_Tiquete";
+                Severidad_Tiquete.Value = Tiquete.Severidad_Tiquete;
+
+                SqlParameter Estado_Tiquete = new SqlParameter();
+                Estado_Tiquete.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Estado_Tiquete.ParameterName = "@Estado_Tiquete";
+                Estado_Tiquete.Value = Tiquete.Estado_Tiquete;
+
+                SqlParameter Comentarios_Tiquete = new SqlParameter();
+                Comentarios_Tiquete.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Comentarios_Tiquete.ParameterName = "@Comentarios_Tiquete";
+                Comentarios_Tiquete.Value = Tiquete.Comentarios_Tiquete;
+
+                SqlParameter HorayFecha_Apertura = new SqlParameter();
+                HorayFecha_Apertura.SqlDbType = System.Data.SqlDbType.DateTime;
+                HorayFecha_Apertura.ParameterName = "@HorayFecha_Apertura";
+                HorayFecha_Apertura.Value = Tiquete.HorayFecha_Apertura;
+
+                SqlParameter HorayFecha_Cierre = new SqlParameter();
+                HorayFecha_Cierre.SqlDbType = System.Data.SqlDbType.DateTime;
+                HorayFecha_Cierre.ParameterName = "@HorayFecha_Cierre";
+                HorayFecha_Cierre.Value = Tiquete.HorayFecha_Cierre;
+
+                listParametros.Add(Id_Tiquete);
+                listParametros.Add(Id_Supervisor);
+                listParametros.Add(Nombre_Usuario);
+                listParametros.Add(Nombre_Cliente);
+                listParametros.Add(Nombre_Aplicacion);
+                listParametros.Add(Numero_Tiquete);
+                listParametros.Add(Severidad_Tiquete);
+                listParametros.Add(Estado_Tiquete);
+                listParametros.Add(Comentarios_Tiquete);
+                listParametros.Add(HorayFecha_Apertura);
+                listParametros.Add(HorayFecha_Cierre);
 
                 sentencia.LSTPARAMETROS = listParametros;
                 #endregion
@@ -1171,14 +1370,14 @@ namespace _02LogicaNegocio
                 ArrayList listParametros = new ArrayList();
                 SQLSentencia sentencia = new SQLSentencia();
                 //sentencia.PETICION = @"DELETE FROM USUARIOS WHERE IDUSUARIO='" + user.IDUSUARIO + "'";
-                sentencia.PETICION = @"DELETE FROM USUARIOS WHERE IDUSUARIO= @IDUSUARIO";
+                sentencia.PETICION = @"DELETE FROM T_Tiquete WHERE Id_Tiquete= @Id_Tiquete";
                 #region Parametrización
-                SqlParameter IDUSUARIO = new SqlParameter();
-                IDUSUARIO.SqlDbType = System.Data.SqlDbType.Int;
-                IDUSUARIO.ParameterName = "@IDUSUARIO";
-                IDUSUARIO.Value = user.IDUSUARIO;
+                SqlParameter Id_Tiquete = new SqlParameter();
+                Id_Tiquete.SqlDbType = System.Data.SqlDbType.Int;
+                Id_Tiquete.ParameterName = "@Id_Tiquete";
+                Id_Tiquete.Value = Tiquete.Id_Tiquete;
 
-                listParametros.Add(IDUSUARIO);
+                listParametros.Add(Id_Tiquete);
 
                 sentencia.LSTPARAMETROS = listParametros;
                 #endregion
@@ -1196,9 +1395,10 @@ namespace _02LogicaNegocio
             try
             {
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT IDUSUARIO, NOMBRE, ALIAS, PASS, TIPO_USUARIO, ESTADO_USUARIO FROM USUARIOS";
+                sentencia.PETICION = @"SELECT Id_Tiquete, Id_Supervisor, Nombre_Usuario, Nombre_Cliente, Nombre_Aplicacion, 
+                Numero_Tiquete, Severidad_Tiquete, Estado_Tiquete, Comentarios_Tiquete, HorayFecha_Apertura, HorayFecha_Cierre FROM T_Tiquete";
                 Acceso objacceso = new Acceso();
-                return objacceso.Obtener_Usuarios(sentencia);
+                return objacceso.Obtener_Tiquetes(sentencia);
             }
             catch (Exception ex)
             {
@@ -1210,9 +1410,11 @@ namespace _02LogicaNegocio
             try
             {
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT *  FROM USUARIOS WHERE IDUSUARIO ='" + user.IDUSUARIO + "'";
+                sentencia.PETICION = @"SELECT Id_Tiquete, Id_Supervisor, Nombre_Usuario, Nombre_Cliente, Nombre_Aplicacion, 
+                Numero_Tiquete, Severidad_Tiquete, Estado_Tiquete, Comentarios_Tiquete, HorayFecha_Apertura, HorayFecha_Cierre FROM T_Tiquete
+                WHERE Id_Tiquete ='" + Tiquete.Id_Tiquete + "'";
                 _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                return objAcceso.Obtener_Usuarios(sentencia);
+                return objAcceso.Obtener_Tiquetes(sentencia);
             }
             catch (Exception e)
             {
@@ -1225,9 +1427,11 @@ namespace _02LogicaNegocio
             try
             {
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT *  FROM USUARIOS WHERE ALIAS ='" + user.ALIAS + "'";
+                sentencia.PETICION = @"SELECT Id_Tiquete, Id_Supervisor, Nombre_Usuario, Nombre_Cliente, Nombre_Aplicacion, 
+                Numero_Tiquete, Severidad_Tiquete, Estado_Tiquete, Comentarios_Tiquete, HorayFecha_Apertura, HorayFecha_Cierre FROM T_Tiquete
+                WHERE Numero_Tiquete ='" + Tiquete.Numero_Tiquete + "'";
                 _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                return objAcceso.Obtener_Usuarios(sentencia);
+                return objAcceso.Obtener_Tiquetes(sentencia);
             }
             catch (Exception e)
             {
