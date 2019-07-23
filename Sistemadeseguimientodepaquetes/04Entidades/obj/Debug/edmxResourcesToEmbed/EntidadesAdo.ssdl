@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_TiquetesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="T_Aplicacion">
+    <Key>
+      <PropertyRef Name="Id_Aplicacion" />
+    </Key>
+    <Property Name="Id_Aplicacion" Type="int" Nullable="false" />
+    <Property Name="Nombre_Aplicacion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descripcion_Aplicacion" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Cliente">
+    <Key>
+      <PropertyRef Name="Id_Cliente" />
+    </Key>
+    <Property Name="Id_Cliente" Type="int" Nullable="false" />
+    <Property Name="Nombre_Cliente" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Telefono_Cliente" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Correo_Cliente" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Region_Cliente" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pais_Cliente" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Focal_Cliente" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Tipo_Servidor" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nombre_Servidor" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Ip_Servidor" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Estado_Servidor" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Estado_Clientes">
+    <Key>
+      <PropertyRef Name="Id_Estado_Clientes" />
+    </Key>
+    <Property Name="Id_Estado_Clientes" Type="int" Nullable="false" />
+    <Property Name="Descripcion_Estado_Clientes" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Estado_Tiquetes">
+    <Key>
+      <PropertyRef Name="Id_Estado_Tiquete" />
+    </Key>
+    <Property Name="Id_Estado_Tiquete" Type="int" Nullable="false" />
+    <Property Name="Descripcion_Estado_Tiquete" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Roles">
+    <Key>
+      <PropertyRef Name="Id_Rol" />
+    </Key>
+    <Property Name="Id_Rol" Type="int" Nullable="false" />
+    <Property Name="Nombre_Rol" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descripcion_Rol" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Severidades">
+    <Key>
+      <PropertyRef Name="Severidad" />
+    </Key>
+    <Property Name="Severidad" Type="int" Nullable="false" />
+    <Property Name="Descripcion_Severidad" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="T_Tiquete">
+    <Key>
+      <PropertyRef Name="Id_Tiquete" />
+    </Key>
+    <Property Name="Id_Tiquete" Type="int" Nullable="false" />
+    <Property Name="Id_Supervisor" Type="int" Nullable="false" />
+    <Property Name="Nombre_Usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nombre_Cliente" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nombre_Aplicacion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Numero_Tiquete" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Severidad_Tiquete" Type="int" Nullable="false" />
+    <Property Name="Estado_Tiquete" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Comentarios_Tiquete" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="HorayFecha_Apertura" Type="datetime" />
+    <Property Name="HorayFecha_Cierre" Type="datetime" />
+  </EntityType>
+  <EntityType Name="T_Usuarios">
+    <Key>
+      <PropertyRef Name="Id_Usuario" />
+    </Key>
+    <Property Name="Id_Usuario" Type="int" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nombre_Usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Contrasena_Usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Estado_Usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Tipo_Usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Function Name="LOGIN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IDUSER" Type="nvarchar" Mode="In" />
+    <Parameter Name="PASSW" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="DB_TiquetesModelStoreContainer">
+    <EntitySet Name="T_Aplicacion" EntityType="Self.T_Aplicacion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Cliente" EntityType="Self.T_Cliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Estado_Clientes" EntityType="Self.T_Estado_Clientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Estado_Tiquetes" EntityType="Self.T_Estado_Tiquetes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Roles" EntityType="Self.T_Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Severidades" EntityType="Self.T_Severidades" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Tiquete" EntityType="Self.T_Tiquete" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="T_Usuarios" EntityType="Self.T_Usuarios" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

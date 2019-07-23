@@ -12,6 +12,9 @@ namespace _04Entidades
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Objects;
+    using System.Data.Objects.DataClasses;
+    using System.Linq;
     
     public partial class DB_TiquetesEntidades : DbContext
     {
@@ -33,5 +36,18 @@ namespace _04Entidades
         public DbSet<T_Severidades> T_Severidades { get; set; }
         public DbSet<T_Tiquete> T_Tiquete { get; set; }
         public DbSet<T_Usuarios> T_Usuarios { get; set; }
+    
+        public virtual ObjectResult<LOGIN_Result> LOGIN(string iDUSER, string pASSW)
+        {
+            var iDUSERParameter = iDUSER != null ?
+                new ObjectParameter("IDUSER", iDUSER) :
+                new ObjectParameter("IDUSER", typeof(string));
+    
+            var pASSWParameter = pASSW != null ?
+                new ObjectParameter("PASSW", pASSW) :
+                new ObjectParameter("PASSW", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<LOGIN_Result>("LOGIN", iDUSERParameter, pASSWParameter);
+        }
     }
 }

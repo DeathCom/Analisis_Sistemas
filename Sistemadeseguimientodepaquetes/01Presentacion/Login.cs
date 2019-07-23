@@ -9,13 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices; //para poder mover la ventana
 using System.Data.SqlClient; //para conexion de db quitar despues de las pruebas
+using _02LogicaNegocio;
+using _04Entidades;
 
 
 namespace _01Presentacion
 {
     public partial class FormLogin : Form
     {
-        
+        //referenciamos las librerias de Entidades y Logica de negocions
+        _04Entidades.SQLSentencia objE = new _04Entidades.SQLSentencia();
+        _02LogicaNegocio.Logica objLN = new _02LogicaNegocio.Logica();
 
         public FormLogin()
         {
@@ -65,107 +69,66 @@ namespace _01Presentacion
         }
         #endregion
 
-        #region CodigoLoginELIMINARPOSTERIORMENTE
-        /*SqlConnection con = new SqlConnection(@"Server=JPRR1ER\SQLSERVER;Database=SeguimientoPaquetesTest;Trusted_Connection=True;");
-        public void login(string usuario, string password)
-        {
-            try
-            {
-                con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT Nombre, Tipo_usuario FROM Usuarios Where Usuario = @Usuario AND password = @Password", con);
-                cmd.Parameters.AddWithValue("Usuario", usuario);
-                cmd.Parameters.AddWithValue("Password", password);
-                SqlDataAdapter sda = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-
-                if (dt.Rows.Count == 1)
-                {
-                    this.Hide();
-                    if (dt.Rows[0][1].ToString() == "Admin")
-                    {
-                        new Administrador(dt.Rows[0][0].ToString()).Show();
-                    }
-                    else if (dt.Rows[0][1].ToString() == "User")
-                    {
-                        new Usuario(dt.Rows[0][0].ToString()).Show();
-                    }
-                    else if (dt.Rows[0][1].ToString() == "Client")
-                    {
-                        new Cliente(dt.Rows[0][0].ToString()).Show();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Usuario o contraseña Invalidos");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                con.Close();
-            }
-        }*/
-        #endregion
-
         #region Login
         private void btnLogin_Click(object sender, EventArgs e)
         {
             try
             {
                 #region ProcesoLogin_Analisis
-                string nombre = txtUsuario.Text;
-                this.Hide();
+                //string nombre = txtUsuario.Text;
+                //this.Hide();
 
-                if (txtUsuario.Text == "Admin" && txtPassword.Text == "0987")
-                {
-                    new Administrador(nombre).Show();
-                }
-                else if (txtUsuario.Text == "User" && txtPassword.Text == "6543")
-                {
-                    new Usuario(nombre).Show();
-                }
-                else if (txtUsuario.Text == "Supervisor" && txtPassword.Text == "1234")
-                {
-                    new Supervisor(nombre).Show();
-                }
-                else
-                {
-                    MessageBox.Show("Usuario o contraseña Invalidos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    /*MessageBox.Show("Usuario Inactivo",
-                                    "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);*/
-                    this.Show();
-                }
+                //if (txtUsuario.Text == "Admin" && txtPassword.Text == "0987")
+                //{
+                //    new Administrador(nombre).Show();
+                //}
+                //else if (txtUsuario.Text == "User" && txtPassword.Text == "6543")
+                //{
+                //    new Usuario(nombre).Show();
+                //}
+                //else if (txtUsuario.Text == "Supervisor" && txtPassword.Text == "1234")
+                //{
+                //    new Supervisor(nombre).Show();
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Usuario o contraseña Invalidos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    /*MessageBox.Show("Usuario Inactivo",
+                //                    "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);*/
+                //    this.Show();
+                //}
                 #endregion
                 #region Proceso_Login_Teoria_Sistemas
                 DataTable dt = new DataTable();
                 objE.iduser = txtUsuario.Text;
                 objE.password = txtPassword.Text;
-                //objE.typeuser = comboTipo.Text;
                 dt = objLN.LNlogin(objE);
 
                 //creo objeto Usuario
-                USUARIOS user = new USUARIOS();
-                user.NOMBRE = dt.Rows[0][1].ToString(); //asigno el elemento [0][1] del dt al objeto use en su atributo nombre
-                user.IDUSUARIO = Convert.ToInt32(dt.Rows[0][0].ToString());
+                T_Usuarios user = new T_Usuarios();
+                user.Usuario = dt.Rows[0][0].ToString(); 
+                user.Nombre_Usuario = dt.Rows[0][1].ToString();
+                user.Contrasena_Usuario = dt.Rows[0][2].ToString();
+                user.Estado_Usuario = dt.Rows[0][3].ToString();
+                user.Tipo_Usuario = dt.Rows[0][4].ToString();
 
                 if (dt.Rows.Count == 1)
                 {
                     this.Hide();
-                    if (dt.Rows[0][4].ToString() == "ADMIN" && dt.Rows[0][5].ToString() == "ACTIVO")
+                    if (user.Estado_Usuario.Equals("ACTIVO"))
                     {
-                        new Administrador(user).Show();
-                    }
-                    else if (dt.Rows[0][4].ToString() == "USER" && dt.Rows[0][5].ToString() == "ACTIVO")
-                    {
-                        new Usuario(user).Show();
-                    }
-                    else if (dt.Rows[0][4].ToString() == "CLIENT" && dt.Rows[0][5].ToString() == "ACTIVO")
-                    {
-                        new Supervisor(user).Show();
+                        if (user.Tipo_Usuario.Equals("ADMIN"))
+                        {
+                            new Administrador(user.Nombre_Usuario).Show();
+                        }
+                        else if (user.Tipo_Usuario.Equals("USER"))
+                        {
+                            new Usuario(user.Nombre_Usuario).Show();
+                        }
+                        else if (user.Tipo_Usuario.Equals("SUPERVISOR"))
+                        {
+                            new Supervisor(user.Nombre_Usuario).Show();
+                        }
                     }
                     else
                     {

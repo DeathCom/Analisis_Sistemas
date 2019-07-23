@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DB_TiquetesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DB_TiquetesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="T_Aplicacion">
           <Key>
             <PropertyRef Name="Id_Aplicacion" />
@@ -85,6 +85,10 @@
           <Property Name="Estado_Usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Tipo_Usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <Function Name="LOGIN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IDUSER" Type="nvarchar" Mode="In" />
+          <Parameter Name="PASSW" Type="nvarchar" Mode="In" />
+        </Function>
         <EntityContainer Name="DB_TiquetesModelStoreContainer">
           <EntitySet Name="T_Aplicacion" EntityType="Self.T_Aplicacion" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="T_Cliente" EntityType="Self.T_Cliente" Schema="dbo" store:Type="Tables" />
@@ -95,8 +99,7 @@
           <EntitySet Name="T_Tiquete" EntityType="Self.T_Tiquete" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="T_Usuarios" EntityType="Self.T_Usuarios" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DB_TiquetesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -189,7 +192,15 @@
           <EntitySet Name="T_Severidades" EntityType="Self.T_Severidades" />
           <EntitySet Name="T_Tiquete" EntityType="Self.T_Tiquete" />
           <EntitySet Name="T_Usuarios" EntityType="Self.T_Usuarios" />
+          <FunctionImport Name="LOGIN" ReturnType="Collection(DB_TiquetesModel.LOGIN_Result)">
+            <Parameter Name="IDUSER" Mode="In" Type="String" />
+            <Parameter Name="PASSW" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
+        <ComplexType Name="LOGIN_Result">
+          <Property Type="String" Name="Usuario" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Contrasena_Usuario" Nullable="false" MaxLength="50" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -284,6 +295,14 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="LOGIN" FunctionName="DB_TiquetesModel.Store.LOGIN">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DB_TiquetesModel.LOGIN_Result">
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Contrasena_Usuario" ColumnName="Contrasena_Usuario" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

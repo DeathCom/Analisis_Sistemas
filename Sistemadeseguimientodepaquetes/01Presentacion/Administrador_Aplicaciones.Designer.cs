@@ -38,16 +38,13 @@
             this.btnEditar = new System.Windows.Forms.PictureBox();
             this.btnBorrar = new System.Windows.Forms.PictureBox();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.txtCiudad = new System.Windows.Forms.TextBox();
-            this.txtPais = new System.Windows.Forms.TextBox();
+            this.txtDescAplicacion = new System.Windows.Forms.TextBox();
+            this.txtNomAplicacion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtIdOrigen = new System.Windows.Forms.TextBox();
+            this.txtIdAplicacion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGrid = new System.Windows.Forms.DataGridView();
-            this.Id_Aplicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre_Aplicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Desc_Aplicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -172,11 +169,11 @@
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(82)))), ((int)(((byte)(100)))));
-            this.panelCentral.Controls.Add(this.txtCiudad);
-            this.panelCentral.Controls.Add(this.txtPais);
+            this.panelCentral.Controls.Add(this.txtDescAplicacion);
+            this.panelCentral.Controls.Add(this.txtNomAplicacion);
             this.panelCentral.Controls.Add(this.label2);
             this.panelCentral.Controls.Add(this.label8);
-            this.panelCentral.Controls.Add(this.txtIdOrigen);
+            this.panelCentral.Controls.Add(this.txtIdAplicacion);
             this.panelCentral.Controls.Add(this.label3);
             this.panelCentral.Controls.Add(this.dataGrid);
             this.panelCentral.Controls.Add(this.textBox1);
@@ -190,21 +187,21 @@
             this.panelCentral.Size = new System.Drawing.Size(520, 355);
             this.panelCentral.TabIndex = 7;
             // 
-            // txtCiudad
+            // txtDescAplicacion
             // 
-            this.txtCiudad.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCiudad.Location = new System.Drawing.Point(284, 124);
-            this.txtCiudad.Name = "txtCiudad";
-            this.txtCiudad.Size = new System.Drawing.Size(120, 27);
-            this.txtCiudad.TabIndex = 36;
+            this.txtDescAplicacion.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescAplicacion.Location = new System.Drawing.Point(284, 124);
+            this.txtDescAplicacion.Name = "txtDescAplicacion";
+            this.txtDescAplicacion.Size = new System.Drawing.Size(120, 27);
+            this.txtDescAplicacion.TabIndex = 36;
             // 
-            // txtPais
+            // txtNomAplicacion
             // 
-            this.txtPais.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPais.Location = new System.Drawing.Point(284, 91);
-            this.txtPais.Name = "txtPais";
-            this.txtPais.Size = new System.Drawing.Size(120, 27);
-            this.txtPais.TabIndex = 35;
+            this.txtNomAplicacion.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomAplicacion.Location = new System.Drawing.Point(284, 91);
+            this.txtNomAplicacion.Name = "txtNomAplicacion";
+            this.txtNomAplicacion.Size = new System.Drawing.Size(120, 27);
+            this.txtNomAplicacion.TabIndex = 35;
             // 
             // label2
             // 
@@ -228,13 +225,13 @@
             this.label8.TabIndex = 33;
             this.label8.Text = "Nombre Aplicacion:";
             // 
-            // txtIdOrigen
+            // txtIdAplicacion
             // 
-            this.txtIdOrigen.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdOrigen.Location = new System.Drawing.Point(284, 58);
-            this.txtIdOrigen.Name = "txtIdOrigen";
-            this.txtIdOrigen.Size = new System.Drawing.Size(120, 27);
-            this.txtIdOrigen.TabIndex = 32;
+            this.txtIdAplicacion.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdAplicacion.Location = new System.Drawing.Point(284, 58);
+            this.txtIdAplicacion.Name = "txtIdAplicacion";
+            this.txtIdAplicacion.Size = new System.Drawing.Size(120, 27);
+            this.txtIdAplicacion.TabIndex = 32;
             // 
             // label3
             // 
@@ -251,30 +248,11 @@
             // 
             this.dataGrid.AllowUserToOrderColumns = true;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id_Aplicacion,
-            this.Nombre_Aplicacion,
-            this.Desc_Aplicacion});
             this.dataGrid.Location = new System.Drawing.Point(3, 182);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.Size = new System.Drawing.Size(514, 170);
             this.dataGrid.TabIndex = 3;
             this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
-            // 
-            // Id_Aplicacion
-            // 
-            this.Id_Aplicacion.HeaderText = "Id_Aplicacion";
-            this.Id_Aplicacion.Name = "Id_Aplicacion";
-            // 
-            // Nombre_Aplicacion
-            // 
-            this.Nombre_Aplicacion.HeaderText = "Nombre_Aplicacion";
-            this.Nombre_Aplicacion.Name = "Nombre_Aplicacion";
-            // 
-            // Desc_Aplicacion
-            // 
-            this.Desc_Aplicacion.HeaderText = "Desc_Aplicacion";
-            this.Desc_Aplicacion.Name = "Desc_Aplicacion";
             // 
             // textBox1
             // 
@@ -364,15 +342,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Tabla;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtCiudad;
-        private System.Windows.Forms.TextBox txtPais;
+        private System.Windows.Forms.TextBox txtDescAplicacion;
+        private System.Windows.Forms.TextBox txtNomAplicacion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtIdOrigen;
+        private System.Windows.Forms.TextBox txtIdAplicacion;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Aplicacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Aplicacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Desc_Aplicacion;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
