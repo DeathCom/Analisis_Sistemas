@@ -38,40 +38,29 @@
             this.btnEditar = new System.Windows.Forms.PictureBox();
             this.btnBorrar = new System.Windows.Forms.PictureBox();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtIdEstadoCB = new System.Windows.Forms.ComboBox();
+            this.comboRegion = new System.Windows.Forms.ComboBox();
+            this.comboTipoServer = new System.Windows.Forms.ComboBox();
+            this.txtNomServer = new System.Windows.Forms.TextBox();
+            this.txtIpServer = new System.Windows.Forms.TextBox();
+            this.txtPais = new System.Windows.Forms.TextBox();
+            this.ComboEstadoServer = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtIdCiudadDestino = new System.Windows.Forms.TextBox();
-            this.txtIdPaisOrigen = new System.Windows.Forms.TextBox();
-            this.txtIdEstado = new System.Windows.Forms.TextBox();
-            this.txtIdUsuario = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.txtFocal = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtNomCliente = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtIdPedido = new System.Windows.Forms.TextBox();
+            this.txtIdCliente = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGrid = new System.Windows.Forms.DataGridView();
-            this.Id_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo_Servidor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre_Servidor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ip_Servidor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Focal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.E_mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Region = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pais = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.icono)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -191,27 +180,27 @@
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(82)))), ((int)(((byte)(100)))));
-            this.panelCentral.Controls.Add(this.comboBox1);
-            this.panelCentral.Controls.Add(this.textBox4);
-            this.panelCentral.Controls.Add(this.textBox3);
-            this.panelCentral.Controls.Add(this.textBox2);
-            this.panelCentral.Controls.Add(this.textBox1);
-            this.panelCentral.Controls.Add(this.txtIdEstadoCB);
+            this.panelCentral.Controls.Add(this.comboRegion);
+            this.panelCentral.Controls.Add(this.comboTipoServer);
+            this.panelCentral.Controls.Add(this.txtNomServer);
+            this.panelCentral.Controls.Add(this.txtIpServer);
+            this.panelCentral.Controls.Add(this.txtPais);
+            this.panelCentral.Controls.Add(this.ComboEstadoServer);
             this.panelCentral.Controls.Add(this.label12);
             this.panelCentral.Controls.Add(this.label5);
             this.panelCentral.Controls.Add(this.label7);
             this.panelCentral.Controls.Add(this.label11);
-            this.panelCentral.Controls.Add(this.txtIdCiudadDestino);
-            this.panelCentral.Controls.Add(this.txtIdPaisOrigen);
-            this.panelCentral.Controls.Add(this.txtIdEstado);
-            this.panelCentral.Controls.Add(this.txtIdUsuario);
+            this.panelCentral.Controls.Add(this.txtCorreo);
+            this.panelCentral.Controls.Add(this.txtFocal);
+            this.panelCentral.Controls.Add(this.txtTelefono);
+            this.panelCentral.Controls.Add(this.txtNomCliente);
             this.panelCentral.Controls.Add(this.label9);
             this.panelCentral.Controls.Add(this.label8);
             this.panelCentral.Controls.Add(this.label4);
             this.panelCentral.Controls.Add(this.label3);
             this.panelCentral.Controls.Add(this.label2);
             this.panelCentral.Controls.Add(this.label1);
-            this.panelCentral.Controls.Add(this.txtIdPedido);
+            this.panelCentral.Controls.Add(this.txtIdCliente);
             this.panelCentral.Controls.Add(this.label6);
             this.panelCentral.Controls.Add(this.dataGrid);
             this.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -220,66 +209,67 @@
             this.panelCentral.Size = new System.Drawing.Size(520, 320);
             this.panelCentral.TabIndex = 5;
             // 
-            // comboBox1
+            // comboRegion
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboRegion.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboRegion.FormattingEnabled = true;
+            this.comboRegion.Items.AddRange(new object[] {
+            "LATAM",
+            "EMEA",
+            "APAC",
+            "NA"});
+            this.comboRegion.Location = new System.Drawing.Point(312, 136);
+            this.comboRegion.Name = "comboRegion";
+            this.comboRegion.Size = new System.Drawing.Size(196, 28);
+            this.comboRegion.TabIndex = 86;
+            // 
+            // comboTipoServer
+            // 
+            this.comboTipoServer.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboTipoServer.FormattingEnabled = true;
+            this.comboTipoServer.Items.AddRange(new object[] {
             "Disaster Recovery",
             "Non-Production",
             "Development",
             "Production",
             "QA"});
-            this.comboBox1.Location = new System.Drawing.Point(96, 92);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(130, 28);
-            this.comboBox1.TabIndex = 85;
+            this.comboTipoServer.Location = new System.Drawing.Point(96, 92);
+            this.comboTipoServer.Name = "comboTipoServer";
+            this.comboTipoServer.Size = new System.Drawing.Size(130, 28);
+            this.comboTipoServer.TabIndex = 85;
             // 
-            // textBox4
+            // txtNomServer
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(96, 140);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(130, 27);
-            this.textBox4.TabIndex = 84;
+            this.txtNomServer.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomServer.Location = new System.Drawing.Point(96, 140);
+            this.txtNomServer.Name = "txtNomServer";
+            this.txtNomServer.Size = new System.Drawing.Size(130, 27);
+            this.txtNomServer.TabIndex = 84;
             // 
-            // textBox3
+            // txtIpServer
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(96, 173);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(130, 27);
-            this.textBox3.TabIndex = 83;
+            this.txtIpServer.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIpServer.Location = new System.Drawing.Point(96, 173);
+            this.txtIpServer.Name = "txtIpServer";
+            this.txtIpServer.Size = new System.Drawing.Size(130, 27);
+            this.txtIpServer.TabIndex = 83;
             // 
-            // textBox2
+            // txtPais
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(312, 169);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(196, 27);
-            this.textBox2.TabIndex = 82;
+            this.txtPais.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPais.Location = new System.Drawing.Point(312, 169);
+            this.txtPais.Name = "txtPais";
+            this.txtPais.Size = new System.Drawing.Size(196, 27);
+            this.txtPais.TabIndex = 82;
             // 
-            // textBox1
+            // ComboEstadoServer
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(312, 136);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 27);
-            this.textBox1.TabIndex = 81;
-            // 
-            // txtIdEstadoCB
-            // 
-            this.txtIdEstadoCB.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdEstadoCB.FormattingEnabled = true;
-            this.txtIdEstadoCB.Items.AddRange(new object[] {
-            "DECOMMISSIONING",
-            "STEADY STATE",
-            "TRANSITION",
-            "CLOSED"});
-            this.txtIdEstadoCB.Location = new System.Drawing.Point(96, 38);
-            this.txtIdEstadoCB.Name = "txtIdEstadoCB";
-            this.txtIdEstadoCB.Size = new System.Drawing.Size(130, 28);
-            this.txtIdEstadoCB.TabIndex = 80;
+            this.ComboEstadoServer.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboEstadoServer.FormattingEnabled = true;
+            this.ComboEstadoServer.Location = new System.Drawing.Point(96, 38);
+            this.ComboEstadoServer.Name = "ComboEstadoServer";
+            this.ComboEstadoServer.Size = new System.Drawing.Size(130, 28);
+            this.ComboEstadoServer.TabIndex = 80;
             // 
             // label12
             // 
@@ -325,37 +315,37 @@
             this.label11.TabIndex = 76;
             this.label11.Text = "Region:";
             // 
-            // txtIdCiudadDestino
+            // txtCorreo
             // 
-            this.txtIdCiudadDestino.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdCiudadDestino.Location = new System.Drawing.Point(312, 71);
-            this.txtIdCiudadDestino.Name = "txtIdCiudadDestino";
-            this.txtIdCiudadDestino.Size = new System.Drawing.Size(196, 27);
-            this.txtIdCiudadDestino.TabIndex = 47;
+            this.txtCorreo.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.Location = new System.Drawing.Point(312, 71);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(196, 27);
+            this.txtCorreo.TabIndex = 47;
             // 
-            // txtIdPaisOrigen
+            // txtFocal
             // 
-            this.txtIdPaisOrigen.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdPaisOrigen.Location = new System.Drawing.Point(312, 39);
-            this.txtIdPaisOrigen.Name = "txtIdPaisOrigen";
-            this.txtIdPaisOrigen.Size = new System.Drawing.Size(196, 27);
-            this.txtIdPaisOrigen.TabIndex = 42;
+            this.txtFocal.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFocal.Location = new System.Drawing.Point(312, 39);
+            this.txtFocal.Name = "txtFocal";
+            this.txtFocal.Size = new System.Drawing.Size(196, 27);
+            this.txtFocal.TabIndex = 42;
             // 
-            // txtIdEstado
+            // txtTelefono
             // 
-            this.txtIdEstado.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdEstado.Location = new System.Drawing.Point(312, 103);
-            this.txtIdEstado.Name = "txtIdEstado";
-            this.txtIdEstado.Size = new System.Drawing.Size(196, 27);
-            this.txtIdEstado.TabIndex = 40;
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.Location = new System.Drawing.Point(312, 103);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(196, 27);
+            this.txtTelefono.TabIndex = 40;
             // 
-            // txtIdUsuario
+            // txtNomCliente
             // 
-            this.txtIdUsuario.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdUsuario.Location = new System.Drawing.Point(312, 8);
-            this.txtIdUsuario.Name = "txtIdUsuario";
-            this.txtIdUsuario.Size = new System.Drawing.Size(196, 27);
-            this.txtIdUsuario.TabIndex = 38;
+            this.txtNomCliente.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomCliente.Location = new System.Drawing.Point(312, 8);
+            this.txtNomCliente.Name = "txtNomCliente";
+            this.txtNomCliente.Size = new System.Drawing.Size(196, 27);
+            this.txtNomCliente.TabIndex = 38;
             // 
             // label9
             // 
@@ -423,13 +413,13 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "Telefono:";
             // 
-            // txtIdPedido
+            // txtIdCliente
             // 
-            this.txtIdPedido.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdPedido.Location = new System.Drawing.Point(96, 8);
-            this.txtIdPedido.Name = "txtIdPedido";
-            this.txtIdPedido.Size = new System.Drawing.Size(130, 27);
-            this.txtIdPedido.TabIndex = 28;
+            this.txtIdCliente.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdCliente.Location = new System.Drawing.Point(96, 8);
+            this.txtIdCliente.Name = "txtIdCliente";
+            this.txtIdCliente.Size = new System.Drawing.Size(130, 27);
+            this.txtIdCliente.TabIndex = 28;
             // 
             // label6
             // 
@@ -446,78 +436,11 @@
             // 
             this.dataGrid.AllowUserToOrderColumns = true;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id_Cliente,
-            this.Cliente,
-            this.Estado,
-            this.Tipo_Servidor,
-            this.Nombre_Servidor,
-            this.Ip_Servidor,
-            this.Focal,
-            this.E_mail,
-            this.Telefono,
-            this.Region,
-            this.Pais});
             this.dataGrid.Location = new System.Drawing.Point(3, 206);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.Size = new System.Drawing.Size(514, 111);
             this.dataGrid.TabIndex = 1;
             this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
-            // 
-            // Id_Cliente
-            // 
-            this.Id_Cliente.HeaderText = "Id_Cliente";
-            this.Id_Cliente.Name = "Id_Cliente";
-            // 
-            // Cliente
-            // 
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            // 
-            // Tipo_Servidor
-            // 
-            this.Tipo_Servidor.HeaderText = "Tipo_Servidor";
-            this.Tipo_Servidor.Name = "Tipo_Servidor";
-            // 
-            // Nombre_Servidor
-            // 
-            this.Nombre_Servidor.HeaderText = "Nombre_Servidor";
-            this.Nombre_Servidor.Name = "Nombre_Servidor";
-            // 
-            // Ip_Servidor
-            // 
-            this.Ip_Servidor.HeaderText = "Ip_Servidor";
-            this.Ip_Servidor.Name = "Ip_Servidor";
-            // 
-            // Focal
-            // 
-            this.Focal.HeaderText = "Focal";
-            this.Focal.Name = "Focal";
-            // 
-            // E_mail
-            // 
-            this.E_mail.HeaderText = "E_mail";
-            this.E_mail.Name = "E_mail";
-            // 
-            // Telefono
-            // 
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.Name = "Telefono";
-            // 
-            // Region
-            // 
-            this.Region.HeaderText = "Region";
-            this.Region.Name = "Region";
-            // 
-            // Pais
-            // 
-            this.Pais.HeaderText = "Pais";
-            this.Pais.Name = "Pais";
             // 
             // Administrador_Clientes
             // 
@@ -563,35 +486,24 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtIdPedido;
+        private System.Windows.Forms.TextBox txtIdCliente;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtIdPaisOrigen;
-        private System.Windows.Forms.TextBox txtIdEstado;
-        private System.Windows.Forms.TextBox txtIdUsuario;
-        private System.Windows.Forms.TextBox txtIdCiudadDestino;
+        private System.Windows.Forms.TextBox txtFocal;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtNomCliente;
+        private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox txtIdEstadoCB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_Servidor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Servidor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ip_Servidor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Focal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn E_mail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Region;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pais;
+        private System.Windows.Forms.ComboBox comboTipoServer;
+        private System.Windows.Forms.TextBox txtNomServer;
+        private System.Windows.Forms.TextBox txtIpServer;
+        private System.Windows.Forms.TextBox txtPais;
+        private System.Windows.Forms.ComboBox ComboEstadoServer;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ComboBox comboRegion;
     }
 }

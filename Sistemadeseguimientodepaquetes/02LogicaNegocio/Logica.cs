@@ -733,7 +733,7 @@ namespace _02LogicaNegocio
         #endregion
 
         #region Metodos Para Tabla T_Cliente 
-        public static void GuardarDato(T_Cliente Cliente) //Metodo para Agregar informacion a la tabla Origen
+        public static void GuardarDatoCliente(T_Cliente Cliente) //Metodo para Agregar informacion a la tabla Origen
         {
             try
             {

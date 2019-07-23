@@ -39,7 +39,7 @@ namespace _01Presentacion
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show("Error al intentar cargar los datos desde la base de datos" + ex.Message); ;
             }
         }
         #endregion
@@ -92,7 +92,7 @@ namespace _01Presentacion
             //MessageBox.Show("Accion Pendiente de Cosntruccion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             try
             {
-                _02LogicaNegocio.Logica.ModificarDato(processoBase());
+                _02LogicaNegocio.Logica.EliminarDato(processoBase());
                 MessageBox.Show("Datos Eliminados Satisfactoriamente");
                 Limpiar(); this.Close();
             }
@@ -134,19 +134,6 @@ namespace _01Presentacion
         }
         #endregion
 
-        #region Botones_Excel_Pdf
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            //Boton de PDF
-            MessageBox.Show("Accion Pendiente de Cosntruccion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            //Boton de Excel
-            MessageBox.Show("Accion Pendiente de Cosntruccion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-        #endregion
-
         #region Evento Cargar Al Abrir
         private void Administrador_Origen_Load(object sender, EventArgs e)
         {
@@ -165,11 +152,22 @@ namespace _01Presentacion
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show("Error al intentar colocar datos en la casilla" + ex.Message);
             }
         }
         #endregion
 
-        
+        #region Botones_Excel_Pdf
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            //Boton de PDF
+            MessageBox.Show("Accion Pendiente de Cosntruccion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //Boton de Excel
+            MessageBox.Show("Accion Pendiente de Cosntruccion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        #endregion
     }
 }
