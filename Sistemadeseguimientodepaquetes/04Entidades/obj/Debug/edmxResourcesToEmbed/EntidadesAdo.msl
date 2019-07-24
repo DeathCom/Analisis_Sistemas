@@ -1,94 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="DB_TiquetesModelStoreContainer" CdmEntityContainer="DB_TiquetesEntidades">
-    <EntitySetMapping Name="T_Aplicacion">
-      <EntityTypeMapping TypeName="DB_TiquetesModel.T_Aplicacion">
-        <MappingFragment StoreEntitySet="T_Aplicacion">
-          <ScalarProperty Name="Id_Aplicacion" ColumnName="Id_Aplicacion" />
-          <ScalarProperty Name="Nombre_Aplicacion" ColumnName="Nombre_Aplicacion" />
-          <ScalarProperty Name="Descripcion_Aplicacion" ColumnName="Descripcion_Aplicacion" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="T_Cliente">
-      <EntityTypeMapping TypeName="DB_TiquetesModel.T_Cliente">
-        <MappingFragment StoreEntitySet="T_Cliente">
-          <ScalarProperty Name="Id_Cliente" ColumnName="Id_Cliente" />
-          <ScalarProperty Name="Nombre_Cliente" ColumnName="Nombre_Cliente" />
-          <ScalarProperty Name="Telefono_Cliente" ColumnName="Telefono_Cliente" />
-          <ScalarProperty Name="Correo_Cliente" ColumnName="Correo_Cliente" />
-          <ScalarProperty Name="Region_Cliente" ColumnName="Region_Cliente" />
-          <ScalarProperty Name="Pais_Cliente" ColumnName="Pais_Cliente" />
-          <ScalarProperty Name="Focal_Cliente" ColumnName="Focal_Cliente" />
-          <ScalarProperty Name="Tipo_Servidor" ColumnName="Tipo_Servidor" />
-          <ScalarProperty Name="Nombre_Servidor" ColumnName="Nombre_Servidor" />
-          <ScalarProperty Name="Ip_Servidor" ColumnName="Ip_Servidor" />
-          <ScalarProperty Name="Estado_Servidor" ColumnName="Estado_Servidor" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="T_Estado_Clientes">
-      <EntityTypeMapping TypeName="DB_TiquetesModel.T_Estado_Clientes">
-        <MappingFragment StoreEntitySet="T_Estado_Clientes">
-          <ScalarProperty Name="Id_Estado_Clientes" ColumnName="Id_Estado_Clientes" />
-          <ScalarProperty Name="Descripcion_Estado_Clientes" ColumnName="Descripcion_Estado_Clientes" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="T_Estado_Tiquetes">
-      <EntityTypeMapping TypeName="DB_TiquetesModel.T_Estado_Tiquetes">
-        <MappingFragment StoreEntitySet="T_Estado_Tiquetes">
-          <ScalarProperty Name="Id_Estado_Tiquete" ColumnName="Id_Estado_Tiquete" />
-          <ScalarProperty Name="Descripcion_Estado_Tiquete" ColumnName="Descripcion_Estado_Tiquete" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="T_Roles">
-      <EntityTypeMapping TypeName="DB_TiquetesModel.T_Roles">
-        <MappingFragment StoreEntitySet="T_Roles">
-          <ScalarProperty Name="Id_Rol" ColumnName="Id_Rol" />
-          <ScalarProperty Name="Nombre_Rol" ColumnName="Nombre_Rol" />
-          <ScalarProperty Name="Descripcion_Rol" ColumnName="Descripcion_Rol" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="T_Severidades">
-      <EntityTypeMapping TypeName="DB_TiquetesModel.T_Severidades">
-        <MappingFragment StoreEntitySet="T_Severidades">
-          <ScalarProperty Name="Severidad" ColumnName="Severidad" />
-          <ScalarProperty Name="Descripcion_Severidad" ColumnName="Descripcion_Severidad" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="T_Tiquete">
-      <EntityTypeMapping TypeName="DB_TiquetesModel.T_Tiquete">
-        <MappingFragment StoreEntitySet="T_Tiquete">
-          <ScalarProperty Name="Id_Tiquete" ColumnName="Id_Tiquete" />
-          <ScalarProperty Name="Id_Supervisor" ColumnName="Id_Supervisor" />
-          <ScalarProperty Name="Nombre_Usuario" ColumnName="Nombre_Usuario" />
-          <ScalarProperty Name="Nombre_Cliente" ColumnName="Nombre_Cliente" />
-          <ScalarProperty Name="Nombre_Aplicacion" ColumnName="Nombre_Aplicacion" />
-          <ScalarProperty Name="Numero_Tiquete" ColumnName="Numero_Tiquete" />
-          <ScalarProperty Name="Severidad_Tiquete" ColumnName="Severidad_Tiquete" />
-          <ScalarProperty Name="Estado_Tiquete" ColumnName="Estado_Tiquete" />
-          <ScalarProperty Name="Comentarios_Tiquete" ColumnName="Comentarios_Tiquete" />
-          <ScalarProperty Name="HorayFecha_Apertura" ColumnName="HorayFecha_Apertura" />
-          <ScalarProperty Name="HorayFecha_Cierre" ColumnName="HorayFecha_Cierre" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="T_Usuarios">
-      <EntityTypeMapping TypeName="DB_TiquetesModel.T_Usuarios">
-        <MappingFragment StoreEntitySet="T_Usuarios">
-          <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
-          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
-          <ScalarProperty Name="Nombre_Usuario" ColumnName="Nombre_Usuario" />
-          <ScalarProperty Name="Contrasena_Usuario" ColumnName="Contrasena_Usuario" />
-          <ScalarProperty Name="Estado_Usuario" ColumnName="Estado_Usuario" />
-          <ScalarProperty Name="Tipo_Usuario" ColumnName="Tipo_Usuario" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="LOGIN" FunctionName="DB_TiquetesModel.Store.LOGIN">
       <ResultMapping>
         <ComplexTypeMapping TypeName="DB_TiquetesModel.LOGIN_Result">
@@ -97,5 +9,76 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <EntitySetMapping Name="T_Aplicacion">
+      <EntityTypeMapping TypeName="DB_TiquetesModel.T_Aplicacion">
+        <MappingFragment StoreEntitySet="T_Aplicacion">
+          <ScalarProperty Name="Descripcion_Aplicacion" ColumnName="Descripcion_Aplicacion" />
+          <ScalarProperty Name="Nombre_Aplicacion" ColumnName="Nombre_Aplicacion" />
+          <ScalarProperty Name="Id_Aplicacion" ColumnName="Id_Aplicacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Cliente">
+      <EntityTypeMapping TypeName="DB_TiquetesModel.T_Cliente">
+        <MappingFragment StoreEntitySet="T_Cliente">
+          <ScalarProperty Name="Estado_Servidor" ColumnName="Estado_Servidor" />
+          <ScalarProperty Name="Ip_Servidor" ColumnName="Ip_Servidor" />
+          <ScalarProperty Name="Nombre_Servidor" ColumnName="Nombre_Servidor" />
+          <ScalarProperty Name="Tipo_Servidor" ColumnName="Tipo_Servidor" />
+          <ScalarProperty Name="Focal_Cliente" ColumnName="Focal_Cliente" />
+          <ScalarProperty Name="Pais_Cliente" ColumnName="Pais_Cliente" />
+          <ScalarProperty Name="Region_Cliente" ColumnName="Region_Cliente" />
+          <ScalarProperty Name="Correo_Cliente" ColumnName="Correo_Cliente" />
+          <ScalarProperty Name="Telefono_Cliente" ColumnName="Telefono_Cliente" />
+          <ScalarProperty Name="Nombre_Cliente" ColumnName="Nombre_Cliente" />
+          <ScalarProperty Name="Id_Cliente" ColumnName="Id_Cliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Estado_Tiquetes">
+      <EntityTypeMapping TypeName="DB_TiquetesModel.T_Estado_Tiquetes">
+        <MappingFragment StoreEntitySet="T_Estado_Tiquetes">
+          <ScalarProperty Name="Descripcion_Estado_Tiquete" ColumnName="Descripcion_Estado_Tiquete" />
+          <ScalarProperty Name="Id_Estado_Tiquete" ColumnName="Id_Estado_Tiquete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Severidades">
+      <EntityTypeMapping TypeName="DB_TiquetesModel.T_Severidades">
+        <MappingFragment StoreEntitySet="T_Severidades">
+          <ScalarProperty Name="Descripcion_Severidad" ColumnName="Descripcion_Severidad" />
+          <ScalarProperty Name="Severidad" ColumnName="Severidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Tiquete">
+      <EntityTypeMapping TypeName="DB_TiquetesModel.T_Tiquete">
+        <MappingFragment StoreEntitySet="T_Tiquete">
+          <ScalarProperty Name="HorayFecha_Cierre" ColumnName="HorayFecha_Cierre" />
+          <ScalarProperty Name="HorayFecha_Apertura" ColumnName="HorayFecha_Apertura" />
+          <ScalarProperty Name="Comentarios_Tiquete" ColumnName="Comentarios_Tiquete" />
+          <ScalarProperty Name="Estado_Tiquete" ColumnName="Estado_Tiquete" />
+          <ScalarProperty Name="Severidad_Tiquete" ColumnName="Severidad_Tiquete" />
+          <ScalarProperty Name="Numero_Tiquete" ColumnName="Numero_Tiquete" />
+          <ScalarProperty Name="Nombre_Aplicacion" ColumnName="Nombre_Aplicacion" />
+          <ScalarProperty Name="Nombre_Cliente" ColumnName="Nombre_Cliente" />
+          <ScalarProperty Name="Nombre_Usuario" ColumnName="Nombre_Usuario" />
+          <ScalarProperty Name="Id_Supervisor" ColumnName="Id_Supervisor" />
+          <ScalarProperty Name="Id_Tiquete" ColumnName="Id_Tiquete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_Usuarios">
+      <EntityTypeMapping TypeName="DB_TiquetesModel.T_Usuarios">
+        <MappingFragment StoreEntitySet="T_Usuarios">
+          <ScalarProperty Name="Tipo_Usuario" ColumnName="Tipo_Usuario" />
+          <ScalarProperty Name="Estado_Usuario" ColumnName="Estado_Usuario" />
+          <ScalarProperty Name="Contrasena_Usuario" ColumnName="Contrasena_Usuario" />
+          <ScalarProperty Name="Nombre_Usuario" ColumnName="Nombre_Usuario" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+          <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

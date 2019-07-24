@@ -40,12 +40,6 @@
             this.panelCentral = new System.Windows.Forms.Panel();
             this.ComboEstadoUsuario = new System.Windows.Forms.ComboBox();
             this.dataGrid = new System.Windows.Forms.DataGridView();
-            this.Id_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contrasena_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ComboTipoUsusario = new System.Windows.Forms.ComboBox();
             this.txtIdUsuario = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -205,8 +199,8 @@
             this.ComboEstadoUsuario.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ComboEstadoUsuario.FormattingEnabled = true;
             this.ComboEstadoUsuario.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
+            "ACTIVO",
+            "INACTIVO"});
             this.ComboEstadoUsuario.Location = new System.Drawing.Point(103, 74);
             this.ComboEstadoUsuario.Name = "ComboEstadoUsuario";
             this.ComboEstadoUsuario.Size = new System.Drawing.Size(83, 28);
@@ -216,48 +210,11 @@
             // 
             this.dataGrid.AllowUserToOrderColumns = true;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id_usuario,
-            this.Nombre_usuario,
-            this.Usuario,
-            this.Contrasena_usuario,
-            this.Estado_usuario,
-            this.Tipo_usuario});
             this.dataGrid.Location = new System.Drawing.Point(3, 143);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.Size = new System.Drawing.Size(514, 174);
             this.dataGrid.TabIndex = 3;
             this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
-            // 
-            // Id_usuario
-            // 
-            this.Id_usuario.HeaderText = "Id_usuario";
-            this.Id_usuario.Name = "Id_usuario";
-            // 
-            // Nombre_usuario
-            // 
-            this.Nombre_usuario.HeaderText = "Nombre_usuario";
-            this.Nombre_usuario.Name = "Nombre_usuario";
-            // 
-            // Usuario
-            // 
-            this.Usuario.HeaderText = "Usuario";
-            this.Usuario.Name = "Usuario";
-            // 
-            // Contrasena_usuario
-            // 
-            this.Contrasena_usuario.HeaderText = "Contrasena_usuario";
-            this.Contrasena_usuario.Name = "Contrasena_usuario";
-            // 
-            // Estado_usuario
-            // 
-            this.Estado_usuario.HeaderText = "Estado_usuario";
-            this.Estado_usuario.Name = "Estado_usuario";
-            // 
-            // Tipo_usuario
-            // 
-            this.Tipo_usuario.HeaderText = "Tipo_usuario";
-            this.Tipo_usuario.Name = "Tipo_usuario";
             // 
             // ComboTipoUsusario
             // 
@@ -267,9 +224,9 @@
             this.ComboTipoUsusario.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ComboTipoUsusario.FormattingEnabled = true;
             this.ComboTipoUsusario.Items.AddRange(new object[] {
-            "User",
-            "Admin",
-            "Supervisor"});
+            "USER",
+            "ADMIN",
+            "SUPERVISOR"});
             this.ComboTipoUsusario.Location = new System.Drawing.Point(331, 74);
             this.ComboTipoUsusario.Name = "ComboTipoUsusario";
             this.ComboTipoUsusario.Size = new System.Drawing.Size(177, 28);
@@ -437,11 +394,5 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Contrasena_usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado_usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_usuario;
     }
 }

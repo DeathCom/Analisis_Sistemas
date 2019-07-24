@@ -116,11 +116,6 @@ namespace _01Presentacion
         }
         #endregion
 
-        private void btnDestinos_Click(object sender, EventArgs e)
-        {
-            AbrirFormularioHijo(new Administrador_Roles());
-        }
-
         private void btnOrigen_Click(object sender, EventArgs e)
         {
             AbrirFormularioHijo(new Administrador_Aplicaciones());

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using _02LogicaNegocio;
 using _04Entidades;
+using _05Seguridad;
 
 namespace _01Presentacion
 {
@@ -50,28 +51,36 @@ namespace _01Presentacion
         #region  Botones_Guardar_Buscar_Editar_Eliminar From Administrador_Usuario
         public T_Usuarios processoBase()
         {
-            T_Usuarios Usuarios = new T_Usuarios();
-            Usuarios.Id_Usuario = Convert.ToInt16(txtIdUsuario.Text.Trim());
-            Usuarios.Usuario = txtAlias.Text;
-            Usuarios.Nombre_Usuario = txtNombre.Text;
-            Usuarios.Contrasena_Usuario = txtPassword.Text;
-            Usuarios.Estado_Usuario = ComboEstadoUsuario.Text;
-            Usuarios.Tipo_Usuario = ComboTipoUsusario.Text;
-            return Usuarios;
+            T_Usuarios usuario = new T_Usuarios();
+            usuario.Id_Usuario = Convert.ToInt16(txtIdUsuario.Text.Trim());
+            usuario.Usuario = txtAlias.Text;
+            usuario.Nombre_Usuario = txtNombre.Text;
+            usuario.Contrasena_Usuario = txtPassword.Text;
+            usuario.Estado_Usuario = ComboEstadoUsuario.Text;
+            usuario.Tipo_Usuario = ComboTipoUsusario.Text;
+            return usuario;
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("Accion Pendiente de Cosntruccion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             try
             {
-                T_Usuarios Usuarios = new T_Usuarios();
-                Usuarios.Id_Usuario = Convert.ToInt16(txtIdUsuario.Text.Trim());
-                Usuarios.Usuario = txtAlias.Text;
-                Usuarios.Nombre_Usuario = txtNombre.Text;
-                Usuarios.Contrasena_Usuario = txtPassword.Text;
-                Usuarios.Estado_Usuario = ComboEstadoUsuario.Text;
-                Usuarios.Tipo_Usuario = ComboTipoUsusario.Text;
-                _02LogicaNegocio.Logica.GuardarDato(Usuarios);
+                //#region Seccion_Encriptado
+                //Encriptado  Encriptar = new Encriptado();
+                //Encriptado TmpEncriptar = new Encriptado();
+                //Encriptado_Sec Encriptador = new Encriptado_Sec();
+                //Encriptar.PALABRA = txtPassword.Text.Trim();
+                //TmpEncriptar = Encriptador.Encriptar(Encriptar);
+                //string contraseña = TmpEncriptar.RESPUESTA;
+                //#endregion
+                T_Usuarios usuario = new T_Usuarios();
+                usuario.Id_Usuario = Convert.ToInt16(txtIdUsuario.Text.Trim());
+                usuario.Usuario = txtAlias.Text;
+                usuario.Nombre_Usuario = txtNombre.Text;
+                usuario.Contrasena_Usuario = txtPassword.Text;
+                usuario.Estado_Usuario = ComboEstadoUsuario.Text;
+                usuario.Tipo_Usuario = ComboTipoUsusario.Text;
+                _02LogicaNegocio.Logica.GuardarDato(usuario);
                 MessageBox.Show("Datos Guardados Exitosamente");
                 Limpiar(); this.Close();
             }

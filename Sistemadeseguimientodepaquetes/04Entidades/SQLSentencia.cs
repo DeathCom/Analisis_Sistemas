@@ -15,11 +15,6 @@ namespace _04Entidades
         #region ProcesoLogin
         public string iduser { get; set; }
         public string password { get; set; }
-        //public string typeuser { get; set; }
-        //public string typeuser { get; set; }
-        //public string.nameUser { get; set; }
-        //public stringtypeuser { get; set; }
-        //public string.stateUser { get; set; }
         #endregion
 
         public SQLSentencia()

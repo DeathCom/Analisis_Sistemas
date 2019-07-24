@@ -101,7 +101,7 @@ IF NOT EXISTS(select * from sysobjects where type = 'U' and name = 'T_Usuarios')
 			 Id_Usuario 		int primary key,
 			 Usuario 			nvarchar(50) not null,
              Nombre_Usuario 	nvarchar(50) not null,
-             Contrasena_Usuario	nvarchar(50) not null,
+             Contrasena_Usuario	nvarchar(250) not null,
              Estado_Usuario		nvarchar(50) not null,
              Tipo_Usuario		nvarchar(50) not null
 		)

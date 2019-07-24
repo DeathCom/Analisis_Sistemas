@@ -41,9 +41,6 @@
             this.txtDescSeveridad = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGrid = new System.Windows.Forms.DataGridView();
-            this.Id_Severidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Severidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Desc_Severidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -196,30 +193,11 @@
             // 
             this.dataGrid.AllowUserToOrderColumns = true;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id_Severidad,
-            this.Severidad,
-            this.Desc_Severidad});
             this.dataGrid.Location = new System.Drawing.Point(3, 212);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.Size = new System.Drawing.Size(514, 140);
             this.dataGrid.TabIndex = 3;
             this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
-            // 
-            // Id_Severidad
-            // 
-            this.Id_Severidad.HeaderText = "Id_Severidad";
-            this.Id_Severidad.Name = "Id_Severidad";
-            // 
-            // Severidad
-            // 
-            this.Severidad.HeaderText = "Severidad";
-            this.Severidad.Name = "Severidad";
-            // 
-            // Desc_Severidad
-            // 
-            this.Desc_Severidad.HeaderText = "Desc_Severidad";
-            this.Desc_Severidad.Name = "Desc_Severidad";
             // 
             // textBox1
             // 
@@ -311,8 +289,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtSeveridad;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Severidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Severidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Desc_Severidad;
     }
 }

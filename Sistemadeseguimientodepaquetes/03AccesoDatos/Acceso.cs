@@ -161,41 +161,40 @@ namespace _03AccesoDatos
 
             return lstEstado_Tiquetes;
         }
+        //public List<T_Estado_Clientes> Obtener_Estado_Clientes(SQLSentencia objsentencia)
+        //{
+        //    List<T_Estado_Clientes> lstEstado_Clientes = new List<T_Estado_Clientes>();
+        //    System.Data.DataTable dt = new System.Data.DataTable();
+        //    try
+        //    {
+        //        SqlCommand cmd = new SqlCommand();
 
-        public List<T_Estado_Clientes> Obtener_Estado_Clientes(SQLSentencia objsentencia)
-        {
-            List<T_Estado_Clientes> lstEstado_Clientes = new List<T_Estado_Clientes>();
-            System.Data.DataTable dt = new System.Data.DataTable();
-            try
-            {
-                SqlCommand cmd = new SqlCommand();
+        //        cmd.CommandText = objsentencia.PETICION;
+        //        cmd.Connection = objConexion;
+        //        cmd.CommandType = System.Data.CommandType.Text;
 
-                cmd.CommandText = objsentencia.PETICION;
-                cmd.Connection = objConexion;
-                cmd.CommandType = System.Data.CommandType.Text;
+        //        SqlDataAdapter objcarga = new SqlDataAdapter(cmd);
+        //        objcarga.Fill(dt);
 
-                SqlDataAdapter objcarga = new SqlDataAdapter(cmd);
-                objcarga.Fill(dt);
+        //        foreach (System.Data.DataRow item in dt.Rows)
+        //        {
+        //            T_Estado_Clientes objEstado_Clientes = new T_Estado_Clientes();
+        //            objEstado_Clientes.Id_Estado_Clientes = Convert.ToInt16(item.ItemArray[0].ToString());
+        //            objEstado_Clientes.Descripcion_Estado_Clientes = item.ItemArray[1].ToString();
+        //            lstEstado_Clientes.Add(objEstado_Clientes);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //    finally
+        //    {
+        //        this.CERRAR();
+        //    }
 
-                foreach (System.Data.DataRow item in dt.Rows)
-                {
-                    T_Estado_Clientes objEstado_Clientes = new T_Estado_Clientes();
-                    objEstado_Clientes.Id_Estado_Clientes = Convert.ToInt16(item.ItemArray[0].ToString());
-                    objEstado_Clientes.Descripcion_Estado_Clientes = item.ItemArray[1].ToString();
-                    lstEstado_Clientes.Add(objEstado_Clientes);
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                this.CERRAR();
-            }
-
-            return lstEstado_Clientes;
-        }
+        //    return lstEstado_Clientes;
+        //}
         #endregion
 
         #region Administrador_Clientes
@@ -245,41 +244,41 @@ namespace _03AccesoDatos
         #endregion
 
         #region Administrador_Roles
-        public List<T_Roles> Obtener_Roles(SQLSentencia objsentencia)
-        {
-            List<T_Roles> lstRoles = new List<T_Roles>();
-            System.Data.DataTable dt = new System.Data.DataTable();
-            try
-            {
-                SqlCommand cmd = new SqlCommand();
+        //public List<T_Roles> Obtener_Roles(SQLSentencia objsentencia)
+        //{
+        //    List<T_Roles> lstRoles = new List<T_Roles>();
+        //    System.Data.DataTable dt = new System.Data.DataTable();
+        //    try
+        //    {
+        //        SqlCommand cmd = new SqlCommand();
 
-                cmd.CommandText = objsentencia.PETICION;
-                cmd.Connection = objConexion;
-                cmd.CommandType = System.Data.CommandType.Text;
+        //        cmd.CommandText = objsentencia.PETICION;
+        //        cmd.Connection = objConexion;
+        //        cmd.CommandType = System.Data.CommandType.Text;
 
-                SqlDataAdapter objcarga = new SqlDataAdapter(cmd);
-                objcarga.Fill(dt);
+        //        SqlDataAdapter objcarga = new SqlDataAdapter(cmd);
+        //        objcarga.Fill(dt);
 
-                foreach (System.Data.DataRow item in dt.Rows)
-                {
-                    T_Roles objRol = new T_Roles();
-                    objRol.Id_Rol = Convert.ToInt16(item.ItemArray[0].ToString());
-                    objRol.Nombre_Rol = item.ItemArray[1].ToString();
-                    objRol.Descripcion_Rol = item.ItemArray[2].ToString();
-                    lstRoles.Add(objRol);
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                this.CERRAR();
-            }
+        //        foreach (System.Data.DataRow item in dt.Rows)
+        //        {
+        //            T_Roles objRol = new T_Roles();
+        //            objRol.Id_Rol = Convert.ToInt16(item.ItemArray[0].ToString());
+        //            objRol.Nombre_Rol = item.ItemArray[1].ToString();
+        //            objRol.Descripcion_Rol = item.ItemArray[2].ToString();
+        //            lstRoles.Add(objRol);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //    finally
+        //    {
+        //        this.CERRAR();
+        //    }
 
-            return lstRoles;
-        }
+        //    return lstRoles;
+        //}
         #endregion
 
         #region Administrador_Severidades

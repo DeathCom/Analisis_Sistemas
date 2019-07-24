@@ -223,6 +223,10 @@
       <Project>{765642d1-e79f-4cbc-8f6d-f2f59f5d656a}</Project>
       <Name>04Entidades</Name>
     </ProjectReference>
+    <ProjectReference Include="..\05Seguridad\05Seguridad.csproj">
+      <Project>{770832bb-01ee-40e0-ae0d-429690a8c1cd}</Project>
+      <Name>05Seguridad</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

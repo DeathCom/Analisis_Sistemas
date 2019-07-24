@@ -266,6 +266,11 @@
             // 
             this.ComboEstadoServer.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ComboEstadoServer.FormattingEnabled = true;
+            this.ComboEstadoServer.Items.AddRange(new object[] {
+            "DECOMMISSIONING",
+            "STEADY STATE",
+            "TRANSITION",
+            "CLOSED"});
             this.ComboEstadoServer.Location = new System.Drawing.Point(96, 38);
             this.ComboEstadoServer.Name = "ComboEstadoServer";
             this.ComboEstadoServer.Size = new System.Drawing.Size(130, 28);
