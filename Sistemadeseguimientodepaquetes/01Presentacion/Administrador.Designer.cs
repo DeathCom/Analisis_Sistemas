@@ -45,8 +45,6 @@
             this.btnEnvio = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnOrigen = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.btnDestinos = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnUsuarios = new System.Windows.Forms.Button();
@@ -64,7 +62,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
@@ -173,8 +170,6 @@
             this.MenuLateral.Controls.Add(this.btnEnvio);
             this.MenuLateral.Controls.Add(this.pictureBox6);
             this.MenuLateral.Controls.Add(this.btnOrigen);
-            this.MenuLateral.Controls.Add(this.pictureBox5);
-            this.MenuLateral.Controls.Add(this.btnDestinos);
             this.MenuLateral.Controls.Add(this.pictureBox4);
             this.MenuLateral.Controls.Add(this.pictureBox2);
             this.MenuLateral.Controls.Add(this.btnUsuarios);
@@ -189,7 +184,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 295);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 259);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -205,7 +200,7 @@
             this.btnEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEstado.ForeColor = System.Drawing.Color.White;
-            this.btnEstado.Location = new System.Drawing.Point(31, 295);
+            this.btnEstado.Location = new System.Drawing.Point(31, 259);
             this.btnEstado.Name = "btnEstado";
             this.btnEstado.Size = new System.Drawing.Size(99, 30);
             this.btnEstado.TabIndex = 19;
@@ -216,7 +211,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(0, 259);
+            this.pictureBox8.Location = new System.Drawing.Point(0, 223);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(30, 30);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -232,7 +227,7 @@
             this.btnPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPagos.ForeColor = System.Drawing.Color.White;
-            this.btnPagos.Location = new System.Drawing.Point(31, 259);
+            this.btnPagos.Location = new System.Drawing.Point(31, 223);
             this.btnPagos.Name = "btnPagos";
             this.btnPagos.Size = new System.Drawing.Size(99, 30);
             this.btnPagos.TabIndex = 17;
@@ -243,7 +238,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(0, 223);
+            this.pictureBox7.Location = new System.Drawing.Point(0, 187);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(30, 30);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -259,7 +254,7 @@
             this.btnEnvio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnvio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnvio.ForeColor = System.Drawing.Color.White;
-            this.btnEnvio.Location = new System.Drawing.Point(31, 223);
+            this.btnEnvio.Location = new System.Drawing.Point(31, 187);
             this.btnEnvio.Name = "btnEnvio";
             this.btnEnvio.Size = new System.Drawing.Size(99, 30);
             this.btnEnvio.TabIndex = 15;
@@ -270,7 +265,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(0, 187);
+            this.pictureBox6.Location = new System.Drawing.Point(0, 151);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(30, 30);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -286,40 +281,13 @@
             this.btnOrigen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrigen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrigen.ForeColor = System.Drawing.Color.White;
-            this.btnOrigen.Location = new System.Drawing.Point(31, 187);
+            this.btnOrigen.Location = new System.Drawing.Point(31, 151);
             this.btnOrigen.Name = "btnOrigen";
             this.btnOrigen.Size = new System.Drawing.Size(99, 30);
             this.btnOrigen.TabIndex = 13;
             this.btnOrigen.Text = "Aplicacion";
             this.btnOrigen.UseVisualStyleBackColor = true;
             this.btnOrigen.Click += new System.EventHandler(this.btnOrigen_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(0, 151);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 12;
-            this.pictureBox5.TabStop = false;
-            // 
-            // btnDestinos
-            // 
-            this.btnDestinos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDestinos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnDestinos.FlatAppearance.BorderSize = 0;
-            this.btnDestinos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnDestinos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDestinos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDestinos.ForeColor = System.Drawing.Color.White;
-            this.btnDestinos.Location = new System.Drawing.Point(31, 151);
-            this.btnDestinos.Name = "btnDestinos";
-            this.btnDestinos.Size = new System.Drawing.Size(99, 30);
-            this.btnDestinos.TabIndex = 11;
-            this.btnDestinos.Text = "Roles";
-            this.btnDestinos.UseVisualStyleBackColor = true;
-            this.btnDestinos.Click += new System.EventHandler(this.btnDestinos_Click);
             // 
             // pictureBox4
             // 
@@ -421,7 +389,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
@@ -452,7 +419,5 @@
         private System.Windows.Forms.Button btnEnvio;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button btnOrigen;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Button btnDestinos;
     }
 }

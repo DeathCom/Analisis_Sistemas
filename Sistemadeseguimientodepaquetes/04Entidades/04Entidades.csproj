@@ -74,13 +74,7 @@
     <Compile Include="T_Cliente.cs">
       <DependentUpon>EntidadesAdo.tt</DependentUpon>
     </Compile>
-    <Compile Include="T_Estado_Clientes.cs">
-      <DependentUpon>EntidadesAdo.tt</DependentUpon>
-    </Compile>
     <Compile Include="T_Estado_Tiquetes.cs">
-      <DependentUpon>EntidadesAdo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="T_Roles.cs">
       <DependentUpon>EntidadesAdo.tt</DependentUpon>
     </Compile>
     <Compile Include="T_Severidades.cs">

@@ -36,11 +36,9 @@
             this.btnBorrar = new System.Windows.Forms.PictureBox();
             this.icono = new System.Windows.Forms.PictureBox();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSeveridad = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtDescPago = new System.Windows.Forms.TextBox();
-            this.txtIdPago = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.txtDescSeveridad = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.Id_Severidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -140,11 +138,9 @@
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(82)))), ((int)(((byte)(100)))));
-            this.panelCentral.Controls.Add(this.textBox2);
+            this.panelCentral.Controls.Add(this.txtSeveridad);
             this.panelCentral.Controls.Add(this.label4);
-            this.panelCentral.Controls.Add(this.txtDescPago);
-            this.panelCentral.Controls.Add(this.txtIdPago);
-            this.panelCentral.Controls.Add(this.label2);
+            this.panelCentral.Controls.Add(this.txtDescSeveridad);
             this.panelCentral.Controls.Add(this.label3);
             this.panelCentral.Controls.Add(this.dataGrid);
             this.panelCentral.Controls.Add(this.textBox1);
@@ -158,13 +154,13 @@
             this.panelCentral.Size = new System.Drawing.Size(520, 355);
             this.panelCentral.TabIndex = 9;
             // 
-            // textBox2
+            // txtSeveridad
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(127, 114);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(120, 27);
-            this.textBox2.TabIndex = 47;
+            this.txtSeveridad.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSeveridad.Location = new System.Drawing.Point(127, 114);
+            this.txtSeveridad.Name = "txtSeveridad";
+            this.txtSeveridad.Size = new System.Drawing.Size(120, 27);
+            this.txtSeveridad.TabIndex = 47;
             // 
             // label4
             // 
@@ -177,32 +173,13 @@
             this.label4.TabIndex = 46;
             this.label4.Text = "Severidad:";
             // 
-            // txtDescPago
+            // txtDescSeveridad
             // 
-            this.txtDescPago.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescPago.Location = new System.Drawing.Point(126, 173);
-            this.txtDescPago.Name = "txtDescPago";
-            this.txtDescPago.Size = new System.Drawing.Size(203, 27);
-            this.txtDescPago.TabIndex = 45;
-            // 
-            // txtIdPago
-            // 
-            this.txtIdPago.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdPago.Location = new System.Drawing.Point(126, 61);
-            this.txtIdPago.Name = "txtIdPago";
-            this.txtIdPago.Size = new System.Drawing.Size(120, 27);
-            this.txtIdPago.TabIndex = 44;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(121, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 20);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "Id Severidad:";
+            this.txtDescSeveridad.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescSeveridad.Location = new System.Drawing.Point(126, 173);
+            this.txtDescSeveridad.Name = "txtDescSeveridad";
+            this.txtDescSeveridad.Size = new System.Drawing.Size(203, 27);
+            this.txtDescSeveridad.TabIndex = 45;
             // 
             // label3
             // 
@@ -291,7 +268,7 @@
             this.label6.TabIndex = 24;
             this.label6.Text = "Id Usuario:";
             // 
-            // Administrador_Pagos
+            // Administrador_Severidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -299,7 +276,7 @@
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.panelCentral);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Administrador_Pagos";
+            this.Name = "Administrador_Severidades";
             this.Text = "Administrador_Pagos";
             this.Load += new System.EventHandler(this.Administrador_Pago_Load);
             this.BarraTitulo.ResumeLayout(false);
@@ -330,11 +307,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Tabla;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtDescPago;
-        private System.Windows.Forms.TextBox txtIdPago;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtDescSeveridad;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSeveridad;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Severidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Severidad;

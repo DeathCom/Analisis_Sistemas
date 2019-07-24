@@ -38,7 +38,7 @@
             this.btnEditar = new System.Windows.Forms.PictureBox();
             this.btnBorrar = new System.Windows.Forms.PictureBox();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.txtEstadoCB = new System.Windows.Forms.ComboBox();
+            this.ComboEstadoUsuario = new System.Windows.Forms.ComboBox();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.Id_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +46,7 @@
             this.Contrasena_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo_usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtTipoUserCB = new System.Windows.Forms.ComboBox();
+            this.ComboTipoUsusario = new System.Windows.Forms.ComboBox();
             this.txtIdUsuario = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -177,9 +177,9 @@
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(82)))), ((int)(((byte)(100)))));
-            this.panelCentral.Controls.Add(this.txtEstadoCB);
+            this.panelCentral.Controls.Add(this.ComboEstadoUsuario);
             this.panelCentral.Controls.Add(this.dataGrid);
-            this.panelCentral.Controls.Add(this.txtTipoUserCB);
+            this.panelCentral.Controls.Add(this.ComboTipoUsusario);
             this.panelCentral.Controls.Add(this.txtIdUsuario);
             this.panelCentral.Controls.Add(this.txtNombre);
             this.panelCentral.Controls.Add(this.label1);
@@ -197,20 +197,20 @@
             this.panelCentral.Size = new System.Drawing.Size(520, 320);
             this.panelCentral.TabIndex = 5;
             // 
-            // txtEstadoCB
+            // ComboEstadoUsuario
             // 
-            this.txtEstadoCB.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtEstadoCB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtEstadoCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtEstadoCB.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstadoCB.FormattingEnabled = true;
-            this.txtEstadoCB.Items.AddRange(new object[] {
+            this.ComboEstadoUsuario.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ComboEstadoUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ComboEstadoUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboEstadoUsuario.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboEstadoUsuario.FormattingEnabled = true;
+            this.ComboEstadoUsuario.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.txtEstadoCB.Location = new System.Drawing.Point(103, 74);
-            this.txtEstadoCB.Name = "txtEstadoCB";
-            this.txtEstadoCB.Size = new System.Drawing.Size(83, 28);
-            this.txtEstadoCB.TabIndex = 31;
+            this.ComboEstadoUsuario.Location = new System.Drawing.Point(103, 74);
+            this.ComboEstadoUsuario.Name = "ComboEstadoUsuario";
+            this.ComboEstadoUsuario.Size = new System.Drawing.Size(83, 28);
+            this.ComboEstadoUsuario.TabIndex = 31;
             // 
             // dataGrid
             // 
@@ -259,21 +259,21 @@
             this.Tipo_usuario.HeaderText = "Tipo_usuario";
             this.Tipo_usuario.Name = "Tipo_usuario";
             // 
-            // txtTipoUserCB
+            // ComboTipoUsusario
             // 
-            this.txtTipoUserCB.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtTipoUserCB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtTipoUserCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtTipoUserCB.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoUserCB.FormattingEnabled = true;
-            this.txtTipoUserCB.Items.AddRange(new object[] {
+            this.ComboTipoUsusario.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ComboTipoUsusario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ComboTipoUsusario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboTipoUsusario.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboTipoUsusario.FormattingEnabled = true;
+            this.ComboTipoUsusario.Items.AddRange(new object[] {
             "User",
             "Admin",
             "Supervisor"});
-            this.txtTipoUserCB.Location = new System.Drawing.Point(331, 74);
-            this.txtTipoUserCB.Name = "txtTipoUserCB";
-            this.txtTipoUserCB.Size = new System.Drawing.Size(177, 28);
-            this.txtTipoUserCB.TabIndex = 30;
+            this.ComboTipoUsusario.Location = new System.Drawing.Point(331, 74);
+            this.ComboTipoUsusario.Name = "ComboTipoUsusario";
+            this.ComboTipoUsusario.Size = new System.Drawing.Size(177, 28);
+            this.ComboTipoUsusario.TabIndex = 30;
             // 
             // txtIdUsuario
             // 
@@ -422,8 +422,8 @@
         private System.Windows.Forms.PictureBox btnBorrar;
         private System.Windows.Forms.Panel panelCentral;
         private System.Windows.Forms.DataGridView dataGrid;
-        private System.Windows.Forms.ComboBox txtEstadoCB;
-        private System.Windows.Forms.ComboBox txtTipoUserCB;
+        private System.Windows.Forms.ComboBox ComboEstadoUsuario;
+        private System.Windows.Forms.ComboBox ComboTipoUsusario;
         private System.Windows.Forms.TextBox txtIdUsuario;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;

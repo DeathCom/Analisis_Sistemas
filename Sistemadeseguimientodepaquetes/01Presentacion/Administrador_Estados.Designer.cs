@@ -36,20 +36,13 @@
             this.btnEditar = new System.Windows.Forms.PictureBox();
             this.btnBorrar = new System.Windows.Forms.PictureBox();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.ComboSelecCliente_tiquete = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridEstTiquete = new System.Windows.Forms.DataGridView();
-            this.Id_Estado_Tiq = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Desc_Estado_Tiq = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtDescEstado = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.dataGridEstCliente = new System.Windows.Forms.DataGridView();
-            this.Desc_Estado_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id_Estado_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,7 +55,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnBorrar)).BeginInit();
             this.panelCentral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEstTiquete)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridEstCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // icono
@@ -144,16 +136,13 @@
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(82)))), ((int)(((byte)(100)))));
-            this.panelCentral.Controls.Add(this.ComboSelecCliente_tiquete);
             this.panelCentral.Controls.Add(this.label7);
             this.panelCentral.Controls.Add(this.dataGridEstTiquete);
             this.panelCentral.Controls.Add(this.txtEstado);
             this.panelCentral.Controls.Add(this.label3);
-            this.panelCentral.Controls.Add(this.label2);
             this.panelCentral.Controls.Add(this.txtDescEstado);
             this.panelCentral.Controls.Add(this.label8);
             this.panelCentral.Controls.Add(this.label9);
-            this.panelCentral.Controls.Add(this.dataGridEstCliente);
             this.panelCentral.Controls.Add(this.textBox1);
             this.panelCentral.Controls.Add(this.textBox6);
             this.panelCentral.Controls.Add(this.label1);
@@ -164,51 +153,26 @@
             this.panelCentral.Size = new System.Drawing.Size(520, 355);
             this.panelCentral.TabIndex = 7;
             // 
-            // ComboSelecCliente_tiquete
-            // 
-            this.ComboSelecCliente_tiquete.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ComboSelecCliente_tiquete.FormattingEnabled = true;
-            this.ComboSelecCliente_tiquete.Items.AddRange(new object[] {
-            "Clientes",
-            "Tiquetes"});
-            this.ComboSelecCliente_tiquete.Location = new System.Drawing.Point(158, 62);
-            this.ComboSelecCliente_tiquete.Name = "ComboSelecCliente_tiquete";
-            this.ComboSelecCliente_tiquete.Size = new System.Drawing.Size(203, 28);
-            this.ComboSelecCliente_tiquete.TabIndex = 81;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(155, 38);
+            this.label7.Location = new System.Drawing.Point(192, 57);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(206, 20);
+            this.label7.Size = new System.Drawing.Size(132, 20);
             this.label7.TabIndex = 69;
-            this.label7.Text = "Estados Clientes y Tiquetes";
+            this.label7.Text = "Estados Tiquetes";
             // 
             // dataGridEstTiquete
             // 
             this.dataGridEstTiquete.AllowUserToOrderColumns = true;
             this.dataGridEstTiquete.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridEstTiquete.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id_Estado_Tiq,
-            this.Desc_Estado_Tiq});
-            this.dataGridEstTiquete.Location = new System.Drawing.Point(3, 188);
+            this.dataGridEstTiquete.Location = new System.Drawing.Point(3, 234);
             this.dataGridEstTiquete.Name = "dataGridEstTiquete";
-            this.dataGridEstTiquete.Size = new System.Drawing.Size(505, 64);
+            this.dataGridEstTiquete.Size = new System.Drawing.Size(505, 109);
             this.dataGridEstTiquete.TabIndex = 68;
             this.dataGridEstTiquete.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridEstTiquete_CellClick);
-            // 
-            // Id_Estado_Tiq
-            // 
-            this.Id_Estado_Tiq.HeaderText = "Id_Estado_Tiq";
-            this.Id_Estado_Tiq.Name = "Id_Estado_Tiq";
-            // 
-            // Desc_Estado_Tiq
-            // 
-            this.Desc_Estado_Tiq.HeaderText = "Desc_Estado_Tiq";
-            this.Desc_Estado_Tiq.Name = "Desc_Estado_Tiq";
             // 
             // txtEstado
             // 
@@ -223,22 +187,11 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 165);
+            this.label3.Location = new System.Drawing.Point(3, 211);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 20);
             this.label3.TabIndex = 63;
             this.label3.Text = "Tiquetes";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 264);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 20);
-            this.label2.TabIndex = 62;
-            this.label2.Text = "Clientes";
             // 
             // txtDescEstado
             // 
@@ -269,29 +222,6 @@
             this.label9.Size = new System.Drawing.Size(80, 20);
             this.label9.TabIndex = 58;
             this.label9.Text = "Id Estado:";
-            // 
-            // dataGridEstCliente
-            // 
-            this.dataGridEstCliente.AllowUserToOrderColumns = true;
-            this.dataGridEstCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridEstCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Desc_Estado_Cliente,
-            this.Id_Estado_Cliente});
-            this.dataGridEstCliente.Location = new System.Drawing.Point(3, 287);
-            this.dataGridEstCliente.Name = "dataGridEstCliente";
-            this.dataGridEstCliente.Size = new System.Drawing.Size(505, 65);
-            this.dataGridEstCliente.TabIndex = 3;
-            this.dataGridEstCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridEstCliente_CellClick);
-            // 
-            // Desc_Estado_Cliente
-            // 
-            this.Desc_Estado_Cliente.HeaderText = "Desc_Estado_Cliente";
-            this.Desc_Estado_Cliente.Name = "Desc_Estado_Cliente";
-            // 
-            // Id_Estado_Cliente
-            // 
-            this.Id_Estado_Cliente.HeaderText = "Id_Estado_Cliente";
-            this.Id_Estado_Cliente.Name = "Id_Estado_Cliente";
             // 
             // textBox1
             // 
@@ -349,7 +279,6 @@
             this.panelCentral.ResumeLayout(false);
             this.panelCentral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEstTiquete)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridEstCliente)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -363,7 +292,6 @@
         private System.Windows.Forms.PictureBox btnEditar;
         private System.Windows.Forms.PictureBox btnBorrar;
         private System.Windows.Forms.Panel panelCentral;
-        private System.Windows.Forms.DataGridView dataGridEstCliente;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label1;
@@ -373,13 +301,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridEstTiquete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Estado_Tiq;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Desc_Estado_Tiq;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Desc_Estado_Cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Estado_Cliente;
-        private System.Windows.Forms.ComboBox ComboSelecCliente_tiquete;
     }
 }

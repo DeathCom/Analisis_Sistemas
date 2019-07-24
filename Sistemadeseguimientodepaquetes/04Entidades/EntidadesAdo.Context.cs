@@ -30,9 +30,7 @@ namespace _04Entidades
     
         public DbSet<T_Aplicacion> T_Aplicacion { get; set; }
         public DbSet<T_Cliente> T_Cliente { get; set; }
-        public DbSet<T_Estado_Clientes> T_Estado_Clientes { get; set; }
         public DbSet<T_Estado_Tiquetes> T_Estado_Tiquetes { get; set; }
-        public DbSet<T_Roles> T_Roles { get; set; }
         public DbSet<T_Severidades> T_Severidades { get; set; }
         public DbSet<T_Tiquete> T_Tiquete { get; set; }
         public DbSet<T_Usuarios> T_Usuarios { get; set; }

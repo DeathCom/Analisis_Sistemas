@@ -318,284 +318,284 @@ namespace _02LogicaNegocio
         #endregion
 
         #region Metodos Para Tabla T_Estado_Clientes 
-        public static void GuardarDato(T_Estado_Clientes E_Cliente) //Metodo para Agregar informacion a la tabla Estado
-        {
-            try
-            {
-                ArrayList listParametros = new ArrayList();
-                SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"INSERT INTO T_Estado_Clientes VALUES (@Id_Estado_Clientes, @Descripcion_Estado_Clientes)";
-                #region Parametrización
-                SqlParameter Id_Estado_Clientes = new SqlParameter();
-                Id_Estado_Clientes.SqlDbType = System.Data.SqlDbType.Int;
-                Id_Estado_Clientes.ParameterName = "@Id_Estado_Clientes";
-                Id_Estado_Clientes.Value = E_Cliente.Id_Estado_Clientes;
+        //public static void GuardarDato(T_Estado_Clientes E_Cliente) //Metodo para Agregar informacion a la tabla Estado
+        //{
+        //    try
+        //    {
+        //        ArrayList listParametros = new ArrayList();
+        //        SQLSentencia sentencia = new SQLSentencia();
+        //        sentencia.PETICION = @"INSERT INTO T_Estado_Clientes VALUES (@Id_Estado_Clientes, @Descripcion_Estado_Clientes)";
+        //        #region Parametrización
+        //        SqlParameter Id_Estado_Clientes = new SqlParameter();
+        //        Id_Estado_Clientes.SqlDbType = System.Data.SqlDbType.Int;
+        //        Id_Estado_Clientes.ParameterName = "@Id_Estado_Clientes";
+        //        Id_Estado_Clientes.Value = E_Cliente.Id_Estado_Clientes;
 
-                SqlParameter Descripcion_Estado_Clientes = new SqlParameter();
-                Descripcion_Estado_Clientes.SqlDbType = System.Data.SqlDbType.NVarChar;
-                Descripcion_Estado_Clientes.ParameterName = "@Descripcion_Estado_Clientes";
-                Descripcion_Estado_Clientes.Value = E_Cliente.Descripcion_Estado_Clientes;
+        //        SqlParameter Descripcion_Estado_Clientes = new SqlParameter();
+        //        Descripcion_Estado_Clientes.SqlDbType = System.Data.SqlDbType.NVarChar;
+        //        Descripcion_Estado_Clientes.ParameterName = "@Descripcion_Estado_Clientes";
+        //        Descripcion_Estado_Clientes.Value = E_Cliente.Descripcion_Estado_Clientes;
 
-                listParametros.Add(Id_Estado_Clientes);
-                listParametros.Add(Descripcion_Estado_Clientes);
+        //        listParametros.Add(Id_Estado_Clientes);
+        //        listParametros.Add(Descripcion_Estado_Clientes);
 
-                sentencia.LSTPARAMETROS = listParametros;
-                #endregion
-                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                objAcceso.EjecutarSentencia(sentencia);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public static void ModificarDato(T_Estado_Clientes E_Cliente) //Metodo para Modificar informacion en la tabla Estado
-        {
-            try
-            {
-                ArrayList listParametros = new ArrayList();
-                SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"UPDATE T_Estado_Clientes SET Descripcion_Estado_Clientes= @Descripcion_Estado_Clientes WHERE Id_Estado_Clientes= @Id_Estado_Clientes";
-                #region Parametrización
-                SqlParameter Id_Estado_Clientes = new SqlParameter();
-                Id_Estado_Clientes.SqlDbType = System.Data.SqlDbType.Int;
-                Id_Estado_Clientes.ParameterName = "@Id_Estado_Clientes";
-                Id_Estado_Clientes.Value = E_Cliente.Id_Estado_Clientes;
+        //        sentencia.LSTPARAMETROS = listParametros;
+        //        #endregion
+        //        _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+        //        objAcceso.EjecutarSentencia(sentencia);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
+        //public static void ModificarDato(T_Estado_Clientes E_Cliente) //Metodo para Modificar informacion en la tabla Estado
+        //{
+        //    try
+        //    {
+        //        ArrayList listParametros = new ArrayList();
+        //        SQLSentencia sentencia = new SQLSentencia();
+        //        sentencia.PETICION = @"UPDATE T_Estado_Clientes SET Descripcion_Estado_Clientes= @Descripcion_Estado_Clientes WHERE Id_Estado_Clientes= @Id_Estado_Clientes";
+        //        #region Parametrización
+        //        SqlParameter Id_Estado_Clientes = new SqlParameter();
+        //        Id_Estado_Clientes.SqlDbType = System.Data.SqlDbType.Int;
+        //        Id_Estado_Clientes.ParameterName = "@Id_Estado_Clientes";
+        //        Id_Estado_Clientes.Value = E_Cliente.Id_Estado_Clientes;
 
-                SqlParameter Descripcion_Estado_Clientes = new SqlParameter();
-                Descripcion_Estado_Clientes.SqlDbType = System.Data.SqlDbType.NVarChar;
-                Descripcion_Estado_Clientes.ParameterName = "@Descripcion_Estado_Clientes";
-                Descripcion_Estado_Clientes.Value = E_Cliente.Descripcion_Estado_Clientes;
+        //        SqlParameter Descripcion_Estado_Clientes = new SqlParameter();
+        //        Descripcion_Estado_Clientes.SqlDbType = System.Data.SqlDbType.NVarChar;
+        //        Descripcion_Estado_Clientes.ParameterName = "@Descripcion_Estado_Clientes";
+        //        Descripcion_Estado_Clientes.Value = E_Cliente.Descripcion_Estado_Clientes;
 
-                listParametros.Add(Id_Estado_Clientes);
-                listParametros.Add(Descripcion_Estado_Clientes);
+        //        listParametros.Add(Id_Estado_Clientes);
+        //        listParametros.Add(Descripcion_Estado_Clientes);
 
-                sentencia.LSTPARAMETROS = listParametros;
-                #endregion
-                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                objAcceso.EjecutarSentencia(sentencia);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public static void EliminarDato(T_Estado_Clientes E_Cliente) //Metodo para Eliminar informacion en la tabla Estado
+        //        sentencia.LSTPARAMETROS = listParametros;
+        //        #endregion
+        //        _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+        //        objAcceso.EjecutarSentencia(sentencia);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
+        //public static void EliminarDato(T_Estado_Clientes E_Cliente) //Metodo para Eliminar informacion en la tabla Estado
 
-        {
-            try
-            {
-                ArrayList listParametros = new ArrayList();
-                SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"DELETE FROM T_Estado_Clientes WHERE Id_Estado_Clientes= @Id_Estado_Clientes";
-                #region Parametrización
-                SqlParameter Id_Estado_Clientes = new SqlParameter();
-                Id_Estado_Clientes.SqlDbType = System.Data.SqlDbType.Int;
-                Id_Estado_Clientes.ParameterName = "@Id_Estado_Clientes";
-                Id_Estado_Clientes.Value = E_Cliente.Id_Estado_Clientes;
+        //{
+        //    try
+        //    {
+        //        ArrayList listParametros = new ArrayList();
+        //        SQLSentencia sentencia = new SQLSentencia();
+        //        sentencia.PETICION = @"DELETE FROM T_Estado_Clientes WHERE Id_Estado_Clientes= @Id_Estado_Clientes";
+        //        #region Parametrización
+        //        SqlParameter Id_Estado_Clientes = new SqlParameter();
+        //        Id_Estado_Clientes.SqlDbType = System.Data.SqlDbType.Int;
+        //        Id_Estado_Clientes.ParameterName = "@Id_Estado_Clientes";
+        //        Id_Estado_Clientes.Value = E_Cliente.Id_Estado_Clientes;
 
-                listParametros.Add(Id_Estado_Clientes);
+        //        listParametros.Add(Id_Estado_Clientes);
 
-                sentencia.LSTPARAMETROS = listParametros;
-                #endregion
-                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                objAcceso.EjecutarSentencia(sentencia);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public static List<T_Estado_Clientes> obtE_Cliente()
-        {
-            try
-            {
-                SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT Id_Estado_Clientes, Descripcion_Estado_Clientes  FROM T_Estado_Clientes";
-                Acceso objacceso = new Acceso();
-                return objacceso.Obtener_Estado_Clientes(sentencia);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public static List<T_Estado_Clientes> BuscarDatoA(T_Estado_Clientes E_Cliente) //Metodo para Buscar informacion en la tabla estado
-        {
-            try
-            {
-                SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT Id_Estado_Clientes, Descripcion_Estado_Clientes FROM T_Estado_Clientes WHERE Id_Estado_Clientes='" + E_Cliente.Id_Estado_Clientes + "'";
-                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                return objAcceso.Obtener_Estado_Clientes(sentencia);
-            }
-            catch (Exception e)
-            {
+        //        sentencia.LSTPARAMETROS = listParametros;
+        //        #endregion
+        //        _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+        //        objAcceso.EjecutarSentencia(sentencia);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
+        //public static List<T_Estado_Clientes> obtE_Cliente()
+        //{
+        //    try
+        //    {
+        //        SQLSentencia sentencia = new SQLSentencia();
+        //        sentencia.PETICION = @"SELECT Id_Estado_Clientes, Descripcion_Estado_Clientes  FROM T_Estado_Clientes";
+        //        Acceso objacceso = new Acceso();
+        //        return objacceso.Obtener_Estado_Clientes(sentencia);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
+        //public static List<T_Estado_Clientes> BuscarDatoA(T_Estado_Clientes E_Cliente) //Metodo para Buscar informacion en la tabla estado
+        //{
+        //    try
+        //    {
+        //        SQLSentencia sentencia = new SQLSentencia();
+        //        sentencia.PETICION = @"SELECT Id_Estado_Clientes, Descripcion_Estado_Clientes FROM T_Estado_Clientes WHERE Id_Estado_Clientes='" + E_Cliente.Id_Estado_Clientes + "'";
+        //        _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+        //        return objAcceso.Obtener_Estado_Clientes(sentencia);
+        //    }
+        //    catch (Exception e)
+        //    {
 
-                throw e;
-            }
-        }
-        public static List<T_Estado_Clientes> BuscarDatoB(T_Estado_Clientes E_Cliente) //Metodo para Buscar informacion en la tabla envio
-        {
-            try
-            {
-                SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT Id_Estado_Clientes, Descripcion_Estado_Clientes FROM T_Estado_Clientes WHERE Descripcion_Estado_Clientes='" + E_Cliente.Descripcion_Estado_Clientes + "'";
-                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                return objAcceso.Obtener_Estado_Clientes(sentencia);
-            }
-            catch (Exception e)
-            {
+        //        throw e;
+        //    }
+        //}
+        //public static List<T_Estado_Clientes> BuscarDatoB(T_Estado_Clientes E_Cliente) //Metodo para Buscar informacion en la tabla envio
+        //{
+        //    try
+        //    {
+        //        SQLSentencia sentencia = new SQLSentencia();
+        //        sentencia.PETICION = @"SELECT Id_Estado_Clientes, Descripcion_Estado_Clientes FROM T_Estado_Clientes WHERE Descripcion_Estado_Clientes='" + E_Cliente.Descripcion_Estado_Clientes + "'";
+        //        _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+        //        return objAcceso.Obtener_Estado_Clientes(sentencia);
+        //    }
+        //    catch (Exception e)
+        //    {
 
-                throw e;
-            }
-        }
+        //        throw e;
+        //    }
+        //}
         #endregion
 
         #region Metodos Para Tabla T_Roles
-        public static void GuardarDato(T_Roles Roles) //Metodo para Agregar informacion a la tabla Pago
-        {
-            try
-            {
-                ArrayList listParametros = new ArrayList();
-                SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"INSERT INTO T_Roles VALUES (@Id_Rol, @Nombre_Rol, @Descripcion_Rol)";
-                #region Parametrización
-                SqlParameter Id_Rol = new SqlParameter();
-                Id_Rol.SqlDbType = System.Data.SqlDbType.Int;
-                Id_Rol.ParameterName = "@Id_Rol";
-                Id_Rol.Value = Roles.Id_Rol;
+        //public static void GuardarDato(T_Roles Roles) //Metodo para Agregar informacion a la tabla Pago
+        //{
+        //    try
+        //    {
+        //        ArrayList listParametros = new ArrayList();
+        //        SQLSentencia sentencia = new SQLSentencia();
+        //        sentencia.PETICION = @"INSERT INTO T_Roles VALUES (@Id_Rol, @Nombre_Rol, @Descripcion_Rol)";
+        //        #region Parametrización
+        //        SqlParameter Id_Rol = new SqlParameter();
+        //        Id_Rol.SqlDbType = System.Data.SqlDbType.Int;
+        //        Id_Rol.ParameterName = "@Id_Rol";
+        //        Id_Rol.Value = Roles.Id_Rol;
 
-                SqlParameter Nombre_Rol = new SqlParameter();
-                Nombre_Rol.SqlDbType = System.Data.SqlDbType.NVarChar;
-                Nombre_Rol.ParameterName = "@Nombre_Rol";
-                Nombre_Rol.Value = Roles.Nombre_Rol;
+        //        SqlParameter Nombre_Rol = new SqlParameter();
+        //        Nombre_Rol.SqlDbType = System.Data.SqlDbType.NVarChar;
+        //        Nombre_Rol.ParameterName = "@Nombre_Rol";
+        //        Nombre_Rol.Value = Roles.Nombre_Rol;
 
-                SqlParameter Descripcion_Rol = new SqlParameter();
-                Descripcion_Rol.SqlDbType = System.Data.SqlDbType.NVarChar;
-                Descripcion_Rol.ParameterName = "@Descripcion_Rol";
-                Descripcion_Rol.Value = Roles.Descripcion_Rol;
+        //        SqlParameter Descripcion_Rol = new SqlParameter();
+        //        Descripcion_Rol.SqlDbType = System.Data.SqlDbType.NVarChar;
+        //        Descripcion_Rol.ParameterName = "@Descripcion_Rol";
+        //        Descripcion_Rol.Value = Roles.Descripcion_Rol;
 
-                listParametros.Add(Id_Rol);
-                listParametros.Add(Nombre_Rol);
-                listParametros.Add(Descripcion_Rol);
+        //        listParametros.Add(Id_Rol);
+        //        listParametros.Add(Nombre_Rol);
+        //        listParametros.Add(Descripcion_Rol);
 
-                sentencia.LSTPARAMETROS = listParametros;
-                #endregion
-                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                objAcceso.EjecutarSentencia(sentencia);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public static void ModificarDato(T_Roles Roles) //Metodo para Modificar informacion en la tabla Pago
-        {
-            try
-            {
-                ArrayList listParametros = new ArrayList();
-                SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"UPDATE T_Roles SET Nombre_Rol= @Nombre_Rol, Descripcion_Rol= @Descripcion_Rol WHERE Id_Rol= @Id_Rol";
-                #region Parametrización
-                SqlParameter Id_Rol = new SqlParameter();
-                Id_Rol.SqlDbType = System.Data.SqlDbType.Int;
-                Id_Rol.ParameterName = "@Id_Rol";
-                Id_Rol.Value = Roles.Id_Rol;
+        //        sentencia.LSTPARAMETROS = listParametros;
+        //        #endregion
+        //        _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+        //        objAcceso.EjecutarSentencia(sentencia);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
+        //public static void ModificarDato(T_Roles Roles) //Metodo para Modificar informacion en la tabla Pago
+        //{
+        //    try
+        //    {
+        //        ArrayList listParametros = new ArrayList();
+        //        SQLSentencia sentencia = new SQLSentencia();
+        //        sentencia.PETICION = @"UPDATE T_Roles SET Nombre_Rol= @Nombre_Rol, Descripcion_Rol= @Descripcion_Rol WHERE Id_Rol= @Id_Rol";
+        //        #region Parametrización
+        //        SqlParameter Id_Rol = new SqlParameter();
+        //        Id_Rol.SqlDbType = System.Data.SqlDbType.Int;
+        //        Id_Rol.ParameterName = "@Id_Rol";
+        //        Id_Rol.Value = Roles.Id_Rol;
 
-                SqlParameter Nombre_Rol = new SqlParameter();
-                Nombre_Rol.SqlDbType = System.Data.SqlDbType.NVarChar;
-                Nombre_Rol.ParameterName = "@Nombre_Rol";
-                Nombre_Rol.Value = Roles.Nombre_Rol;
+        //        SqlParameter Nombre_Rol = new SqlParameter();
+        //        Nombre_Rol.SqlDbType = System.Data.SqlDbType.NVarChar;
+        //        Nombre_Rol.ParameterName = "@Nombre_Rol";
+        //        Nombre_Rol.Value = Roles.Nombre_Rol;
 
-                SqlParameter Descripcion_Rol = new SqlParameter();
-                Descripcion_Rol.SqlDbType = System.Data.SqlDbType.NVarChar;
-                Descripcion_Rol.ParameterName = "@Descripcion_Rol";
-                Descripcion_Rol.Value = Roles.Descripcion_Rol;
+        //        SqlParameter Descripcion_Rol = new SqlParameter();
+        //        Descripcion_Rol.SqlDbType = System.Data.SqlDbType.NVarChar;
+        //        Descripcion_Rol.ParameterName = "@Descripcion_Rol";
+        //        Descripcion_Rol.Value = Roles.Descripcion_Rol;
 
-                listParametros.Add(Id_Rol);
-                listParametros.Add(Nombre_Rol);
-                listParametros.Add(Descripcion_Rol);
+        //        listParametros.Add(Id_Rol);
+        //        listParametros.Add(Nombre_Rol);
+        //        listParametros.Add(Descripcion_Rol);
 
-                sentencia.LSTPARAMETROS = listParametros;
-                #endregion
-                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                objAcceso.EjecutarSentencia(sentencia);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public static void EliminarDato(T_Roles Roles) //Metodo para Eliminar informacion en la tabla Pago
-        {
-            try
-            {
-                ArrayList listParametros = new ArrayList();
-                SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"DELETE FROM T_Roles WHERE Id_Rol= @Id_Rol";
-                #region Parametrización
-                SqlParameter Id_Rol = new SqlParameter();
-                Id_Rol.SqlDbType = System.Data.SqlDbType.Int;
-                Id_Rol.ParameterName = "@Id_Rol";
-                Id_Rol.Value = Roles.Id_Rol;
+        //        sentencia.LSTPARAMETROS = listParametros;
+        //        #endregion
+        //        _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+        //        objAcceso.EjecutarSentencia(sentencia);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
+        //public static void EliminarDato(T_Roles Roles) //Metodo para Eliminar informacion en la tabla Pago
+        //{
+        //    try
+        //    {
+        //        ArrayList listParametros = new ArrayList();
+        //        SQLSentencia sentencia = new SQLSentencia();
+        //        sentencia.PETICION = @"DELETE FROM T_Roles WHERE Id_Rol= @Id_Rol";
+        //        #region Parametrización
+        //        SqlParameter Id_Rol = new SqlParameter();
+        //        Id_Rol.SqlDbType = System.Data.SqlDbType.Int;
+        //        Id_Rol.ParameterName = "@Id_Rol";
+        //        Id_Rol.Value = Roles.Id_Rol;
 
-                listParametros.Add(Id_Rol);
+        //        listParametros.Add(Id_Rol);
 
-                sentencia.LSTPARAMETROS = listParametros;
-                #endregion
-                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                objAcceso.EjecutarSentencia(sentencia);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public static List<T_Roles> obtRoles()
-        {
-            try
-            {
-                SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT Id_Rol, Nombre_Rol, Descripcion_Rol FROM T_Roles";
-                Acceso objacceso = new Acceso();
-                return objacceso.Obtener_Roles(sentencia);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-        public static List<T_Roles> BuscarDatoA(T_Roles Roles) //Metodo para Buscar informacion en la tabla estado
-        {
-            try
-            {
-                SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT Id_Rol, Nombre_Rol, Descripcion_Rol FROM T_Roles WHERE Id_Rol='" + Roles.Id_Rol + "'";
-                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                return objAcceso.Obtener_Roles(sentencia);
-            }
-            catch (Exception e)
-            {
+        //        sentencia.LSTPARAMETROS = listParametros;
+        //        #endregion
+        //        _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+        //        objAcceso.EjecutarSentencia(sentencia);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
+        //public static List<T_Roles> obtRoles()
+        //{
+        //    try
+        //    {
+        //        SQLSentencia sentencia = new SQLSentencia();
+        //        sentencia.PETICION = @"SELECT Id_Rol, Nombre_Rol, Descripcion_Rol FROM T_Roles";
+        //        Acceso objacceso = new Acceso();
+        //        return objacceso.Obtener_Roles(sentencia);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
+        //public static List<T_Roles> BuscarDatoA(T_Roles Roles) //Metodo para Buscar informacion en la tabla estado
+        //{
+        //    try
+        //    {
+        //        SQLSentencia sentencia = new SQLSentencia();
+        //        sentencia.PETICION = @"SELECT Id_Rol, Nombre_Rol, Descripcion_Rol FROM T_Roles WHERE Id_Rol='" + Roles.Id_Rol + "'";
+        //        _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+        //        return objAcceso.Obtener_Roles(sentencia);
+        //    }
+        //    catch (Exception e)
+        //    {
 
-                throw e;
-            }
-        }
-        public static List<T_Roles> BuscarDatoB(T_Roles Roles) //Metodo para Buscar informacion en la tabla envio
-        {
-            try
-            {
-                SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT Id_Rol, Nombre_Rol, Descripcion_Rol FROM T_RolesO WHERE Nombre_Rol='" + Roles.Nombre_Rol + "'";
-                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                return objAcceso.Obtener_Roles(sentencia);
-            }
-            catch (Exception e)
-            {
+        //        throw e;
+        //    }
+        //}
+        //public static List<T_Roles> BuscarDatoB(T_Roles Roles) //Metodo para Buscar informacion en la tabla envio
+        //{
+        //    try
+        //    {
+        //        SQLSentencia sentencia = new SQLSentencia();
+        //        sentencia.PETICION = @"SELECT Id_Rol, Nombre_Rol, Descripcion_Rol FROM T_RolesO WHERE Nombre_Rol='" + Roles.Nombre_Rol + "'";
+        //        _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+        //        return objAcceso.Obtener_Roles(sentencia);
+        //    }
+        //    catch (Exception e)
+        //    {
 
-                throw e;
-            }
-        }
+        //        throw e;
+        //    }
+        //}
         #endregion
 
         #region Metodos Para Tabla T_Severidades 
