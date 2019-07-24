@@ -988,7 +988,7 @@ namespace _02LogicaNegocio
             {
                 ArrayList listParametros = new ArrayList();
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"INSERT INTO USUARIOS VALUES (@Id_Usuario, @Usuario, @Nombre_Usuario, @Contrasena_Usuario, @Estado_Usuario, @Tipo_Usuario)";
+                sentencia.PETICION = @"INSERT INTO T_Usuarios VALUES (@Id_Usuario, @Usuario, @Nombre_Usuario, @Contrasena_Usuario, @Estado_Usuario, @Tipo_Usuario)";
                 #region Parametrización
                 SqlParameter Id_Usuario = new SqlParameter();
                 Id_Usuario.SqlDbType = System.Data.SqlDbType.Int;

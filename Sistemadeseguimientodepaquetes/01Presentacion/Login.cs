@@ -11,6 +11,7 @@ using System.Runtime.InteropServices; //para poder mover la ventana
 using System.Data.SqlClient; //para conexion de db quitar despues de las pruebas
 using _02LogicaNegocio;
 using _04Entidades;
+using _05Seguridad;
 
 
 namespace _01Presentacion
@@ -98,10 +99,17 @@ namespace _01Presentacion
                 //    this.Show();
                 //}
                 #endregion
+
                 #region Proceso_Login_Teoria_Sistemas
                 DataTable dt = new DataTable();
+                #region Seccion_DesEncriptado
+                Encriptado DesEncriptar = new Encriptado();
+                Encriptado_Sec DesEncriptador = new Encriptado_Sec();
+                DesEncriptar.PALABRA = txtPassword.Text.Trim();
+                DesEncriptar = DesEncriptador.DesEncriptar(DesEncriptar);
+                #endregion
                 objE.iduser = txtUsuario.Text;
-                objE.password = txtPassword.Text;
+                objE.password = DesEncriptar.PALABRA;
                 dt = objLN.LNlogin(objE);
 
                 //creo objeto Usuario

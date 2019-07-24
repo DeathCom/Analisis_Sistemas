@@ -65,22 +65,26 @@ namespace _01Presentacion
             //MessageBox.Show("Accion Pendiente de Cosntruccion", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             try
             {
-                //#region Seccion_Encriptado
-                //Encriptado  Encriptar = new Encriptado();
-                //Encriptado TmpEncriptar = new Encriptado();
-                //Encriptado_Sec Encriptador = new Encriptado_Sec();
-                //Encriptar.PALABRA = txtPassword.Text.Trim();
-                //TmpEncriptar = Encriptador.Encriptar(Encriptar);
-                //string contraseña = TmpEncriptar.RESPUESTA;
-                //#endregion
-                T_Usuarios usuario = new T_Usuarios();
-                usuario.Id_Usuario = Convert.ToInt16(txtIdUsuario.Text.Trim());
-                usuario.Usuario = txtAlias.Text;
-                usuario.Nombre_Usuario = txtNombre.Text;
-                usuario.Contrasena_Usuario = txtPassword.Text;
-                usuario.Estado_Usuario = ComboEstadoUsuario.Text;
-                usuario.Tipo_Usuario = ComboTipoUsusario.Text;
-                _02LogicaNegocio.Logica.GuardarDato(usuario);
+                #region Seccion_Encriptado
+                Encriptado Encriptar = new Encriptado();
+                Encriptado_Sec Encriptador = new Encriptado_Sec();
+                Encriptar.PALABRA = txtPassword.Text.Trim();
+                Encriptar = Encriptador.Encriptar(Encriptar);
+                #endregion
+                #region Mensaje_Contraseña
+                MessageBox.Show("La llave de acceso para:\n"
+                                + txtNombre.Text + "es: \n"
+                                + Encriptar.RESPUESTA
+                                + "\nGuardela en un lugar seguro y no la olvide.");
+                #endregion
+                T_Usuarios user = new T_Usuarios();
+                user.Id_Usuario = Convert.ToInt16(txtIdUsuario.Text.Trim());
+                user.Usuario = txtAlias.Text;
+                user.Nombre_Usuario = txtNombre.Text;
+                user.Contrasena_Usuario = Encriptar.RESPUESTA;
+                user.Estado_Usuario = ComboEstadoUsuario.Text;
+                user.Tipo_Usuario = ComboTipoUsusario.Text;
+                _02LogicaNegocio.Logica.GuardarDato(user);
                 MessageBox.Show("Datos Guardados Exitosamente");
                 Limpiar(); this.Close();
             }
@@ -173,8 +177,8 @@ namespace _01Presentacion
                 this.txtNombre.Text = dataGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
                 this.txtAlias.Text = dataGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
                 this.txtPassword.Text = dataGrid.Rows[e.RowIndex].Cells[3].Value.ToString();
-                this.ComboTipoUsusario.Text = dataGrid.Rows[e.RowIndex].Cells[4].Value.ToString();
-                this.ComboEstadoUsuario.Text = dataGrid.Rows[e.RowIndex].Cells[5].Value.ToString();
+                this.ComboTipoUsusario.SelectedText = dataGrid.Rows[e.RowIndex].Cells[4].Value.ToString();
+                this.ComboEstadoUsuario.SelectedText = dataGrid.Rows[e.RowIndex].Cells[5].Value.ToString();
             }
             catch (Exception ex)
             {
