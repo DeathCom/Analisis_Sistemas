@@ -373,17 +373,16 @@ namespace _03AccesoDatos
                 foreach (System.Data.DataRow item in dt.Rows)
                 {
                     T_Tiquete objTiquete = new T_Tiquete();
-                    objTiquete.Id_Tiquete = Convert.ToInt16(item.ItemArray[0].ToString());
-                    objTiquete.Id_Supervisor = Convert.ToInt16(item.ItemArray[1].ToString());
+                    objTiquete.Numero_Tiquete = item.ItemArray[0].ToString();
+                    objTiquete.Nombre_Supervisor = item.ItemArray[1].ToString();
                     objTiquete.Nombre_Usuario = item.ItemArray[2].ToString();
                     objTiquete.Nombre_Cliente = item.ItemArray[3].ToString();
                     objTiquete.Nombre_Aplicacion = item.ItemArray[4].ToString();
-                    objTiquete.Numero_Tiquete = item.ItemArray[5].ToString();
-                    objTiquete.Severidad_Tiquete = Convert.ToInt16(item.ItemArray[6].ToString());
-                    objTiquete.Estado_Tiquete = item.ItemArray[7].ToString();
-                    objTiquete.Comentarios_Tiquete = item.ItemArray[8].ToString();
-                    objTiquete.HorayFecha_Apertura = Convert.ToDateTime(item.ItemArray[9].ToString());
-                    objTiquete.HorayFecha_Cierre = Convert.ToDateTime(item.ItemArray[10].ToString());
+                    objTiquete.Severidad_Tiquete = item.ItemArray[5].ToString();
+                    objTiquete.Estado_Tiquete = item.ItemArray[6].ToString();
+                    objTiquete.Comentarios_Tiquete = item.ItemArray[7].ToString();
+                    objTiquete.HorayFecha_Apertura = Convert.ToDateTime(item.ItemArray[8].ToString());
+                    objTiquete.HorayFecha_Cierre = Convert.ToDateTime(item.ItemArray[9].ToString());
                     lstTiquetes.Add(objTiquete);
                 }
             }

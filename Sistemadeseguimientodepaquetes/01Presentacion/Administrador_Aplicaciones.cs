@@ -45,7 +45,6 @@ namespace _01Presentacion
         #endregion
 
         #region  Botones_Guardar_Buscar_Editar_Eliminar Form Administrador_Origen
-
         public T_Aplicacion processoBase()
         {
             T_Aplicacion aplicacion = new T_Aplicacion();

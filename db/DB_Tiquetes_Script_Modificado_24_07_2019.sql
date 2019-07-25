@@ -116,13 +116,12 @@ IF NOT EXISTS(select * from sysobjects where type = 'U' and name = 'T_Tiquete')
 	BEGIN
 		create table T_Tiquete
 		(
-			Id_Tiquete 			int primary key,
-			Id_Supervisor		int not null,
+			Numero_Tiquete		nvarchar(150) primary key,
+			Nombre_Supervisor	nvarchar(50) not null,
 		    Nombre_Usuario 		nvarchar(50) not null,
 		    Nombre_Cliente 		nvarchar(50) not null,
 		    Nombre_Aplicacion 	nvarchar(50) not null,
-		    Numero_Tiquete		nvarchar(200) not null,
-		    Severidad_Tiquete 	int not null,
+		    Severidad_Tiquete 	nvarchar(50) not null,
 		    Estado_Tiquete 		nvarchar(50) not null,
 		    Comentarios_Tiquete	nvarchar(100) not null,
 		    HorayFecha_Apertura datetime,

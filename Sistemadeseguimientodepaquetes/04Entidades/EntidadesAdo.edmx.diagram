@@ -5,12 +5,12 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="6b5627cf54cc4aa9afadda535c7772d7" Name="Diagram1">
-        <EntityTypeShape EntityType="DB_TiquetesModel.T_Aplicacion" Width="1.5" PointX="0.5" PointY="0.5" />
-        <EntityTypeShape EntityType="DB_TiquetesModel.T_Cliente" Width="1.5" PointX="2.5" PointY="0.5" />
-        <EntityTypeShape EntityType="DB_TiquetesModel.T_Estado_Tiquetes" Width="1.5" PointX="4.5" PointY="0.5" />
-        <EntityTypeShape EntityType="DB_TiquetesModel.T_Severidades" Width="1.5" PointX="4.5" PointY="2.125" />
-        <EntityTypeShape EntityType="DB_TiquetesModel.T_Tiquete" Width="1.5" PointX="6.25" PointY="0.5" />
-        <EntityTypeShape EntityType="DB_TiquetesModel.T_Usuarios" Width="1.5" PointX="0.5" PointY="2.25" />
+        <EntityTypeShape EntityType="DB_TiquetesModel.T_Aplicacion" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_TiquetesModel.T_Cliente" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_TiquetesModel.T_Estado_Tiquetes" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_TiquetesModel.T_Severidades" Width="1.5" PointX="4.75" PointY="2.25" />
+        <EntityTypeShape EntityType="DB_TiquetesModel.T_Tiquete" Width="1.5" PointX="6.5" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_TiquetesModel.T_Usuarios" Width="1.5" PointX="0.75" PointY="2.5" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -1188,24 +1188,24 @@ namespace _02LogicaNegocio
         #endregion
 
         #region Metodos Para Tabla T_Tiquete
-        public static void GuardarDato(T_Tiquete Tiquete) //Metodo para Agregar informacion a la tabla DESTINO
+        public static void GuardarDato(T_Tiquete Tiquete)
         {
             try
             {
                 ArrayList listParametros = new ArrayList();
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"INSERT INTO T_Tiquete VALUES (@Id_Tiquete, @Id_Supervisor, @Nombre_Usuario, @Nombre_Cliente, @Nombre_Aplicacion, @Numero_Tiquete,
+                sentencia.PETICION = @"INSERT INTO T_Tiquete VALUES (@Numero_Tiquete, @Nombre_Supervisor, @Nombre_Usuario, @Nombre_Cliente, @Nombre_Aplicacion,
                 @Severidad_Tiquete, @Estado_Tiquete, @Comentarios_Tiquete, @HorayFecha_Apertura, @HorayFecha_Cierre)";
                 #region Parametrización
-                SqlParameter Id_Tiquete = new SqlParameter();
-                Id_Tiquete.SqlDbType = System.Data.SqlDbType.Int;
-                Id_Tiquete.ParameterName = "@Id_Tiquete";
-                Id_Tiquete.Value = Tiquete.Id_Tiquete;
+                SqlParameter Numero_Tiquete = new SqlParameter();
+                Numero_Tiquete.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Numero_Tiquete.ParameterName = "@Numero_Tiquete";
+                Numero_Tiquete.Value = Tiquete.Numero_Tiquete;
 
-                SqlParameter Id_Supervisor = new SqlParameter();
-                Id_Supervisor.SqlDbType = System.Data.SqlDbType.Int;
-                Id_Supervisor.ParameterName = "@Id_Supervisor";
-                Id_Supervisor.Value = Tiquete.Id_Supervisor;
+                SqlParameter Nombre_Supervisor = new SqlParameter();
+                Nombre_Supervisor.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Nombre_Supervisor.ParameterName = "@Nombre_Supervisor";
+                Nombre_Supervisor.Value = Tiquete.Nombre_Supervisor;
 
                 SqlParameter Nombre_Usuario = new SqlParameter();
                 Nombre_Usuario.SqlDbType = System.Data.SqlDbType.NVarChar;
@@ -1222,10 +1222,87 @@ namespace _02LogicaNegocio
                 Nombre_Aplicacion.ParameterName = "@Nombre_Aplicacion";
                 Nombre_Aplicacion.Value = Tiquete.Nombre_Aplicacion;
 
+                SqlParameter Severidad_Tiquete = new SqlParameter();
+                Severidad_Tiquete.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Severidad_Tiquete.ParameterName = "@Severidad_Tiquete";
+                Severidad_Tiquete.Value = Tiquete.Severidad_Tiquete;
+
+                SqlParameter Estado_Tiquete = new SqlParameter();
+                Estado_Tiquete.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Estado_Tiquete.ParameterName = "@Estado_Tiquete";
+                Estado_Tiquete.Value = Tiquete.Estado_Tiquete;
+
+                SqlParameter Comentarios_Tiquete = new SqlParameter();
+                Comentarios_Tiquete.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Comentarios_Tiquete.ParameterName = "@Comentarios_Tiquete";
+                Comentarios_Tiquete.Value = Tiquete.Comentarios_Tiquete;
+
+                SqlParameter HorayFecha_Apertura = new SqlParameter();
+                HorayFecha_Apertura.SqlDbType = System.Data.SqlDbType.DateTime2;
+                HorayFecha_Apertura.ParameterName = "@HorayFecha_Apertura";
+                HorayFecha_Apertura.Value = Tiquete.HorayFecha_Apertura;
+
+                SqlParameter HorayFecha_Cierre = new SqlParameter();
+                HorayFecha_Cierre.SqlDbType = System.Data.SqlDbType.DateTime2;
+                HorayFecha_Cierre.ParameterName = "@HorayFecha_Cierre";
+                HorayFecha_Cierre.Value = Tiquete.HorayFecha_Cierre;
+
+                listParametros.Add(Numero_Tiquete);
+                listParametros.Add(Nombre_Supervisor);
+                listParametros.Add(Nombre_Usuario);
+                listParametros.Add(Nombre_Cliente);
+                listParametros.Add(Nombre_Aplicacion);
+                listParametros.Add(Severidad_Tiquete);
+                listParametros.Add(Estado_Tiquete);
+                listParametros.Add(Comentarios_Tiquete);
+                listParametros.Add(HorayFecha_Apertura);
+                listParametros.Add(HorayFecha_Cierre);
+
+                sentencia.LSTPARAMETROS = listParametros;
+                #endregion
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                objAcceso.EjecutarSentencia(sentencia);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+        }
+        public static void ModificarDato(T_Tiquete Tiquete)
+        {
+            try
+            {
+                ArrayList listParametros = new ArrayList();
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"UPDATE T_Tiquete SET Nombre_Supervisor= @Nombre_Supervisor, Nombre_Usuario= @Nombre_Usuario, Nombre_Cliente= @Nombre_Cliente, 
+                Nombre_Aplicacion= @Nombre_Aplicacion, Severidad_Tiquete= @Severidad_Tiquete,  Estado_Tiquete= @Estado_Tiquete,
+                Comentarios_Tiquete= @Comentarios_Tiquete, HorayFecha_Apertura= @HorayFecha_Apertura, HorayFecha_Cierre= @HorayFecha_Cierre WHERE Numero_Tiquete= @Numero_Tiquete";
+                #region Parametrización
                 SqlParameter Numero_Tiquete = new SqlParameter();
                 Numero_Tiquete.SqlDbType = System.Data.SqlDbType.NVarChar;
                 Numero_Tiquete.ParameterName = "@Numero_Tiquete";
                 Numero_Tiquete.Value = Tiquete.Numero_Tiquete;
+
+                SqlParameter Nombre_Supervisor = new SqlParameter();
+                Nombre_Supervisor.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Nombre_Supervisor.ParameterName = "@Nombre_Supervisor";
+                Nombre_Supervisor.Value = Tiquete.Nombre_Supervisor;
+
+                SqlParameter Nombre_Usuario = new SqlParameter();
+                Nombre_Usuario.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Nombre_Usuario.ParameterName = "@Nombre_Usuario";
+                Nombre_Usuario.Value = Tiquete.Nombre_Usuario;
+
+                SqlParameter Nombre_Cliente = new SqlParameter();
+                Nombre_Cliente.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Nombre_Cliente.ParameterName = "@Nombre_Cliente";
+                Nombre_Cliente.Value = Tiquete.Nombre_Cliente;
+
+                SqlParameter Nombre_Aplicacion = new SqlParameter();
+                Nombre_Aplicacion.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Nombre_Aplicacion.ParameterName = "@Nombre_Aplicacion";
+                Nombre_Aplicacion.Value = Tiquete.Nombre_Aplicacion;
 
                 SqlParameter Severidad_Tiquete = new SqlParameter();
                 Severidad_Tiquete.SqlDbType = System.Data.SqlDbType.Int;
@@ -1252,12 +1329,11 @@ namespace _02LogicaNegocio
                 HorayFecha_Cierre.ParameterName = "@HorayFecha_Cierre";
                 HorayFecha_Cierre.Value = Tiquete.HorayFecha_Cierre;
 
-                listParametros.Add(Id_Tiquete);
-                listParametros.Add(Id_Supervisor);
+                listParametros.Add(Numero_Tiquete);
+                listParametros.Add(Nombre_Supervisor);
                 listParametros.Add(Nombre_Usuario);
                 listParametros.Add(Nombre_Cliente);
                 listParametros.Add(Nombre_Aplicacion);
-                listParametros.Add(Numero_Tiquete);
                 listParametros.Add(Severidad_Tiquete);
                 listParametros.Add(Estado_Tiquete);
                 listParametros.Add(Comentarios_Tiquete);
@@ -1275,109 +1351,20 @@ namespace _02LogicaNegocio
                 throw e;
             }
         }
-        public static void ModificarDato(T_Tiquete Tiquete) //Metodo para Modificar informacion en la tabla DESTINO
+        public static void EliminarDato(T_Tiquete Tiquete) 
         {
             try
             {
                 ArrayList listParametros = new ArrayList();
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"UPDATE T_Tiquete SET Id_Supervisor= @Id_Supervisor, Nombre_Usuario= @Nombre_Usuario, Nombre_Cliente= @Nombre_Cliente, 
-                Nombre_Aplicacion= @Nombre_Aplicacion, Numero_Tiquete= @Numero_Tiquete, Severidad_Tiquete= @Severidad_Tiquete,  Estado_Tiquete= @Estado_Tiquete,
-                Comentarios_Tiquete= @Comentarios_Tiquete, HorayFecha_Apertura= @HorayFecha_Apertura, HorayFecha_Cierre= @HorayFecha_Cierre WHERE Id_Tiquete= @Id_Tiquete";
+                sentencia.PETICION = @"DELETE FROM T_Tiquete WHERE Numero_Tiquete= @Numero_Tiquete";
                 #region Parametrización
-                SqlParameter Id_Tiquete = new SqlParameter();
-                Id_Tiquete.SqlDbType = System.Data.SqlDbType.Int;
-                Id_Tiquete.ParameterName = "@Id_Tiquete";
-                Id_Tiquete.Value = Tiquete.Id_Tiquete;
-
-                SqlParameter Id_Supervisor = new SqlParameter();
-                Id_Supervisor.SqlDbType = System.Data.SqlDbType.Int;
-                Id_Supervisor.ParameterName = "@Id_Supervisor";
-                Id_Supervisor.Value = Tiquete.Id_Supervisor;
-
-                SqlParameter Nombre_Usuario = new SqlParameter();
-                Nombre_Usuario.SqlDbType = System.Data.SqlDbType.NVarChar;
-                Nombre_Usuario.ParameterName = "@Nombre_Usuario";
-                Nombre_Usuario.Value = Tiquete.Nombre_Usuario;
-
-                SqlParameter Nombre_Cliente = new SqlParameter();
-                Nombre_Cliente.SqlDbType = System.Data.SqlDbType.NVarChar;
-                Nombre_Cliente.ParameterName = "@Nombre_Cliente";
-                Nombre_Cliente.Value = Tiquete.Nombre_Cliente;
-
-                SqlParameter Nombre_Aplicacion = new SqlParameter();
-                Nombre_Aplicacion.SqlDbType = System.Data.SqlDbType.NVarChar;
-                Nombre_Aplicacion.ParameterName = "@Nombre_Aplicacion";
-                Nombre_Aplicacion.Value = Tiquete.Nombre_Aplicacion;
-
                 SqlParameter Numero_Tiquete = new SqlParameter();
-                Numero_Tiquete.SqlDbType = System.Data.SqlDbType.NVarChar;
+                Numero_Tiquete.SqlDbType = System.Data.SqlDbType.Int;
                 Numero_Tiquete.ParameterName = "@Numero_Tiquete";
                 Numero_Tiquete.Value = Tiquete.Numero_Tiquete;
 
-                SqlParameter Severidad_Tiquete = new SqlParameter();
-                Severidad_Tiquete.SqlDbType = System.Data.SqlDbType.Int;
-                Severidad_Tiquete.ParameterName = "@Severidad_Tiquete";
-                Severidad_Tiquete.Value = Tiquete.Severidad_Tiquete;
-
-                SqlParameter Estado_Tiquete = new SqlParameter();
-                Estado_Tiquete.SqlDbType = System.Data.SqlDbType.NVarChar;
-                Estado_Tiquete.ParameterName = "@Estado_Tiquete";
-                Estado_Tiquete.Value = Tiquete.Estado_Tiquete;
-
-                SqlParameter Comentarios_Tiquete = new SqlParameter();
-                Comentarios_Tiquete.SqlDbType = System.Data.SqlDbType.NVarChar;
-                Comentarios_Tiquete.ParameterName = "@Comentarios_Tiquete";
-                Comentarios_Tiquete.Value = Tiquete.Comentarios_Tiquete;
-
-                SqlParameter HorayFecha_Apertura = new SqlParameter();
-                HorayFecha_Apertura.SqlDbType = System.Data.SqlDbType.DateTime;
-                HorayFecha_Apertura.ParameterName = "@HorayFecha_Apertura";
-                HorayFecha_Apertura.Value = Tiquete.HorayFecha_Apertura;
-
-                SqlParameter HorayFecha_Cierre = new SqlParameter();
-                HorayFecha_Cierre.SqlDbType = System.Data.SqlDbType.DateTime;
-                HorayFecha_Cierre.ParameterName = "@HorayFecha_Cierre";
-                HorayFecha_Cierre.Value = Tiquete.HorayFecha_Cierre;
-
-                listParametros.Add(Id_Tiquete);
-                listParametros.Add(Id_Supervisor);
-                listParametros.Add(Nombre_Usuario);
-                listParametros.Add(Nombre_Cliente);
-                listParametros.Add(Nombre_Aplicacion);
                 listParametros.Add(Numero_Tiquete);
-                listParametros.Add(Severidad_Tiquete);
-                listParametros.Add(Estado_Tiquete);
-                listParametros.Add(Comentarios_Tiquete);
-                listParametros.Add(HorayFecha_Apertura);
-                listParametros.Add(HorayFecha_Cierre);
-
-                sentencia.LSTPARAMETROS = listParametros;
-                #endregion
-                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                objAcceso.EjecutarSentencia(sentencia);
-            }
-            catch (Exception e)
-            {
-
-                throw e;
-            }
-        }
-        public static void EliminarDato(T_Tiquete Tiquete) //Metodo para Eliminar informacion en la tabla DESTINO
-        {
-            try
-            {
-                ArrayList listParametros = new ArrayList();
-                SQLSentencia sentencia = new SQLSentencia();
-                //sentencia.PETICION = @"DELETE FROM USUARIOS WHERE IDUSUARIO='" + user.IDUSUARIO + "'";
-                sentencia.PETICION = @"DELETE FROM T_Tiquete WHERE Id_Tiquete= @Id_Tiquete";
-                #region Parametrización
-                SqlParameter Id_Tiquete = new SqlParameter();
-                Id_Tiquete.SqlDbType = System.Data.SqlDbType.Int;
-                Id_Tiquete.ParameterName = "@Id_Tiquete";
-                Id_Tiquete.Value = Tiquete.Id_Tiquete;
-
-                listParametros.Add(Id_Tiquete);
 
                 sentencia.LSTPARAMETROS = listParametros;
                 #endregion
@@ -1395,8 +1382,8 @@ namespace _02LogicaNegocio
             try
             {
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT Id_Tiquete, Id_Supervisor, Nombre_Usuario, Nombre_Cliente, Nombre_Aplicacion, 
-                Numero_Tiquete, Severidad_Tiquete, Estado_Tiquete, Comentarios_Tiquete, HorayFecha_Apertura, HorayFecha_Cierre FROM T_Tiquete";
+                sentencia.PETICION = @"SELECT Numero_Tiquete, Nombre_Supervisor, Nombre_Usuario, Nombre_Cliente, Nombre_Aplicacion, 
+                Severidad_Tiquete, Estado_Tiquete, Comentarios_Tiquete, HorayFecha_Apertura, HorayFecha_Cierre FROM T_Tiquete";
                 Acceso objacceso = new Acceso();
                 return objacceso.Obtener_Tiquetes(sentencia);
             }
@@ -1405,37 +1392,19 @@ namespace _02LogicaNegocio
                 throw ex;
             }
         }
-        public static List<T_Tiquete> BuscarDatoA(T_Tiquete Tiquete) //Metodo para Buscar informacion en la tabla DESTINO
+        public static List<T_Tiquete> BuscarDatoA(T_Tiquete Tiquete)
         {
             try
             {
                 SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT Id_Tiquete, Id_Supervisor, Nombre_Usuario, Nombre_Cliente, Nombre_Aplicacion, 
-                Numero_Tiquete, Severidad_Tiquete, Estado_Tiquete, Comentarios_Tiquete, HorayFecha_Apertura, HorayFecha_Cierre FROM T_Tiquete
-                WHERE Id_Tiquete ='" + Tiquete.Id_Tiquete + "'";
-                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
-                return objAcceso.Obtener_Tiquetes(sentencia);
-            }
-            catch (Exception e)
-            {
-
-                throw e;
-            }
-        }
-        public static List<T_Tiquete> BuscarDatoB(T_Tiquete Tiquete) //Metodo para Buscar informacion en la tabla DESTINO
-        {
-            try
-            {
-                SQLSentencia sentencia = new SQLSentencia();
-                sentencia.PETICION = @"SELECT Id_Tiquete, Id_Supervisor, Nombre_Usuario, Nombre_Cliente, Nombre_Aplicacion, 
-                Numero_Tiquete, Severidad_Tiquete, Estado_Tiquete, Comentarios_Tiquete, HorayFecha_Apertura, HorayFecha_Cierre FROM T_Tiquete
+                sentencia.PETICION = @"SELECT Numero_Tiquete, Nombre_Supervisor, Nombre_Usuario, Nombre_Cliente, Nombre_Aplicacion, 
+                Severidad_Tiquete, Estado_Tiquete, Comentarios_Tiquete, HorayFecha_Apertura, HorayFecha_Cierre FROM T_Tiquete
                 WHERE Numero_Tiquete ='" + Tiquete.Numero_Tiquete + "'";
                 _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
                 return objAcceso.Obtener_Tiquetes(sentencia);
             }
             catch (Exception e)
             {
-
                 throw e;
             }
         }

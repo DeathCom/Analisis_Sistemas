@@ -59,12 +59,11 @@
           <ScalarProperty Name="Comentarios_Tiquete" ColumnName="Comentarios_Tiquete" />
           <ScalarProperty Name="Estado_Tiquete" ColumnName="Estado_Tiquete" />
           <ScalarProperty Name="Severidad_Tiquete" ColumnName="Severidad_Tiquete" />
-          <ScalarProperty Name="Numero_Tiquete" ColumnName="Numero_Tiquete" />
           <ScalarProperty Name="Nombre_Aplicacion" ColumnName="Nombre_Aplicacion" />
           <ScalarProperty Name="Nombre_Cliente" ColumnName="Nombre_Cliente" />
           <ScalarProperty Name="Nombre_Usuario" ColumnName="Nombre_Usuario" />
-          <ScalarProperty Name="Id_Supervisor" ColumnName="Id_Supervisor" />
-          <ScalarProperty Name="Id_Tiquete" ColumnName="Id_Tiquete" />
+          <ScalarProperty Name="Nombre_Supervisor" ColumnName="Nombre_Supervisor" />
+          <ScalarProperty Name="Numero_Tiquete" ColumnName="Numero_Tiquete" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

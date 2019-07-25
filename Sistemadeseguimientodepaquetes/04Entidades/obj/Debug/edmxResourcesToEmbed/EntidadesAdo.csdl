@@ -56,15 +56,14 @@
   </EntityType>
   <EntityType Name="T_Tiquete">
     <Key>
-      <PropertyRef Name="Id_Tiquete" />
+      <PropertyRef Name="Numero_Tiquete" />
     </Key>
-    <Property Name="Id_Tiquete" Type="Int32" Nullable="false" />
-    <Property Name="Id_Supervisor" Type="Int32" Nullable="false" />
+    <Property Name="Numero_Tiquete" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Nombre_Supervisor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Nombre_Usuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Nombre_Cliente" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Nombre_Aplicacion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Numero_Tiquete" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="Severidad_Tiquete" Type="Int32" Nullable="false" />
+    <Property Name="Severidad_Tiquete" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Estado_Tiquete" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Comentarios_Tiquete" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="HorayFecha_Apertura" Type="DateTime" Precision="3" />

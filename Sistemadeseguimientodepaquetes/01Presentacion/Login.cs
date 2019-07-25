@@ -102,14 +102,22 @@ namespace _01Presentacion
 
                 #region Proceso_Login_Teoria_Sistemas
                 DataTable dt = new DataTable();
+
                 #region Seccion_DesEncriptado
-                Encriptado DesEncriptar = new Encriptado();
-                Encriptado_Sec DesEncriptador = new Encriptado_Sec();
-                DesEncriptar.PALABRA = txtPassword.Text.Trim();
-                DesEncriptar = DesEncriptador.DesEncriptar(DesEncriptar);
+                //Encriptado DesEncriptar = new Encriptado();
+                //Encriptado_Sec DesEncriptador = new Encriptado_Sec();
+                //DesEncriptar.PALABRA = txtPassword.Text.Trim();
+                //DesEncriptar = DesEncriptador.DesEncriptar(DesEncriptar);
+                //MessageBox.Show(DesEncriptar.RESPUESTA);
+                Encriptado Encriptar = new Encriptado();
+                Encriptado_Sec Encriptador = new Encriptado_Sec();
+                Encriptar.PALABRA = txtPassword.Text.Trim();
+                Encriptar = Encriptador.Encriptar(Encriptar);
+                //MessageBox.Show(Encriptar.RESPUESTA);
                 #endregion
+
                 objE.iduser = txtUsuario.Text;
-                objE.password = DesEncriptar.PALABRA;
+                objE.password = Encriptar.RESPUESTA;
                 dt = objLN.LNlogin(objE);
 
                 //creo objeto Usuario
@@ -119,7 +127,7 @@ namespace _01Presentacion
                 user.Contrasena_Usuario = dt.Rows[0][2].ToString();
                 user.Estado_Usuario = dt.Rows[0][3].ToString();
                 user.Tipo_Usuario = dt.Rows[0][4].ToString();
-
+                
                 if (dt.Rows.Count == 1)
                 {
                     this.Hide();

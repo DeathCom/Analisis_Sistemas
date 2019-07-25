@@ -45,15 +45,14 @@
         </EntityType>
         <EntityType Name="T_Tiquete">
           <Key>
-            <PropertyRef Name="Id_Tiquete" />
+            <PropertyRef Name="Numero_Tiquete" />
           </Key>
-          <Property Name="Id_Tiquete" Type="int" Nullable="false" />
-          <Property Name="Id_Supervisor" Type="int" Nullable="false" />
+          <Property Name="Numero_Tiquete" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Nombre_Supervisor" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Nombre_Usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Nombre_Cliente" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Nombre_Aplicacion" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Numero_Tiquete" Type="nvarchar" MaxLength="200" Nullable="false" />
-          <Property Name="Severidad_Tiquete" Type="int" Nullable="false" />
+          <Property Name="Severidad_Tiquete" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Estado_Tiquete" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Comentarios_Tiquete" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="HorayFecha_Apertura" Type="datetime" />
@@ -97,7 +96,7 @@
           <EntitySet Name="T_Severidades" EntityType="DB_TiquetesModel.T_Severidades" />
           <EntitySet Name="T_Tiquete" EntityType="DB_TiquetesModel.T_Tiquete" />
           <EntitySet Name="T_Usuarios" EntityType="DB_TiquetesModel.T_Usuarios" />
-        </EntityContainer>
+          </EntityContainer>
         <ComplexType Name="LOGIN_Result">
           <Property Type="String" Name="Usuario" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="Contrasena_Usuario" Nullable="false" MaxLength="50" />
@@ -142,15 +141,14 @@
         </EntityType>
         <EntityType Name="T_Tiquete">
           <Key>
-            <PropertyRef Name="Id_Tiquete" />
+            <PropertyRef Name="Numero_Tiquete" />
           </Key>
-          <Property Name="Id_Tiquete" Type="Int32" Nullable="false" />
-          <Property Name="Id_Supervisor" Type="Int32" Nullable="false" />
+          <Property Name="Numero_Tiquete" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Nombre_Supervisor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Nombre_Usuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Nombre_Cliente" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Nombre_Aplicacion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Numero_Tiquete" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="Severidad_Tiquete" Type="Int32" Nullable="false" />
+          <Property Name="Severidad_Tiquete" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Estado_Tiquete" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Comentarios_Tiquete" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="HorayFecha_Apertura" Type="DateTime" Precision="3" />
@@ -167,7 +165,7 @@
           <Property Name="Estado_Usuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Tipo_Usuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -231,12 +229,11 @@
                 <ScalarProperty Name="Comentarios_Tiquete" ColumnName="Comentarios_Tiquete" />
                 <ScalarProperty Name="Estado_Tiquete" ColumnName="Estado_Tiquete" />
                 <ScalarProperty Name="Severidad_Tiquete" ColumnName="Severidad_Tiquete" />
-                <ScalarProperty Name="Numero_Tiquete" ColumnName="Numero_Tiquete" />
                 <ScalarProperty Name="Nombre_Aplicacion" ColumnName="Nombre_Aplicacion" />
                 <ScalarProperty Name="Nombre_Cliente" ColumnName="Nombre_Cliente" />
                 <ScalarProperty Name="Nombre_Usuario" ColumnName="Nombre_Usuario" />
-                <ScalarProperty Name="Id_Supervisor" ColumnName="Id_Supervisor" />
-                <ScalarProperty Name="Id_Tiquete" ColumnName="Id_Tiquete" />
+                <ScalarProperty Name="Nombre_Supervisor" ColumnName="Nombre_Supervisor" />
+                <ScalarProperty Name="Numero_Tiquete" ColumnName="Numero_Tiquete" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -252,7 +249,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-        </EntityContainerMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

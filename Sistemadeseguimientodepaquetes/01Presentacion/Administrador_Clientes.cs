@@ -18,30 +18,7 @@ namespace _01Presentacion
         {
             InitializeComponent();
         }
-        //#region Cargar_Combo_Estados_Cliente
-        //private void CargarCombos()
-        //{
-        //    try
-        //    {
-        //        //Listas de asignacion a combos
-        //        List<T_Estado_Clientes> lstEstados = _02LogicaNegocio.Logica.obtE_Cliente();
-
-        //        //Asigancion del listado a la fuente de datos del elemento
-        //        ComboEstadoServer.DataSource = lstEstados;
-
-        //        //Especificacion de campos de la fuente de datos a cada caracteristica del
-        //        //combo. El valuemember es el valor escondido
-        //        ComboEstadoServer.ValueMember = "Estado_Servidor";
-        //        ComboEstadoServer.DisplayMember = "Estado_Servidor";
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //        throw ex;
-        //    }
-        //}
-        //#endregion
-
+  
         #region Metodo Limpiar
         public void Limpiar()
         {

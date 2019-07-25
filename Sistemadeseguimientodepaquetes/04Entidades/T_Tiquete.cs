@@ -14,13 +14,12 @@ namespace _04Entidades
     
     public partial class T_Tiquete
     {
-        public int Id_Tiquete { get; set; }
-        public int Id_Supervisor { get; set; }
+        public string Numero_Tiquete { get; set; }
+        public string Nombre_Supervisor { get; set; }
         public string Nombre_Usuario { get; set; }
         public string Nombre_Cliente { get; set; }
         public string Nombre_Aplicacion { get; set; }
-        public string Numero_Tiquete { get; set; }
-        public int Severidad_Tiquete { get; set; }
+        public string Severidad_Tiquete { get; set; }
         public string Estado_Tiquete { get; set; }
         public string Comentarios_Tiquete { get; set; }
         public Nullable<System.DateTime> HorayFecha_Apertura { get; set; }

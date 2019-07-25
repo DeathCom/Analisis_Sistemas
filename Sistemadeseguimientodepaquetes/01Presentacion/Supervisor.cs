@@ -18,6 +18,7 @@ namespace _01Presentacion
         {
             InitializeComponent();
             lblTipoUsuario.Text = nombre;
+            codigo = nombre;
             AbrirFormularioHijo(new Supervisor_Inicio(lblTipoUsuario.Text));
         }
 

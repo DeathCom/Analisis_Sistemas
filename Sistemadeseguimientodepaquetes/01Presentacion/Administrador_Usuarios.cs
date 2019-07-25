@@ -72,9 +72,9 @@ namespace _01Presentacion
                 Encriptar = Encriptador.Encriptar(Encriptar);
                 #endregion
                 #region Mensaje_Contraseña
-                MessageBox.Show("La llave de acceso para:\n"
-                                + txtNombre.Text + "es: \n"
-                                + Encriptar.RESPUESTA
+                MessageBox.Show("La Clave de acceso para:\n"
+                                + txtNombre.Text + " es: \n"
+                                + txtPassword.Text.Trim()
                                 + "\nGuardela en un lugar seguro y no la olvide.");
                 #endregion
                 T_Usuarios user = new T_Usuarios();
