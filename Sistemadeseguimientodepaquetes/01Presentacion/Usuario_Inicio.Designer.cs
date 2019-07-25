@@ -30,22 +30,24 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuario_Inicio));
             this.panelCentral = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblTipoUsuario = new System.Windows.Forms.Label();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.icono = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Numero_Tiquete = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre_Supervisor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre_Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre_Aplicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Severidad_Tiquete = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado_Tiquete = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hora_de_Asignacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hora_de_Cierre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Herramienta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Comentarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Comentarios_Tiquete = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HorayFecha_Apertura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HorayFecha_Cierre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelCentral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icono)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelCentral
@@ -58,6 +60,25 @@
             this.panelCentral.Name = "panelCentral";
             this.panelCentral.Size = new System.Drawing.Size(520, 320);
             this.panelCentral.TabIndex = 8;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Numero_Tiquete,
+            this.Nombre_Supervisor,
+            this.Nombre_Usuario,
+            this.Nombre_Cliente,
+            this.Nombre_Aplicacion,
+            this.Severidad_Tiquete,
+            this.Estado_Tiquete,
+            this.Comentarios_Tiquete,
+            this.HorayFecha_Apertura,
+            this.HorayFecha_Cierre});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 6);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(496, 258);
+            this.dataGridView1.TabIndex = 1;
             // 
             // lblTipoUsuario
             // 
@@ -92,62 +113,55 @@
             this.icono.TabIndex = 0;
             this.icono.TabStop = false;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Usuario,
-            this.Numero_Tiquete,
-            this.Cliente,
-            this.Estado_Tiquete,
-            this.Hora_de_Asignacion,
-            this.Hora_de_Cierre,
-            this.Herramienta,
-            this.Comentarios});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(496, 258);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // Usuario
-            // 
-            this.Usuario.HeaderText = "Usuario";
-            this.Usuario.Name = "Usuario";
-            // 
             // Numero_Tiquete
             // 
             this.Numero_Tiquete.HeaderText = "Numero_Tiquete";
             this.Numero_Tiquete.Name = "Numero_Tiquete";
             // 
-            // Cliente
+            // Nombre_Supervisor
             // 
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
+            this.Nombre_Supervisor.HeaderText = "Nombre_Supervisor";
+            this.Nombre_Supervisor.Name = "Nombre_Supervisor";
+            // 
+            // Nombre_Usuario
+            // 
+            this.Nombre_Usuario.HeaderText = "Nombre_Usuario";
+            this.Nombre_Usuario.Name = "Nombre_Usuario";
+            // 
+            // Nombre_Cliente
+            // 
+            this.Nombre_Cliente.HeaderText = "Nombre_Cliente";
+            this.Nombre_Cliente.Name = "Nombre_Cliente";
+            // 
+            // Nombre_Aplicacion
+            // 
+            this.Nombre_Aplicacion.HeaderText = "Nombre_Aplicacion";
+            this.Nombre_Aplicacion.Name = "Nombre_Aplicacion";
+            // 
+            // Severidad_Tiquete
+            // 
+            this.Severidad_Tiquete.HeaderText = "Severidad_Tiquete";
+            this.Severidad_Tiquete.Name = "Severidad_Tiquete";
             // 
             // Estado_Tiquete
             // 
-            this.Estado_Tiquete.HeaderText = "Estado_Tiquete";
+            this.Estado_Tiquete.HeaderText = "Estado_Tiquete ";
             this.Estado_Tiquete.Name = "Estado_Tiquete";
             // 
-            // Hora_de_Asignacion
+            // Comentarios_Tiquete
             // 
-            this.Hora_de_Asignacion.HeaderText = "Hora_de_Asignacion";
-            this.Hora_de_Asignacion.Name = "Hora_de_Asignacion";
+            this.Comentarios_Tiquete.HeaderText = "Comentarios_Tiquete";
+            this.Comentarios_Tiquete.Name = "Comentarios_Tiquete";
             // 
-            // Hora_de_Cierre
+            // HorayFecha_Apertura
             // 
-            this.Hora_de_Cierre.HeaderText = "Hora_de_Cierre";
-            this.Hora_de_Cierre.Name = "Hora_de_Cierre";
+            this.HorayFecha_Apertura.HeaderText = "HorayFecha_Apertura";
+            this.HorayFecha_Apertura.Name = "HorayFecha_Apertura";
             // 
-            // Herramienta
+            // HorayFecha_Cierre
             // 
-            this.Herramienta.HeaderText = "Herramienta";
-            this.Herramienta.Name = "Herramienta";
-            // 
-            // Comentarios
-            // 
-            this.Comentarios.HeaderText = "Comentarios";
-            this.Comentarios.Name = "Comentarios";
+            this.HorayFecha_Cierre.HeaderText = "HorayFecha_Cierre";
+            this.HorayFecha_Cierre.Name = "HorayFecha_Cierre";
             // 
             // Usuario_Inicio
             // 
@@ -163,9 +177,9 @@
             this.Text = "Usuario_Inicio";
             this.panelCentral.ResumeLayout(false);
             this.panelCentral.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.BarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.icono)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -177,13 +191,15 @@
         private System.Windows.Forms.PictureBox icono;
         private System.Windows.Forms.Label lblTipoUsuario;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Numero_Tiquete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Supervisor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Aplicacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Severidad_Tiquete;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado_Tiquete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Hora_de_Asignacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Hora_de_Cierre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Herramienta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Comentarios;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Comentarios_Tiquete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HorayFecha_Apertura;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HorayFecha_Cierre;
     }
 }

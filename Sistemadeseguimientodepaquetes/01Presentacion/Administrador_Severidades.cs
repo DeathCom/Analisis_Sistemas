@@ -43,7 +43,7 @@ namespace _01Presentacion
         }
         #endregion
 
-        #region  Botones_Guardar_Buscar_Editar_Eliminar Form Administrador_Pago
+        #region  Botones_Guardar_Buscar_Editar_Eliminar Form Administrador_Severidades
         public T_Severidades processoBase()
         {
             T_Severidades Severidad = new T_Severidades();

@@ -71,12 +71,7 @@ namespace _01Presentacion
                 Encriptar.PALABRA = txtPassword.Text.Trim();
                 Encriptar = Encriptador.Encriptar(Encriptar);
                 #endregion
-                #region Mensaje_Contraseña
-                MessageBox.Show("La Clave de acceso para:\n"
-                                + txtNombre.Text + " es: \n"
-                                + txtPassword.Text.Trim()
-                                + "\nGuardela en un lugar seguro y no la olvide.");
-                #endregion
+                
                 T_Usuarios user = new T_Usuarios();
                 user.Id_Usuario = Convert.ToInt16(txtIdUsuario.Text.Trim());
                 user.Usuario = txtAlias.Text;
@@ -86,6 +81,12 @@ namespace _01Presentacion
                 user.Tipo_Usuario = ComboTipoUsusario.Text;
                 _02LogicaNegocio.Logica.GuardarDato(user);
                 MessageBox.Show("Datos Guardados Exitosamente");
+                #region Mensaje_Contraseña
+                MessageBox.Show("La Clave de acceso para:\n"
+                                + txtNombre.Text + " es: \n"
+                                + txtPassword.Text.Trim()
+                                + "\nGuardela en un lugar seguro y no la olvide.");
+                #endregion
                 Limpiar(); this.Close();
             }
             catch (Exception ex)

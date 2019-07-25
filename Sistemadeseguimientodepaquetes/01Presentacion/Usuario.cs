@@ -92,7 +92,7 @@ namespace _01Presentacion
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHijo(new Usuario_TiquetesUser());
+            AbrirFormularioHijo(new Usuario_TiquetesUser(lblTipoUsuario.Text));
         }
 
         private void btnInicio_Click(object sender, EventArgs e)

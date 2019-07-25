@@ -1238,12 +1238,12 @@ namespace _02LogicaNegocio
                 Comentarios_Tiquete.Value = Tiquete.Comentarios_Tiquete;
 
                 SqlParameter HorayFecha_Apertura = new SqlParameter();
-                HorayFecha_Apertura.SqlDbType = System.Data.SqlDbType.DateTime2;
+                HorayFecha_Apertura.SqlDbType = System.Data.SqlDbType.DateTime;
                 HorayFecha_Apertura.ParameterName = "@HorayFecha_Apertura";
                 HorayFecha_Apertura.Value = Tiquete.HorayFecha_Apertura;
 
                 SqlParameter HorayFecha_Cierre = new SqlParameter();
-                HorayFecha_Cierre.SqlDbType = System.Data.SqlDbType.DateTime2;
+                HorayFecha_Cierre.SqlDbType = System.Data.SqlDbType.DateTime;
                 HorayFecha_Cierre.ParameterName = "@HorayFecha_Cierre";
                 HorayFecha_Cierre.Value = Tiquete.HorayFecha_Cierre;
 
@@ -1305,7 +1305,7 @@ namespace _02LogicaNegocio
                 Nombre_Aplicacion.Value = Tiquete.Nombre_Aplicacion;
 
                 SqlParameter Severidad_Tiquete = new SqlParameter();
-                Severidad_Tiquete.SqlDbType = System.Data.SqlDbType.Int;
+                Severidad_Tiquete.SqlDbType = System.Data.SqlDbType.NVarChar;
                 Severidad_Tiquete.ParameterName = "@Severidad_Tiquete";
                 Severidad_Tiquete.Value = Tiquete.Severidad_Tiquete;
 
@@ -1392,7 +1392,7 @@ namespace _02LogicaNegocio
                 throw ex;
             }
         }
-        public static List<T_Tiquete> BuscarDatoA(T_Tiquete Tiquete)
+        public static List<T_Tiquete> Buscar_Numero_Tiquete(T_Tiquete Tiquete)
         {
             try
             {
@@ -1400,6 +1400,102 @@ namespace _02LogicaNegocio
                 sentencia.PETICION = @"SELECT Numero_Tiquete, Nombre_Supervisor, Nombre_Usuario, Nombre_Cliente, Nombre_Aplicacion, 
                 Severidad_Tiquete, Estado_Tiquete, Comentarios_Tiquete, HorayFecha_Apertura, HorayFecha_Cierre FROM T_Tiquete
                 WHERE Numero_Tiquete ='" + Tiquete.Numero_Tiquete + "'";
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                return objAcceso.Obtener_Tiquetes(sentencia);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public static List<T_Tiquete> Buscar_Nombre_Supervisor(T_Tiquete Tiquete)
+        {
+            try
+            {
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT Numero_Tiquete, Nombre_Supervisor, Nombre_Usuario, Nombre_Cliente, Nombre_Aplicacion, 
+                Severidad_Tiquete, Estado_Tiquete, Comentarios_Tiquete, HorayFecha_Apertura, HorayFecha_Cierre FROM T_Tiquete
+                WHERE Nombre_Supervisor ='" + Tiquete.Nombre_Supervisor + "'";
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                return objAcceso.Obtener_Tiquetes(sentencia);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public static List<T_Tiquete> Buscar_Nombre_Usuario(T_Tiquete Tiquete)
+        {
+            try
+            {
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT Numero_Tiquete, Nombre_Supervisor, Nombre_Usuario, Nombre_Cliente, Nombre_Aplicacion, 
+                Severidad_Tiquete, Estado_Tiquete, Comentarios_Tiquete, HorayFecha_Apertura, HorayFecha_Cierre FROM T_Tiquete
+                WHERE Nombre_Usuario ='" + Tiquete.Nombre_Usuario + "'";
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                return objAcceso.Obtener_Tiquetes(sentencia);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public static List<T_Tiquete> Buscar_Nombre_Cliente(T_Tiquete Tiquete)
+        {
+            try
+            {
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT Numero_Tiquete, Nombre_Supervisor, Nombre_Usuario, Nombre_Cliente, Nombre_Aplicacion, 
+                Severidad_Tiquete, Estado_Tiquete, Comentarios_Tiquete, HorayFecha_Apertura, HorayFecha_Cierre FROM T_Tiquete
+                WHERE Nombre_Cliente ='" + Tiquete.Nombre_Cliente + "'";
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                return objAcceso.Obtener_Tiquetes(sentencia);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public static List<T_Tiquete> Buscar_Nombre_Aplicacion(T_Tiquete Tiquete)
+        {
+            try
+            {
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT Numero_Tiquete, Nombre_Supervisor, Nombre_Usuario, Nombre_Cliente, Nombre_Aplicacion, 
+                Severidad_Tiquete, Estado_Tiquete, Comentarios_Tiquete, HorayFecha_Apertura, HorayFecha_Cierre FROM T_Tiquete
+                WHERE Nombre_Aplicacion ='" + Tiquete.Nombre_Aplicacion + "'";
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                return objAcceso.Obtener_Tiquetes(sentencia);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public static List<T_Tiquete> Buscar_Severidad_Tiquete(T_Tiquete Tiquete)
+        {
+            try
+            {
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT Numero_Tiquete, Nombre_Supervisor, Nombre_Usuario, Nombre_Cliente, Nombre_Aplicacion, 
+                Severidad_Tiquete, Estado_Tiquete, Comentarios_Tiquete, HorayFecha_Apertura, HorayFecha_Cierre FROM T_Tiquete
+                WHERE Severidad_Tiquete ='" + Tiquete.Severidad_Tiquete + "'";
+                _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
+                return objAcceso.Obtener_Tiquetes(sentencia);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+        public static List<T_Tiquete> Buscar_Estado_Tiquete(T_Tiquete Tiquete)
+        {
+            try
+            {
+                SQLSentencia sentencia = new SQLSentencia();
+                sentencia.PETICION = @"SELECT Numero_Tiquete, Nombre_Supervisor, Nombre_Usuario, Nombre_Cliente, Nombre_Aplicacion, 
+                Severidad_Tiquete, Estado_Tiquete, Comentarios_Tiquete, HorayFecha_Apertura, HorayFecha_Cierre FROM T_Tiquete
+                WHERE Estado_Tiquete ='" + Tiquete.Estado_Tiquete + "'";
                 _03AccesoDatos.Acceso objAcceso = new _03AccesoDatos.Acceso();
                 return objAcceso.Obtener_Tiquetes(sentencia);
             }

@@ -31,14 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Supervisor_Inicio));
             this.panelCentral = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Numero_Tiquete = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado_Tiquete = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hora_de_Asignacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hora_de_Cierre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Herramienta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Comentarios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTipoUsuario = new System.Windows.Forms.Label();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.icono = new System.Windows.Forms.PictureBox();
@@ -62,59 +54,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Usuario,
-            this.Numero_Tiquete,
-            this.Cliente,
-            this.Estado_Tiquete,
-            this.Hora_de_Asignacion,
-            this.Hora_de_Cierre,
-            this.Herramienta,
-            this.Comentarios});
             this.dataGridView1.Location = new System.Drawing.Point(12, 6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(496, 278);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // Usuario
-            // 
-            this.Usuario.HeaderText = "Usuario";
-            this.Usuario.Name = "Usuario";
-            // 
-            // Numero_Tiquete
-            // 
-            this.Numero_Tiquete.HeaderText = "Numero_Tiquete";
-            this.Numero_Tiquete.Name = "Numero_Tiquete";
-            // 
-            // Cliente
-            // 
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            // 
-            // Estado_Tiquete
-            // 
-            this.Estado_Tiquete.HeaderText = "Estado_Tiquete";
-            this.Estado_Tiquete.Name = "Estado_Tiquete";
-            // 
-            // Hora_de_Asignacion
-            // 
-            this.Hora_de_Asignacion.HeaderText = "Hora_de_Asignacion";
-            this.Hora_de_Asignacion.Name = "Hora_de_Asignacion";
-            // 
-            // Hora_de_Cierre
-            // 
-            this.Hora_de_Cierre.HeaderText = "Hora_de_Cierre";
-            this.Hora_de_Cierre.Name = "Hora_de_Cierre";
-            // 
-            // Herramienta
-            // 
-            this.Herramienta.HeaderText = "Herramienta";
-            this.Herramienta.Name = "Herramienta";
-            // 
-            // Comentarios
-            // 
-            this.Comentarios.HeaderText = "Comentarios";
-            this.Comentarios.Name = "Comentarios";
             // 
             // lblTipoUsuario
             // 
@@ -177,13 +120,5 @@
         private System.Windows.Forms.PictureBox icono;
         private System.Windows.Forms.Label lblTipoUsuario;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Numero_Tiquete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado_Tiquete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Hora_de_Asignacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Hora_de_Cierre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Herramienta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Comentarios;
     }
 }
