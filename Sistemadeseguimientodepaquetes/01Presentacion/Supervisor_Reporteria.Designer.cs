@@ -126,18 +126,18 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 79);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 61);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(496, 229);
+            this.dataGridView1.Size = new System.Drawing.Size(496, 247);
             this.dataGridView1.TabIndex = 99;
             // 
             // txtBuscar
             // 
             this.txtBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(12, 46);
+            this.txtBuscar.Location = new System.Drawing.Point(286, 13);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(287, 27);
+            this.txtBuscar.Size = new System.Drawing.Size(222, 27);
             this.txtBuscar.TabIndex = 98;
             // 
             // comboBuscarPor
@@ -155,7 +155,7 @@
             "Nombre de la Aplicacion"});
             this.comboBuscarPor.Location = new System.Drawing.Point(108, 12);
             this.comboBuscarPor.Name = "comboBuscarPor";
-            this.comboBuscarPor.Size = new System.Drawing.Size(191, 28);
+            this.comboBuscarPor.Size = new System.Drawing.Size(164, 28);
             this.comboBuscarPor.TabIndex = 96;
             // 
             // label8
