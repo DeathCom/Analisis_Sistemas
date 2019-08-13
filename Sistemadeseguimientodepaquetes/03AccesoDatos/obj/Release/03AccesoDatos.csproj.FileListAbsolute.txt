@@ -1,0 +1,12 @@
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\03AccesoDatos\bin\Release\03AccesoDatos.dll.config
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\03AccesoDatos\bin\Release\03AccesoDatos.dll
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\03AccesoDatos\bin\Release\03AccesoDatos.pdb
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\03AccesoDatos\bin\Release\04Entidades.dll
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\03AccesoDatos\bin\Release\EntityFramework.dll
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\03AccesoDatos\bin\Release\04Entidades.pdb
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\03AccesoDatos\bin\Release\EntityFramework.xml
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\03AccesoDatos\obj\Release\03AccesoDatos.csprojResolveAssemblyReference.cache
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\03AccesoDatos\obj\Release\_03AccesoDatos.Properties.Resources.resources
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\03AccesoDatos\obj\Release\03AccesoDatos.csproj.GenerateResource.Cache
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\03AccesoDatos\obj\Release\03AccesoDatos.dll
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\03AccesoDatos\obj\Release\03AccesoDatos.pdb

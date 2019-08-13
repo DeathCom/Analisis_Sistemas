@@ -1,0 +1,9 @@
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\05Seguridad\bin\Release\05Seguridad.dll
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\05Seguridad\bin\Release\05Seguridad.pdb
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\05Seguridad\bin\Release\04Entidades.dll
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\05Seguridad\bin\Release\EntityFramework.dll
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\05Seguridad\bin\Release\04Entidades.pdb
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\05Seguridad\bin\Release\EntityFramework.xml
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\05Seguridad\obj\Release\05Seguridad.csprojResolveAssemblyReference.cache
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\05Seguridad\obj\Release\05Seguridad.dll
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\05Seguridad\obj\Release\05Seguridad.pdb

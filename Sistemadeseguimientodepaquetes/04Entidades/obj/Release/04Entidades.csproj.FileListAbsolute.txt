@@ -1,0 +1,8 @@
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\04Entidades\bin\Release\04Entidades.dll.config
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\04Entidades\bin\Release\04Entidades.dll
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\04Entidades\bin\Release\04Entidades.pdb
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\04Entidades\bin\Release\EntityFramework.dll
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\04Entidades\bin\Release\EntityFramework.xml
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\04Entidades\obj\Release\04Entidades.csprojResolveAssemblyReference.cache
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\04Entidades\obj\Release\04Entidades.dll
+C:\Users\dmx369zhw\Documents\GitHub\Analisis_Sistemas\Sistemadeseguimientodepaquetes\04Entidades\obj\Release\04Entidades.pdb

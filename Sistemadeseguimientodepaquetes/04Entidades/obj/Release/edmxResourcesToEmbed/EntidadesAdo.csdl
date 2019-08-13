@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_TiquetesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DB_TiquetesEntidades" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="LOGIN" ReturnType="Collection(DB_TiquetesModel.LOGIN_Result)">
+      <Parameter Name="IDUSER" Mode="In" Type="String" />
+      <Parameter Name="PASSW" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="T_Aplicacion" EntityType="DB_TiquetesModel.T_Aplicacion" />
+    <EntitySet Name="T_Cliente" EntityType="DB_TiquetesModel.T_Cliente" />
+    <EntitySet Name="T_Estado_Tiquetes" EntityType="DB_TiquetesModel.T_Estado_Tiquetes" />
+    <EntitySet Name="T_Severidades" EntityType="DB_TiquetesModel.T_Severidades" />
+    <EntitySet Name="T_Tiquete" EntityType="DB_TiquetesModel.T_Tiquete" />
+    <EntitySet Name="T_Usuarios" EntityType="DB_TiquetesModel.T_Usuarios" />
+  </EntityContainer>
+  <ComplexType Name="LOGIN_Result">
+    <Property Type="String" Name="Usuario" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Contrasena_Usuario" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <EntityType Name="T_Aplicacion">
+    <Key>
+      <PropertyRef Name="Id_Aplicacion" />
+    </Key>
+    <Property Name="Id_Aplicacion" Type="Int32" Nullable="false" />
+    <Property Name="Nombre_Aplicacion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion_Aplicacion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="T_Cliente">
+    <Key>
+      <PropertyRef Name="Id_Cliente" />
+    </Key>
+    <Property Name="Id_Cliente" Type="Int32" Nullable="false" />
+    <Property Name="Nombre_Cliente" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Telefono_Cliente" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Correo_Cliente" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Region_Cliente" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Pais_Cliente" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Focal_Cliente" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tipo_Servidor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Nombre_Servidor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Ip_Servidor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Estado_Servidor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="T_Estado_Tiquetes">
+    <Key>
+      <PropertyRef Name="Id_Estado_Tiquete" />
+    </Key>
+    <Property Name="Id_Estado_Tiquete" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion_Estado_Tiquete" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="T_Severidades">
+    <Key>
+      <PropertyRef Name="Severidad" />
+    </Key>
+    <Property Name="Severidad" Type="Int32" Nullable="false" />
+    <Property Name="Descripcion_Severidad" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="T_Tiquete">
+    <Key>
+      <PropertyRef Name="Numero_Tiquete" />
+    </Key>
+    <Property Name="Numero_Tiquete" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Nombre_Supervisor" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Nombre_Usuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Nombre_Cliente" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Nombre_Aplicacion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Severidad_Tiquete" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Estado_Tiquete" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Comentarios_Tiquete" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="HorayFecha_Apertura" Type="DateTime" Precision="3" />
+    <Property Name="HorayFecha_Cierre" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="T_Usuarios">
+    <Key>
+      <PropertyRef Name="Id_Usuario" />
+    </Key>
+    <Property Name="Id_Usuario" Type="Int32" Nullable="false" />
+    <Property Name="Usuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Nombre_Usuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Contrasena_Usuario" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Estado_Usuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tipo_Usuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>
